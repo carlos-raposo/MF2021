@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Museu da Fala</title>
+        <meta name="description" content="Themebau">
+        <meta name="author" content="RunWebRun">
+        <link rel="icon" type="image/png" href="../assets/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- START: Styles -->
+        <!-- Swiper -->
+        <link rel="stylesheet" href="../assets/vendor/swiper/dist/css/swiper.min.css" />
+        <!-- Fancybox -->
+        <link rel="stylesheet" href="../assets/vendor/fancybox/dist/jquery.fancybox.min.css" />
+        <!-- Themebau -->
+        <link rel="stylesheet" href="../assets/css/themebau.min.css">
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="../assets/css/custom.css">
+        <!-- END: Styles -->
+        <!-- jQuery -->
+        <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+		<style>
+		.gallery-item img {
+			width: auto;}
+		.gallery-item-sm img{position:relative}	
+		p {margin-bottom:0.5rem}
+		.row.gv-4>[class*=col] {padding-top: 5px;}
+		.row.gh-1 {margin-left: 0px;}
+		.row.gh-1>[class*=col] {padding-left: 5px;}
+		.row.gv-1>[class*=col] {padding-top: 0px;}
+		ul.nav.navbar-nav {text-transform: uppercase;}
+		.verso {padding-left:6.5vw; margin-top: 2em;}
+		.verso h4 {padding-left:25%}
+		
+		/* START scroll to top */
+		.scroll {
+			color: #fff;
+			margin-top: 100px
+		}
+
+		#toTopBtn {
+			position: fixed;
+			bottom: 26px;
+			right: 39px;
+			z-index: 98;
+			padding: 21px;
+			background-color: hsla(5, 76%, 62%, .8)
+		}
+
+		.js .cd-top--fade-out {
+			opacity: .5
+		}
+
+		.js .cd-top--is-visible {
+			visibility: visible;
+			opacity: 1
+		}
+
+		.js .cd-top {
+			visibility: hidden;
+			opacity: 0;
+			transition: opacity .3s, visibility .3s, background-color .3s
+		}
+
+		.cd-top {
+			position: fixed;
+			bottom: 20px;
+			bottom: var(--cd-back-to-top-margin);
+			right: 20px;
+			right: var(--cd-back-to-top-margin);
+			display: inline-block;
+			height: 40px;
+			height: var(--cd-back-to-top-size);
+			width: 40px;
+			width: var(--cd-back-to-top-size);
+			box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+			background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+			background-color: hsla(5, 76%, 62%, .8);
+			background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8)
+		}
+		/* END scroll to top */
+		
+		@media only screen and (min-width: 321px) and (orientation: portrait) {
+			.verso {
+				padding-left: 4em;
+				padding-right: 2em;
+			}
+			.verso h4 {padding-left:30%}
+			}
+			
+		@media only screen and (min-width: 320px) and (orientation: landscape) {
+			.verso {
+				padding-left: 8em;
+				padding-right: 2em;
+				}
+			}
+			
+		@media (max-width: 827.98px){
+			.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+				padding-right: 6px;
+				padding-left: 1px;
+				}
+			.row.gh-1 {
+				margin-left: 0px;
+				}
+			.w-50 {width: 90%!important;}
+		}
+		
+		@media (min-width: 828px){
+			.navbar-mobile-style-2 .navbar-body>.navbar-nav {
+				font-size: 55px;
+			}
+		}		
+			
+		@media (max-width: 827.98px){
+		.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+			padding-right: 6px;
+			padding-left: 1px;
+			}
+		.row.gh-1 {
+			margin-left: 0px;
+			}
+		.w-50 {width: 90%!important;}
+		}
+		
+		@media (min-width: 828px){
+			.navbar-mobile-style-2 .navbar-body>.navbar-nav {
+				font-size: 55px;
+			}
+		}
+
+		
+		@media only screen and (min-width: 1024px){
+			.verso {
+				line-height: 1.5em;
+				padding-left: 28%;
+				padding-right: 28%;
+			}
+			img.footer-image {margin-top:-50px}
+			}
+		  @media only screen and (min-width: 1824px){
+			.verso {
+				line-height: 1.5em;
+				padding-left: 28%;
+				padding-right: 28%;
+			}
+			}
+		</style>
+	
+	</head>
+    <body>
+		<a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+        <header class="navbar navbar-top navbar-expand navbar-fixed">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <p style="padding-top:30px">museudafala</p>      
+                <a class="navbar-toggle" href="#navbar-mobile-style-2" data-fancybox="" data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">
+                            <span class="nav-link-name">início</span>
+                        </a>
+                    </li>
+                    <li class="nav-item navbar-dropdown">
+                        <a href="#exposicoes" class="nav-link">
+                            <span class="nav-link-name">exposições</span>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" id="exposicoes">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Crioulo</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Literatura de Cordel</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">O Cante Alentejano</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Drummond</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Herberto Helder</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Clarice Lispector</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Crioulo</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Crioulo</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item navbar-dropdown">
+                        <a href="#recursos" class="nav-link">
+                            <span class="nav-link-name">recursos</span>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" id="recursos">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item">
+                                    <a href="https://runwebrun.com/themebau/about-us.html" class="nav-link">
+                                        <span class="nav-link-name">81 museus na internet</span>
+                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://runwebrun.com/themebau/services.html" class="nav-link">
+                                        <span class="nav-link-name">cronologia</span>
+                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+					<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center text-white">
+						<li class="nav-item">
+							<a href="https://facebook.com/museudafala" class="nav-link">
+								<svg width="7" height="15" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8.17421 3.65234H9.99996V0.154687C9.68557 0.107422 8.60224 0 7.34088 0C4.70831 0 2.90529 1.82188 2.90529 5.16914V8.25H0V12.1602H2.90529V22H6.46588V12.1602H9.25375L9.69693 8.25H6.46588V5.55586C6.46588 4.42578 6.7424 3.65234 8.17421 3.65234Z" fill="currentColor"></path>
+								</svg>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="https://twitter.com/museu_da_fala" class="nav-link">
+								<svg width="17" height="14" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M22.0706 5.51356C22.086 5.73504 22.086 5.95656 22.086 6.17804C22.086 12.9334 17.0783 20.7172 7.92575 20.7172C5.10601 20.7172 2.48661 19.8787 0.283203 18.4232C0.683835 18.4707 1.069 18.4865 1.48505 18.4865C3.81167 18.4865 5.95347 17.6797 7.6638 16.3033C5.47581 16.2558 3.64221 14.7845 3.01046 12.7594C3.31865 12.8069 3.6268 12.8385 3.9504 12.8385C4.39723 12.8385 4.84411 12.7752 5.2601 12.6645C2.97968 12.1898 1.2693 10.1332 1.2693 7.64935V7.58609C1.93183 7.96579 2.70231 8.20309 3.5189 8.2347C2.17837 7.31709 1.30013 5.75086 1.30013 3.97894C1.30013 3.02972 1.54661 2.15959 1.97807 1.40019C4.42801 4.50103 8.11063 6.52604 12.24 6.74756C12.163 6.36787 12.1168 5.97239 12.1168 5.57687C12.1168 2.76076 14.3356 0.466797 17.0937 0.466797C18.5266 0.466797 19.8209 1.0838 20.73 2.0805C21.8548 1.85902 22.9334 1.43184 23.8887 0.846495C23.5189 2.03307 22.7331 3.02977 21.7008 3.66255C22.7023 3.55186 23.673 3.26702 24.5667 2.87155C23.8888 3.88403 23.0413 4.78577 22.0706 5.51356Z" fill="currentColor"></path>
+								</svg>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<svg width="15" height="15" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.2827 5.3166C8.24087 5.3166 5.78732 7.8148 5.78732 10.912C5.78732 14.0092 8.24087 16.5074 11.2827 16.5074C14.3245 16.5074 16.7781 14.0092 16.7781 10.912C16.7781 7.8148 14.3245 5.3166 11.2827 5.3166ZM11.2827 14.5497C9.31698 14.5497 7.70998 12.9183 7.70998 10.912C7.70998 8.90563 9.3122 7.27425 11.2827 7.27425C13.2532 7.27425 14.8554 8.90563 14.8554 10.912C14.8554 12.9183 13.2484 14.5497 11.2827 14.5497ZM18.2846 5.08772C18.2846 5.81331 17.7107 6.39282 17.0029 6.39282C16.2902 6.39282 15.7211 5.80844 15.7211 5.08772C15.7211 4.36699 16.295 3.78261 17.0029 3.78261C17.7107 3.78261 18.2846 4.36699 18.2846 5.08772ZM21.9243 6.4123C21.843 4.66404 21.4508 3.11545 20.1929 1.83956C18.9399 0.563678 17.419 0.164355 15.7019 0.0766992C13.9323 -0.0255664 8.62827 -0.0255664 6.85865 0.0766992C5.14643 0.159486 3.62552 0.558809 2.36766 1.83469C1.10979 3.11058 0.722392 4.65917 0.636302 6.40743C0.535865 8.20925 0.535865 13.6098 0.636302 15.4117C0.717609 17.1599 1.10979 18.7085 2.36766 19.9844C3.62552 21.2603 5.14165 21.6596 6.85865 21.7473C8.62827 21.8495 13.9323 21.8495 15.7019 21.7473C17.419 21.6645 18.9399 21.2652 20.1929 19.9844C21.446 18.7085 21.8382 17.1599 21.9243 15.4117C22.0247 13.6098 22.0247 8.21412 21.9243 6.4123ZM19.6381 17.345C19.2651 18.2995 18.5429 19.0348 17.6007 19.4195C16.1898 19.9893 12.8419 19.8578 11.2827 19.8578C9.72352 19.8578 6.37081 19.9844 4.96469 19.4195C4.02727 19.0397 3.30507 18.3043 2.92724 17.345C2.36766 15.9084 2.49679 12.4995 2.49679 10.912C2.49679 9.32443 2.37244 5.91071 2.92724 4.47899C3.30029 3.52451 4.02248 2.78917 4.96469 2.40446C6.37559 1.83469 9.72352 1.96618 11.2827 1.96618C12.8419 1.96618 16.1946 1.83956 17.6007 2.40446C18.5381 2.7843 19.2603 3.51964 19.6381 4.47899C20.1977 5.91558 20.0686 9.32443 20.0686 10.912C20.0686 12.4995 20.1977 15.9133 19.6381 17.345Z" fill="currentColor"></path>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</ul>	
+            </div>
+        </header>
+        <!-- style 2 -->
+        <div class="navbar navbar-mobile navbar-mobile-style-2" id="navbar-mobile-style-2">
+            <div class="shape justify-content-end">
+                <svg data-rellax-speed="0" width="544" height="362" viewBox="0 0 544 362" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="320.5" cy="41.5" r="320.5" fill="#ececec" />
+                </svg>
+            </div>
+            <div class="navbar-head">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img width="107" src="../assets/images/logo.svg" alt="">
+                    </a>
+                    <a class="navbar-toggle" href="#" data-fancybox-close>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row gh-1 justify-content-center">
+                    <div class="col-12 col-md-7 col-lg-5 col-xl-4">
+                        <div class="navbar-body">
+                            <ul class="nav navbar-nav navbar-nav-collapse">
+                                <li class="nav-item">
+                                    <a href="../index.html" class="nav-link collapsed">
+                                        <span class="nav-link-name">início</span>
+                                        <svg class="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 11L6 6L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="nav-item navbar-collapse">
+                                    <a href="#navbarCollapseProjects" class="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseProjects">
+                                        <span class="nav-link-name">exposições</span>
+                                        <svg class="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 11L6 6L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                    <div class="navbar-collapse-menu collapse" id="navbarCollapseProjects">
+                                        <ul class="nav navbar-nav">
+                                            <li class="nav-item">
+                                                <a href="../index_crioulo.html">
+                                                    <span class="nav-link-name">Crioulo</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../cordel.html">
+                                                    <span class="nav-link-name">Literatura de Cordel</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../cante.html">
+                                                    <span class="nav-link-name">O Cante Alentejano</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../drummond.html">
+                                                    <span class="nav-link-name">Drummond</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../herberto.html">
+                                                    <span class="nav-link-name">Herberto Helder</span>
+                                                </a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="#navbarCollapse2Column" class="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapse2Column">
+                                                    <span class="nav-link-name">Clarice Lispector</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="cante.html" class="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapse3Column">
+                                                    <span class="nav-link-name">O Cante Alentejano</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#navbarCollapse4Column" class="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapse4Column">
+                                                    <span class="nav-link-name">Drummond</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#navbarCollapseSingleWorks" class="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseSingleWorks">
+                                                    <span class="nav-link-name">Herberto Helder</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item navbar-collapse">
+                                    <a href="#navbarCollapsePages" class="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapsePages">
+                                        <span class="nav-link-name">recursos</span>
+                                        <svg class="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 11L6 6L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                    <div class="navbar-collapse-menu collapse" id="navbarCollapsePages">
+                                        <ul class="nav navbar-nav">
+                                            <li class="nav-item">
+                                                <a href="#navbarCollapseAboutUs" class="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseAboutUs">
+                                                    <span class="nav-link-name">81 museus na internet</span>
+                                                </a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="#navbarCollapseAboutUs" class="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseAboutUs">
+                                                    <span class="nav-link-name">cronologia</span>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#navbarCollapseContact" class="nav-link">
+                                        <span class="nav-link-name">loja</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="#navbarCollapseContact" class="nav-link">
+                                        <span class="nav-link-name">café</span>
+                                    </a>
+                                </li>
+								<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center">
+									<li class="nav-item">
+										<a href="https://facebook.com/runwebrun" class="nav-link">
+											<svg width="8" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.17421 3.65234H9.99996V0.154687C9.68557 0.107422 8.60224 0 7.34088 0C4.70831 0 2.90529 1.82188 2.90529 5.16914V8.25H0V12.1602H2.90529V22H6.46588V12.1602H9.25375L9.69693 8.25H6.46588V5.55586C6.46588 4.42578 6.7424 3.65234 8.17421 3.65234Z" fill="currentColor" />
+											</svg>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="https://twitter.com/runwebrun" class="nav-link">
+											<svg width="20" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M22.0706 5.51356C22.086 5.73504 22.086 5.95656 22.086 6.17804C22.086 12.9334 17.0783 20.7172 7.92575 20.7172C5.10601 20.7172 2.48661 19.8787 0.283203 18.4232C0.683835 18.4707 1.069 18.4865 1.48505 18.4865C3.81167 18.4865 5.95347 17.6797 7.6638 16.3033C5.47581 16.2558 3.64221 14.7845 3.01046 12.7594C3.31865 12.8069 3.6268 12.8385 3.9504 12.8385C4.39723 12.8385 4.84411 12.7752 5.2601 12.6645C2.97968 12.1898 1.2693 10.1332 1.2693 7.64935V7.58609C1.93183 7.96579 2.70231 8.20309 3.5189 8.2347C2.17837 7.31709 1.30013 5.75086 1.30013 3.97894C1.30013 3.02972 1.54661 2.15959 1.97807 1.40019C4.42801 4.50103 8.11063 6.52604 12.24 6.74756C12.163 6.36787 12.1168 5.97239 12.1168 5.57687C12.1168 2.76076 14.3356 0.466797 17.0937 0.466797C18.5266 0.466797 19.8209 1.0838 20.73 2.0805C21.8548 1.85902 22.9334 1.43184 23.8887 0.846495C23.5189 2.03307 22.7331 3.02977 21.7008 3.66255C22.7023 3.55186 23.673 3.26702 24.5667 2.87155C23.8888 3.88403 23.0413 4.78577 22.0706 5.51356Z" fill="currentColor" />
+											</svg>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="https://instagram.com/runwebrun" class="nav-link">
+											<svg width="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M11.2827 5.3166C8.24087 5.3166 5.78732 7.8148 5.78732 10.912C5.78732 14.0092 8.24087 16.5074 11.2827 16.5074C14.3245 16.5074 16.7781 14.0092 16.7781 10.912C16.7781 7.8148 14.3245 5.3166 11.2827 5.3166ZM11.2827 14.5497C9.31698 14.5497 7.70998 12.9183 7.70998 10.912C7.70998 8.90563 9.3122 7.27425 11.2827 7.27425C13.2532 7.27425 14.8554 8.90563 14.8554 10.912C14.8554 12.9183 13.2484 14.5497 11.2827 14.5497ZM18.2846 5.08772C18.2846 5.81331 17.7107 6.39282 17.0029 6.39282C16.2902 6.39282 15.7211 5.80844 15.7211 5.08772C15.7211 4.36699 16.295 3.78261 17.0029 3.78261C17.7107 3.78261 18.2846 4.36699 18.2846 5.08772ZM21.9243 6.4123C21.843 4.66404 21.4508 3.11545 20.1929 1.83956C18.9399 0.563678 17.419 0.164355 15.7019 0.0766992C13.9323 -0.0255664 8.62827 -0.0255664 6.85865 0.0766992C5.14643 0.159486 3.62552 0.558809 2.36766 1.83469C1.10979 3.11058 0.722392 4.65917 0.636302 6.40743C0.535865 8.20925 0.535865 13.6098 0.636302 15.4117C0.717609 17.1599 1.10979 18.7085 2.36766 19.9844C3.62552 21.2603 5.14165 21.6596 6.85865 21.7473C8.62827 21.8495 13.9323 21.8495 15.7019 21.7473C17.419 21.6645 18.9399 21.2652 20.1929 19.9844C21.446 18.7085 21.8382 17.1599 21.9243 15.4117C22.0247 13.6098 22.0247 8.21412 21.9243 6.4123ZM19.6381 17.345C19.2651 18.2995 18.5429 19.0348 17.6007 19.4195C16.1898 19.9893 12.8419 19.8578 11.2827 19.8578C9.72352 19.8578 6.37081 19.9844 4.96469 19.4195C4.02727 19.0397 3.30507 18.3043 2.92724 17.345C2.36766 15.9084 2.49679 12.4995 2.49679 10.912C2.49679 9.32443 2.37244 5.91071 2.92724 4.47899C3.30029 3.52451 4.02248 2.78917 4.96469 2.40446C6.37559 1.83469 9.72352 1.96618 11.2827 1.96618C12.8419 1.96618 16.1946 1.83956 17.6007 2.40446C18.5381 2.7843 19.2603 3.51964 19.6381 4.47899C20.1977 5.91558 20.0686 9.32443 20.0686 10.912C20.0686 12.4995 20.1977 15.9133 19.6381 17.345Z" fill="currentColor" />
+											</svg>
+										</a>
+									</li>
+								</ul>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div class="content-wrap">
+            <div class="container isotope mt-130">
+                
+                <div class="pt-0 show-on-scroll" data-show-duration="800">
+                    <div class="row gh-1 gv-1 isotope-grid">
+						<div class="col-12  isotope-item" data-filters="design">
+                            <div class="card card-block d-flex ">
+								<a href="../assets/images/exposicoes/cordel/nascimento-600.png" class="gallery-item gallery-item-sm" data-fancybox="gallery-1" data-animation-effect="fade">
+									
+									
+									<img src="../assets/images/exposicoes/cordel/nascimento-600.png"
+										srcset="../assets/images/exposicoes/cordel/aisesesse-300.png 300w,
+												 ../assets/images/exposicoes/cordel/nascimento-600.png 600w"
+										 sizes="(max-width:500px) 300px,
+												600px"
+										 
+										 alt="Presépio">
+								</a>						
+							</div>
+                        </div>
+					</div>
+					<div class="row gh-1 gv-1 isotope-grid" style="margin-top: 30px;">
+                        <div class="col-12 col-sm-6 isotope-item" data-filters="design">
+                            <div class="card card-block d-flex verso ">
+								<h4>1</h4>
+								<p><b>A narrativa que faço</b>
+								<p>Não é minha invenção
+								<p>Pra contar já me benzi
+								<p>E fiz minha oração
+								<p>Peço a Deus discernimento
+								<p>Pra falar do nascimento
+								<p>De quem trouxe a salvação						
+							</div>
+                        </div>
+                        <div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>2</h4>
+								<p><b>É que a tal ignorância</b>
+								<p>Cumprirei o meu papel
+								<p>Seguindo sempre a risca
+								<p>O tema desse cordel
+								<p>A vinda do Deus menino
+								<p>Sua saga seu destino
+								<p>Prometendo ser fiel.		
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="design">
+                            <div class="card card-block d-flex verso ">
+								<h4>3</h4>
+								<p><b>Tudo isso começou</b>
+								<p>Com José e com Maria
+								<p>Que ficaram radiantes
+								<p>E replenos de alegria
+								<p>Quando Miguel o arcanjo
+								<p>Com sua boca de anjo
+								<p>A boa nova dizia.</p>						
+							</div>
+                        </div>
+                        <div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>4</h4>
+								<p><b>Assim deu ele a notícia</b>
+								<p>Com jeito e com muito tino
+								<p>Que do ventre de Maria
+								<p>Nasceria um menino
+								<p>Maria daria a luz
+								<p>Ao filho de Deus, Jesus,
+								<p>O sagrado ser divino.	
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="design">
+                            <div class="card card-block d-flex verso ">
+								<h4>5</h4>
+								<p><b>Com o casal satisfeito</b>
+								<p>Não havia desengano
+								<p>Mas veio de Cesar Augusto
+								<p>O Imperador Romano
+								<p>Uma nova lei criada
+								<p>E a família sagrada
+								<p>Tinha que mudar de plano.						
+							</div>
+                        </div>
+                        <div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>6</h4>
+								<p><b>A sua terra natal</b>
+								<p>Todos tinham que voltar
+								<p>Porque Cesar resolveu
+								<p>A população contar
+								<p>O motivo foi exposto
+								<p>Foi por causa do imposto
+								<p>Que ele decidiu cobrar.	
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>7</h4>
+								<p><b>A família de José</b>
+								<p>Voltava para Belém
+								<p>A fim de cumprir a lei
+								<p>E se registrar também
+								<p>Com dor a pobre Maria
+								<p>No caminho padecia
+								<p>Mesmo assim dizia amém.	
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>8</h4>
+								<p><b>Foi uma viagem longa,</b>
+								<p>Deixou Maria cansada
+								<p>E se aproximava a hora
+								<p>Por todos tão esperada
+								<p>Sem achar hospedaria
+								<p>José fez o que podia
+								<p>De maneira improvisada.	
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>9</h4>
+								<p><b>Ele avistou um estábulo</b>
+								<p>Onde montou seu abrigo
+								<p>O ambiente era limpo
+								<p>Lá não corriam perigo
+								<p>Com palha forrou o chão
+								<p>Improvisando um colchão
+								<p>Fugindo do desabrigo.
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>10</h4>
+								<p><b>Por sobre a palha, José,</b>
+								<p>Uma manta estendeu
+								<p>Ali deitou o casal
+								<p>Que descanso mereceu
+								<p>Para geral alegria
+								<p>O menino de Maria
+								<p>A meia noite nasceu.
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>11</h4>
+								<p><b>E foi numa manjedoura</b>
+								<p>Que a criança ficou
+								<p>Forrada com palha limpa
+								<p>Que o bom José arrumou
+								<p>Num pano foi enrolado
+								<p>Nas palhinhas colocado
+								<p>Pela mãe que lhe embalou.
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>12</h4>
+								<p><b>Nasceu o filho de Deus</b>
+								<p>E de Jesus foi chamado
+								<p>Como advertiu o anjo
+								<p>Quando deu o seu recado
+								<p>Foi despido de riqueza
+								<p>No meio da singeleza
+								<p>Que Jesus foi adorado
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>13</h4>
+								<p><b>Nas colinas de Belém</b>
+								<p>Os pastores agrupados
+								<p>Vigiavam seus rebanhos
+								<p>E ficaram assustados
+								<p>Quando lá no céu brilhou
+								<p>Uma luz que os espantou
+								<p>Deixando-lhes ofuscados.
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>14</h4>
+								<p><b>Era um anjo que surgia</b>
+								<p>E acalmou cada pastor
+								<p>Eu trago boa notícia
+								<p>Escutem-me, por favor,
+								<p>Nesta noite em Belém
+								<p>Nasceu para nosso bem
+								<p>Jesus nosso Salvador.
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>15</h4>
+								<p><b>E logo no céu surgiu</b>
+								<p>Encantando os pastores
+								<p>Mais anjos que lindamente
+								<p>Cantarolavam louvores
+								<p>Em homenagem a Jesus
+								<p>Que chegou trazendo luz
+								<p>E prenúncio de amores.
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>16</h4>
+								<p><b>E Glória a Deus nas alturas</b>
+								<p>Se ouviu com suavidade
+								<p>E paz na terra aos homens
+								<p>Que tinham boa vontade
+								<p>Os anjos assim cantavam
+								<p>Pastores se encantavam
+								<p>Diante da novidade.
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>17</h4>
+								<p><b>A luz foi diminuindo</b>
+								<p>Todos logo perceberam
+								<p>Os anjos também sumiram
+								<p>E os pastores se acenderam
+								<p>E cheios de esperança
+								<p>Foram atrás da criança
+								<p>A pista eles não perderam.
+							</div>
+                        </div>
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>18</h4>
+								<p><b>Quando viram o estábulo</b>
+								<p>Entraram devagarinho
+								<p>Na manjedoura o menino
+								<p>Ao lado dele um burrinho
+								<p>Tinha uma vaca também
+								<p>Como de fato convém
+								<p>Jesus não estava sozinho.
+							</div>
+                        </div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>19</h4>
+								<p><b>Pelos homens da colina</b>
+								<p>Jesus Rei foi adorado
+								<p>Ele era o salvador
+								<p>Pelo anjo anunciado
+								<p>Os pastores finalmente
+								<p>Contaram pra toda gente
+								<p>Que Jesus tinha chegado.
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>20</h4>
+								<p><b>Três homens sábios moravam</b>
+								<p>Num país muito distante
+								<p>E do céu e das estrelas
+								<p>Faziam estudo constante
+								<p>Uma estrela reluzente
+								<p>Aparece de repente
+								<p>Com um brilho intrigante.
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>21</h4>
+								<p><b>Diziam os três Reis Magos</b>
+								<p>Que o sinal emitido
+								<p>Era algo especial
+								<p>Que havia acontecido
+								<p>E foram seguindo a luz
+								<p>Para visitar Jesus
+								<p>O rei que tinha nascido.
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>22</h4>
+								<p><b>Os três Reis Magos levaram</b>
+								<p>Presentes para ofertar
+								<p>A grande estrela guiava
+								<p>Melchior e Baltazar,
+								<p>E Gaspar ia também
+								<p>Pra cidade de Belém
+								<p>O novo rei adorar.
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>23</h4>
+								<p><b>Quando o rei Herodes soube</b>
+								<p>Que nasceu o rei menino
+								<p>Ficou bastante zangado
+								<p>Cometendo desatino
+								<p>Aos Magos pediu favor
+								<p>Caso vissem o Salvador
+								<p>Lhe revelasse o destino.	
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>24</h4>
+								<p><b>Os Reis Magos prosseguiram</b>
+								<p>Cada um com seu presente
+								<p>Era Ouro, incenso e mirra
+								<p>Para o pequeno inocente
+								<p>Que logo foi adorado
+								<p>E também presenteado
+								<p>Pelos reis do oriente
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>25</h4>
+								<p><b>Os Reis seguiram viagem</b>
+								<p>Logo após a adoração
+								<p>Pararam para dormir
+								<p>Num sonho a revelação
+								<p>Um anjo veio avisar:
+								<p>Herodes quer é matar
+								<p>Jesus, rei da salvação.
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>26</h4>
+								<p><b>Os três Reis Magos pegaram</b>
+								<p>Na volta um novo curso
+								<p>Pra não cruzar com Herodes
+								<p>Fazendo o mesmo percurso
+								<p>Acharam os três por bem
+								<p>Desviar Jerusalém
+								<p>Só tinham esse recurso.
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>27</h4>
+								<p><b>José também teve um sonho</b>
+								<p>Sonho pior não teria
+								<p>Um anjo lhe avisou
+								<p>Para fugir com Maria
+								<p>Deixar depressa o abrigo
+								<p>Jesus corria perigo
+								<p>Se foram na correria.
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>28</h4>
+								<p><b>Partiram para o Egito</b>
+								<p>Como o anjo aconselhou
+								<p>A fuga foi cansativa
+								<p>Mas a família chegou
+								<p>Sã e salva a seu destino
+								<p>Salvaram Jesus menino
+								<p>Do rei que louco ficou.
+								
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>29</h4>
+								<p><b>Quando Herodes descobriu</b>
+								<p>Que tinha sido enganado
+								<p>Ficou com ódio dos Magos
+								<p>E completamente irado
+								<p>Com medo do novo rei
+								<p>Não respeitou sua grei
+								<p>Estava desatinado.
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>30</h4>
+								<p><b>Para não perder o trono</b>
+								<p>Diante dos desenganos
+								<p>Ordenou os seus soldados
+								<p>Que executassem seus planos
+								<p>E começou a matança
+								<p>Que era assassinar criança
+								<p>E com menos de dois anos.
+							</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>31</h4>
+								<p><b>Quem não amava Herodes</b>
+								<p>Passou mesmo a odiar.
+								<p>E no Egito a família
+								<p>Sagrada pode escapar
+								<p>Munidos de muita fé
+								<p>Voltaram pra Nazaré
+								<p>Para viver em seu lar.
+										</div>
+						</div>
+						
+						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h4>32</h4>
+								<p><b>Foi um anjo que avisou</b>
+								<p>Que José já poderia
+								<p>Voltar para Nazaré
+								<p>Pois perigo não corria
+								<p>Herodes tinha morrido
+								<p>Ele voltou comovido
+								<p>Com Jesus e com Maria.
+							</div>
+						</div>
+						
+                    </div>
+                </div>
+            </div>
+			
+			<div class="container isotope mt-130 mb-100">
+                
+                <div class="row gh-1 gv-1 isotope-grid" style="margin-top: 0px;">
+                        <div class="col-12 col-sm-6 isotope-item" data-filters="design">
+                            <div class="card card-block d-flex verso">
+								<h3>CRÉDITOS</h3>
+								<p>Autora: Dalinha Catunda</p>
+								<p>Xilogravura: Erivaldo</p>						
+							</div>
+                        </div>
+                        <div class="col-12 col-sm-6 isotope-item" data-filters="photography">
+                            <div class="card card-block d-flex verso">
+								<h5>FALE COM A AUTORA</h5>
+								<p><a href="https://cordeldesaia.blogspot.com/">Cordel de Saia</a>
+								<p><a href="https://cantinhodadalinha.blogspot.com/">Cantinha da Dalinda</a>
+								<p><a href="https://www.facebook.com/profile.php?id=790748006">Facebook da Dalinda</a>	
+							</div>
+                        </div>
+				</div>	
+			</div>
+			
+        </div>
+         <footer class="footer bg-white text-black shape-parent overflow-hidden pt-130">
+            <div class="container mb-n5">
+                <div class="row justify-content-between gh-1 gv-4 mb-30">
+                    <div class="col-12 col-lg-12">
+                        <div class="row gh-1 gv-1">
+                            <div class="col-12 col-lg-4">
+                                <ul class="nav flex-column text-black">
+                                    <li>
+                                        <p style="margin-bottom: 0.2rem;">CONTATOS</p>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">museudafala@gmail.com</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Design e Programação de CMR</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Mapa do site</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <ul class="nav flex-column text-black">
+                                    <li>
+                                        <p style="margin-bottom: 0.2rem;">APOIOS</p>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Universidade Nova de Lisboa</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Câmara Municipal de Lisboa</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <ul class="nav flex-column text-black">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Acessibilidade</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Termos legais</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block col-1"></div>
+                </div>
+                <div class="row justify-content-between gh-1 mb-30">
+                    <div class="col-12 col-lg-4">
+                        <ul class="nav text-black align-items-center">
+                            <li class="nav-item">
+                                <a href="https://facebook.com/museudafala" class="nav-link">
+                                    <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.17421 3.65234H9.99996V0.154687C9.68557 0.107422 8.60224 0 7.34088 0C4.70831 0 2.90529 1.82188 2.90529 5.16914V8.25H0V12.1602H2.90529V22H6.46588V12.1602H9.25375L9.69693 8.25H6.46588V5.55586C6.46588 4.42578 6.7424 3.65234 8.17421 3.65234Z" fill="currentColor" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://twitter.com/museu_da_fala" class="nav-link">
+                                    <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22.0706 5.51356C22.086 5.73504 22.086 5.95656 22.086 6.17804C22.086 12.9334 17.0783 20.7172 7.92575 20.7172C5.10601 20.7172 2.48661 19.8787 0.283203 18.4232C0.683835 18.4707 1.069 18.4865 1.48505 18.4865C3.81167 18.4865 5.95347 17.6797 7.6638 16.3033C5.47581 16.2558 3.64221 14.7845 3.01046 12.7594C3.31865 12.8069 3.6268 12.8385 3.9504 12.8385C4.39723 12.8385 4.84411 12.7752 5.2601 12.6645C2.97968 12.1898 1.2693 10.1332 1.2693 7.64935V7.58609C1.93183 7.96579 2.70231 8.20309 3.5189 8.2347C2.17837 7.31709 1.30013 5.75086 1.30013 3.97894C1.30013 3.02972 1.54661 2.15959 1.97807 1.40019C4.42801 4.50103 8.11063 6.52604 12.24 6.74756C12.163 6.36787 12.1168 5.97239 12.1168 5.57687C12.1168 2.76076 14.3356 0.466797 17.0937 0.466797C18.5266 0.466797 19.8209 1.0838 20.73 2.0805C21.8548 1.85902 22.9334 1.43184 23.8887 0.846495C23.5189 2.03307 22.7331 3.02977 21.7008 3.66255C22.7023 3.55186 23.673 3.26702 24.5667 2.87155C23.8888 3.88403 23.0413 4.78577 22.0706 5.51356Z" fill="currentColor" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.2827 5.3166C8.24087 5.3166 5.78732 7.8148 5.78732 10.912C5.78732 14.0092 8.24087 16.5074 11.2827 16.5074C14.3245 16.5074 16.7781 14.0092 16.7781 10.912C16.7781 7.8148 14.3245 5.3166 11.2827 5.3166ZM11.2827 14.5497C9.31698 14.5497 7.70998 12.9183 7.70998 10.912C7.70998 8.90563 9.3122 7.27425 11.2827 7.27425C13.2532 7.27425 14.8554 8.90563 14.8554 10.912C14.8554 12.9183 13.2484 14.5497 11.2827 14.5497ZM18.2846 5.08772C18.2846 5.81331 17.7107 6.39282 17.0029 6.39282C16.2902 6.39282 15.7211 5.80844 15.7211 5.08772C15.7211 4.36699 16.295 3.78261 17.0029 3.78261C17.7107 3.78261 18.2846 4.36699 18.2846 5.08772ZM21.9243 6.4123C21.843 4.66404 21.4508 3.11545 20.1929 1.83956C18.9399 0.563678 17.419 0.164355 15.7019 0.0766992C13.9323 -0.0255664 8.62827 -0.0255664 6.85865 0.0766992C5.14643 0.159486 3.62552 0.558809 2.36766 1.83469C1.10979 3.11058 0.722392 4.65917 0.636302 6.40743C0.535865 8.20925 0.535865 13.6098 0.636302 15.4117C0.717609 17.1599 1.10979 18.7085 2.36766 19.9844C3.62552 21.2603 5.14165 21.6596 6.85865 21.7473C8.62827 21.8495 13.9323 21.8495 15.7019 21.7473C17.419 21.6645 18.9399 21.2652 20.1929 19.9844C21.446 18.7085 21.8382 17.1599 21.9243 15.4117C22.0247 13.6098 22.0247 8.21412 21.9243 6.4123ZM19.6381 17.345C19.2651 18.2995 18.5429 19.0348 17.6007 19.4195C16.1898 19.9893 12.8419 19.8578 11.2827 19.8578C9.72352 19.8578 6.37081 19.9844 4.96469 19.4195C4.02727 19.0397 3.30507 18.3043 2.92724 17.345C2.36766 15.9084 2.49679 12.4995 2.49679 10.912C2.49679 9.32443 2.37244 5.91071 2.92724 4.47899C3.30029 3.52451 4.02248 2.78917 4.96469 2.40446C6.37559 1.83469 9.72352 1.96618 11.2827 1.96618C12.8419 1.96618 16.1946 1.83956 17.6007 2.40446C18.5381 2.7843 19.2603 3.51964 19.6381 4.47899C20.1977 5.91558 20.0686 9.32443 20.0686 10.912C20.0686 12.4995 20.1977 15.9133 19.6381 17.345Z" fill="currentColor" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+					<div class="col-12 col-lg-4">
+                        <div><img class="footer-image" width="250" src="../assets/images/logo_white.svg" alt=""></div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="footer-copyright">© 2016-2021 - Museu da Fala</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- START: Scripts -->
+		<script>
+		$(document).ready(function() {
+		$(window).scroll(function() {
+		if ($(this).scrollTop() > 20) {
+		$('#toTopBtn').fadeIn();
+		} else {
+		$('#toTopBtn').fadeOut();
+		}
+		});
+
+		$('#toTopBtn').click(function() {
+		$("html, body").animate({
+		scrollTop: 0
+		}, 1000);
+		return false;
+		});
+		});
+		</script>
+        <!-- Object Fit Polyfill -->
+        <script src="../assets/vendor/object-fit-images/dist/ofi.min.js"></script>
+        <!-- Popper -->
+        <script src="../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Bootstrap Validator -->
+        <script src="../assets/vendor/bootstrap-validator/dist/validator.min.js"></script>
+        <!-- ImagesLoaded -->
+        <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <!-- Swiper -->
+        <script src="../assets/vendor/swiper/dist/js/swiper.min.js"></script>
+        <!-- Animejs -->
+        <script src="../assets/vendor/animejs/lib/anime.min.js"></script>
+        <!-- Rellax -->
+        <script src="../assets/vendor/rellax/rellax.min.js"></script>
+        <!-- Countdown -->
+        <script src="../assets/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+        <!-- Moment.js -->
+        <script src="../assets/vendor/moment/min/moment.min.js"></script>
+        <script src="../assets/vendor/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+        <!-- Isotope -->
+        <script src="../assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="../assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <!-- Jarallax -->
+        <script src="../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+        <script src="../assets/vendor/jarallax/dist/jarallax-video.min.js"></script>
+        <!-- Fancybox -->
+        <script src="../assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+        <!-- Themebau -->
+        <script src="../assets/js/themebau.min.js"></script>
+        <!-- END: Scripts -->
+    </body>
+</html>

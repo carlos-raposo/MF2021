@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Museu da Fala | Mário Viegas</title>
+        <meta name="description" content="Themebau">
+        <meta name="author" content="RunWebRun">
+        <link rel="icon" type="image/png" href="../../assets/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Google Fonts -->
+        <link href="./Themebau _ Carousel Dark_files/css2" rel="stylesheet">
+        <!-- START: Styles -->
+        <!-- Swiper -->
+        <link rel="stylesheet" href="../../assets/vendor/swiper/dist/css/swiper.min.css">
+        <!-- Fancybox -->
+        <link rel="stylesheet" href="../../assets/vendor/fancybox/dist/jquery.fancybox.min.css">
+        <!-- Themebau -->
+        <link rel="stylesheet" href="../../assets/css/themebau.min.css">
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="../../assets/css/custom.css">
+		<!-- Cubo Styles -->
+		<link rel="stylesheet" media="only screen and (min-device-width : 320px) and (max-device-width : 480px)" href="cubo300.css">
+		<link rel="stylesheet" media="only screen and (min-width : 321px)" href="cubo300.css">
+		<link rel="stylesheet" media="only screen and (max-width : 320px)" href="cubo300.css">
+		<link rel="stylesheet" media="only screen (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3)" href="cubo300.css">
+		<link rel="stylesheet" media="only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3)" href="cubo300.css">
+		<link rel="stylesheet" media="only screen and (min-device-width: 768px)and (max-device-width : 1024px)" href="cubo400.css">
+		<link rel="stylesheet" media="only screen and (min-width : 1224px)" href="cubo500.css">
+		<link rel="stylesheet" media="only screen and (min-width : 1824px" href="cubo500.css">
+		
+        <!-- END: Styles -->
+        
+		<style>
+		.card-portfolio.card-hover-bar .card-img-overlay {
+			padding: 10px 5px;}
+		.card-portfolio .card-img-overlay {
+			justify-content: start;
+			top: -25px;}
+		.h2 {font-weight: bolder;}
+		.text-white {color: #0a0a0a!important;}
+		.card .card-title {
+			color: #0a0a0a;
+		}
+		
+		.row.gv-4>[class*=col] {
+			padding-top: 4px;
+		}
+
+		.row.gh-1>[class*=col] {
+			padding-left: 4px;
+		}
+		
+		.navbar-mobile .navbar-body .navbar-nav .nav-social {
+			margin-top:30px}
+			
+		.nav-social .nav-item {    
+			padding-right: 20px;}	
+		.footer-font {
+			font-size: .900em;
+			color: #;
+		}
+		
+		.footer-font p {margin-bottom:0.5em;
+		}
+		
+		p.text {margin-bottom: 0.2em;}
+		
+		.text:hover {
+		color:#4db151;
+		text-shadow: 0 0 3px #fffff, 0 0 5px #ffffff;
+		}
+		.text {
+		-webkit-transition: all 0.7s ease;
+		transition: all 0.7s ease;
+		}
+		
+		@media (max-width: 619.98px) {
+			.h2, h2 {
+				margin-bottom: 1.1em;
+				font-size: 9vw;
+			}
+		}
+		
+		@media only screen
+			and (min-width : 1224px){	
+			p.text {font-size:20px}
+			}
+		
+		@media only screen
+			and (min-width : 1824px){	
+			p.text {font-size:24px}
+			}
+		
+		</style>
+    </head>
+    <body class="bg-dark cursor-enabled navbar-show">
+        <header class="navbar navbar-top navbar-expand navbar-dark navbar-fixed">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">
+                    <p style="padding-top:30px">museudafala</p>      
+                <a class="navbar-toggle" href="#navbar-mobile-style-2" data-fancybox="" data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="../../index.html" class="nav-link">
+                            <span class="nav-link-name">início</span>
+                        </a>
+                    </li>
+                    <li class="nav-item navbar-dropdown">
+                        <a href="#exposicoes" class="nav-link">
+                            <span class="nav-link-name">exposições</span>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" id="exposicoes">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Crioulo</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Literatura de Cordel</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">O Cante Alentejano</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Drummond</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Herberto Helder</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../clarice/index.html" class="nav-link">
+                                        <span class="nav-link-name">Clarice Lispector</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Crioulo</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Crioulo</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item navbar-dropdown">
+                        <a href="#recursos" class="nav-link">
+                            <span class="nav-link-name">recursos</span>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" id="recursos">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item">
+                                    <a href="https://runwebrun.com/themebau/about-us.html" class="nav-link">
+                                        <span class="nav-link-name">81 museus na internet</span>
+                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://runwebrun.com/themebau/services.html" class="nav-link">
+                                        <span class="nav-link-name">cronologia</span>
+                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+					<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center text-white">
+						<li class="nav-item">
+							<a href="https://facebook.com/museudafala" class="nav-link">
+								<svg width="7" height="15" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8.17421 3.65234H9.99996V0.154687C9.68557 0.107422 8.60224 0 7.34088 0C4.70831 0 2.90529 1.82188 2.90529 5.16914V8.25H0V12.1602H2.90529V22H6.46588V12.1602H9.25375L9.69693 8.25H6.46588V5.55586C6.46588 4.42578 6.7424 3.65234 8.17421 3.65234Z" fill="currentColor"></path>
+								</svg>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="https://twitter.com/museu_da_fala" class="nav-link">
+								<svg width="17" height="14" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M22.0706 5.51356C22.086 5.73504 22.086 5.95656 22.086 6.17804C22.086 12.9334 17.0783 20.7172 7.92575 20.7172C5.10601 20.7172 2.48661 19.8787 0.283203 18.4232C0.683835 18.4707 1.069 18.4865 1.48505 18.4865C3.81167 18.4865 5.95347 17.6797 7.6638 16.3033C5.47581 16.2558 3.64221 14.7845 3.01046 12.7594C3.31865 12.8069 3.6268 12.8385 3.9504 12.8385C4.39723 12.8385 4.84411 12.7752 5.2601 12.6645C2.97968 12.1898 1.2693 10.1332 1.2693 7.64935V7.58609C1.93183 7.96579 2.70231 8.20309 3.5189 8.2347C2.17837 7.31709 1.30013 5.75086 1.30013 3.97894C1.30013 3.02972 1.54661 2.15959 1.97807 1.40019C4.42801 4.50103 8.11063 6.52604 12.24 6.74756C12.163 6.36787 12.1168 5.97239 12.1168 5.57687C12.1168 2.76076 14.3356 0.466797 17.0937 0.466797C18.5266 0.466797 19.8209 1.0838 20.73 2.0805C21.8548 1.85902 22.9334 1.43184 23.8887 0.846495C23.5189 2.03307 22.7331 3.02977 21.7008 3.66255C22.7023 3.55186 23.673 3.26702 24.5667 2.87155C23.8888 3.88403 23.0413 4.78577 22.0706 5.51356Z" fill="currentColor"></path>
+								</svg>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<svg width="15" height="15" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.2827 5.3166C8.24087 5.3166 5.78732 7.8148 5.78732 10.912C5.78732 14.0092 8.24087 16.5074 11.2827 16.5074C14.3245 16.5074 16.7781 14.0092 16.7781 10.912C16.7781 7.8148 14.3245 5.3166 11.2827 5.3166ZM11.2827 14.5497C9.31698 14.5497 7.70998 12.9183 7.70998 10.912C7.70998 8.90563 9.3122 7.27425 11.2827 7.27425C13.2532 7.27425 14.8554 8.90563 14.8554 10.912C14.8554 12.9183 13.2484 14.5497 11.2827 14.5497ZM18.2846 5.08772C18.2846 5.81331 17.7107 6.39282 17.0029 6.39282C16.2902 6.39282 15.7211 5.80844 15.7211 5.08772C15.7211 4.36699 16.295 3.78261 17.0029 3.78261C17.7107 3.78261 18.2846 4.36699 18.2846 5.08772ZM21.9243 6.4123C21.843 4.66404 21.4508 3.11545 20.1929 1.83956C18.9399 0.563678 17.419 0.164355 15.7019 0.0766992C13.9323 -0.0255664 8.62827 -0.0255664 6.85865 0.0766992C5.14643 0.159486 3.62552 0.558809 2.36766 1.83469C1.10979 3.11058 0.722392 4.65917 0.636302 6.40743C0.535865 8.20925 0.535865 13.6098 0.636302 15.4117C0.717609 17.1599 1.10979 18.7085 2.36766 19.9844C3.62552 21.2603 5.14165 21.6596 6.85865 21.7473C8.62827 21.8495 13.9323 21.8495 15.7019 21.7473C17.419 21.6645 18.9399 21.2652 20.1929 19.9844C21.446 18.7085 21.8382 17.1599 21.9243 15.4117C22.0247 13.6098 22.0247 8.21412 21.9243 6.4123ZM19.6381 17.345C19.2651 18.2995 18.5429 19.0348 17.6007 19.4195C16.1898 19.9893 12.8419 19.8578 11.2827 19.8578C9.72352 19.8578 6.37081 19.9844 4.96469 19.4195C4.02727 19.0397 3.30507 18.3043 2.92724 17.345C2.36766 15.9084 2.49679 12.4995 2.49679 10.912C2.49679 9.32443 2.37244 5.91071 2.92724 4.47899C3.30029 3.52451 4.02248 2.78917 4.96469 2.40446C6.37559 1.83469 9.72352 1.96618 11.2827 1.96618C12.8419 1.96618 16.1946 1.83956 17.6007 2.40446C18.5381 2.7843 19.2603 3.51964 19.6381 4.47899C20.1977 5.91558 20.0686 9.32443 20.0686 10.912C20.0686 12.4995 20.1977 15.9133 19.6381 17.345Z" fill="currentColor"></path>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</ul>	
+            </div>
+        </header>
+        <!-- style 2 -->
+        <div class="navbar navbar-mobile navbar-mobile-style-2 navbar-dark" id="navbar-mobile-style-2">
+            <div class="shape justify-content-end">
+                <svg data-rellax-speed="0" width="544" height="362" viewBox="0 0 544 362" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(0px, 0px, 0px);">
+                    <circle cx="320.5" cy="41.5" r="320.5" fill=" #202020"></circle>
+                </svg>
+            </div>
+            <div class="navbar-head">
+                <div class="container">
+                    <a class="navbar-brand" href="../../index.html">
+                        <img width="107" src="../assets/images/logo.svg" alt="">
+                    </a>
+                    <a class="navbar-toggle" href="#" data-fancybox-close>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row gh-1 justify-content-center">
+                    <div class="col-12 col-md-7 col-lg-5 col-xl-4">
+                        <div class="navbar-body">
+                            <ul class="nav navbar-nav navbar-nav-collapse">
+                                <li class="nav-item">
+                                    <a href="../../index.html" class="nav-link collapsed">
+                                        <span class="nav-link-name">início</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item navbar-collapse">
+                                    <a href="#navbarCollapseProjects" class="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseProjects">
+                                        <span class="nav-link-name">exposições</span>
+                                        <svg class="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 11L6 6L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                    <div class="navbar-collapse-menu collapse" id="navbarCollapseProjects">
+                                        <ul class="nav navbar-nav">
+                                            <li class="nav-item">
+                                                <a href="../crioulo/index.html" class="nav-link collapsed>
+                                                    <span class="nav-link-name">Crioulo</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../cordel/index.html" class="nav-link collapsed>
+                                                    <span class="nav-link-name">Literatura de Cordel</span>
+                                                </a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="../clarice/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Clarice Lispector</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../cante/index.html" class="nav-link collapsed>
+                                                    <span class="nav-link-name">O Cante Alentejano</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../drummond/index.html" class="nav-link collapsed>
+                                                    <span class="nav-link-name">Drummond de Andrade</span>
+                                                </a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="#" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Fernando Pessoa</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../herbertohelder/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Herberto Helder</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Mário Viegas</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../monossilabico/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Monossilábico</span>
+                                                </a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="../nheengatu/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Nheengatu</span>
+                                                </a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="../sonsanimais/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Os Sons dos Animais</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item navbar-collapse">
+                                    <a href="#navbarCollapsePages" class="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapsePages">
+                                        <span class="nav-link-name">recursos</span>
+                                        <svg class="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 11L6 6L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                    <div class="navbar-collapse-menu collapse" id="navbarCollapsePages">
+                                        <ul class="nav navbar-nav">
+                                            <li class="nav-item">
+                                                <a href="../../recursos/guia/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">81 museus na internet</span>
+                                                </a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="../../recursos/cronologia/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">cronologia</span>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <span class="nav-link-name">loja</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../../cafe/index.html" class="nav-link">
+                                        <span class="nav-link-name">café</span>
+                                    </a>
+                                </li>
+								<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center">
+									<li class="nav-item">
+										<a href="https://facebook.com/runwebrun" class="nav-link">
+											<svg width="12" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.17421 3.65234H9.99996V0.154687C9.68557 0.107422 8.60224 0 7.34088 0C4.70831 0 2.90529 1.82188 2.90529 5.16914V8.25H0V12.1602H2.90529V22H6.46588V12.1602H9.25375L9.69693 8.25H6.46588V5.55586C6.46588 4.42578 6.7424 3.65234 8.17421 3.65234Z" fill="currentColor" />
+											</svg>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="https://twitter.com/runwebrun" class="nav-link">
+											<svg width="30" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M22.0706 5.51356C22.086 5.73504 22.086 5.95656 22.086 6.17804C22.086 12.9334 17.0783 20.7172 7.92575 20.7172C5.10601 20.7172 2.48661 19.8787 0.283203 18.4232C0.683835 18.4707 1.069 18.4865 1.48505 18.4865C3.81167 18.4865 5.95347 17.6797 7.6638 16.3033C5.47581 16.2558 3.64221 14.7845 3.01046 12.7594C3.31865 12.8069 3.6268 12.8385 3.9504 12.8385C4.39723 12.8385 4.84411 12.7752 5.2601 12.6645C2.97968 12.1898 1.2693 10.1332 1.2693 7.64935V7.58609C1.93183 7.96579 2.70231 8.20309 3.5189 8.2347C2.17837 7.31709 1.30013 5.75086 1.30013 3.97894C1.30013 3.02972 1.54661 2.15959 1.97807 1.40019C4.42801 4.50103 8.11063 6.52604 12.24 6.74756C12.163 6.36787 12.1168 5.97239 12.1168 5.57687C12.1168 2.76076 14.3356 0.466797 17.0937 0.466797C18.5266 0.466797 19.8209 1.0838 20.73 2.0805C21.8548 1.85902 22.9334 1.43184 23.8887 0.846495C23.5189 2.03307 22.7331 3.02977 21.7008 3.66255C22.7023 3.55186 23.673 3.26702 24.5667 2.87155C23.8888 3.88403 23.0413 4.78577 22.0706 5.51356Z" fill="currentColor" />
+											</svg>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="https://instagram.com/runwebrun" class="nav-link">
+											<svg width="27" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M11.2827 5.3166C8.24087 5.3166 5.78732 7.8148 5.78732 10.912C5.78732 14.0092 8.24087 16.5074 11.2827 16.5074C14.3245 16.5074 16.7781 14.0092 16.7781 10.912C16.7781 7.8148 14.3245 5.3166 11.2827 5.3166ZM11.2827 14.5497C9.31698 14.5497 7.70998 12.9183 7.70998 10.912C7.70998 8.90563 9.3122 7.27425 11.2827 7.27425C13.2532 7.27425 14.8554 8.90563 14.8554 10.912C14.8554 12.9183 13.2484 14.5497 11.2827 14.5497ZM18.2846 5.08772C18.2846 5.81331 17.7107 6.39282 17.0029 6.39282C16.2902 6.39282 15.7211 5.80844 15.7211 5.08772C15.7211 4.36699 16.295 3.78261 17.0029 3.78261C17.7107 3.78261 18.2846 4.36699 18.2846 5.08772ZM21.9243 6.4123C21.843 4.66404 21.4508 3.11545 20.1929 1.83956C18.9399 0.563678 17.419 0.164355 15.7019 0.0766992C13.9323 -0.0255664 8.62827 -0.0255664 6.85865 0.0766992C5.14643 0.159486 3.62552 0.558809 2.36766 1.83469C1.10979 3.11058 0.722392 4.65917 0.636302 6.40743C0.535865 8.20925 0.535865 13.6098 0.636302 15.4117C0.717609 17.1599 1.10979 18.7085 2.36766 19.9844C3.62552 21.2603 5.14165 21.6596 6.85865 21.7473C8.62827 21.8495 13.9323 21.8495 15.7019 21.7473C17.419 21.6645 18.9399 21.2652 20.1929 19.9844C21.446 18.7085 21.8382 17.1599 21.9243 15.4117C22.0247 13.6098 22.0247 8.21412 21.9243 6.4123ZM19.6381 17.345C19.2651 18.2995 18.5429 19.0348 17.6007 19.4195C16.1898 19.9893 12.8419 19.8578 11.2827 19.8578C9.72352 19.8578 6.37081 19.9844 4.96469 19.4195C4.02727 19.0397 3.30507 18.3043 2.92724 17.345C2.36766 15.9084 2.49679 12.4995 2.49679 10.912C2.49679 9.32443 2.37244 5.91071 2.92724 4.47899C3.30029 3.52451 4.02248 2.78917 4.96469 2.40446C6.37559 1.83469 9.72352 1.96618 11.2827 1.96618C12.8419 1.96618 16.1946 1.83956 17.6007 2.40446C18.5381 2.7843 19.2603 3.51964 19.6381 4.47899C20.1977 5.91558 20.0686 9.32443 20.0686 10.912C20.0686 12.4995 20.1977 15.9133 19.6381 17.345Z" fill="currentColor" />
+											</svg>
+										</a>
+									</li>
+								</ul>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div class="content-wrap">
+            
+            <div class="pt-160 pb-20 text-center">
+                <div class="container">
+                    <div class="scene" style="margin:0 auto;">
+						<div class="cube">
+							<div class="cube__face cube__face--front"><h1 style=" font-size:45px; text-align:center; color:ivory; text-shadow: 20px 20px 45px purple;"><br><br> Rode o cubo selecionando um dos lados</h1></div>
+							<div class="cube__face cube__face--back"><iframe src="https://www.youtube.com/embed/VnQSA-Kcbno?controls=0" frameborder="0" width="100%" height="100%" style="opacity:0.9"></iframe></div>
+							<div class="cube__face cube__face--right"><iframe src="https://www.youtube.com/embed/hJCPMNwktzQ?controls=0" frameborder="0" width="100%" height="100%" style="opacity:0.9"></iframe></div>
+							<div class="cube__face cube__face--left"><iframe src="https://www.youtube.com/embed/bm0JxtLdZfk?start=13&controls=0&autoplay=1" frameborder="0" width="100%" height="100%" style="opacity:0.9"></iframe></div>
+							<div class="cube__face cube__face--top"><iframe src="https://www.youtube.com/embed/YzN9uqb97bA?controls=0" frameborder="0" width="100%" height="100%" style="opacity:0.9"></iframe></div>
+							<div class="cube__face cube__face--bottom"><iframe src="https://www.youtube.com/embed/nwB1EotE994?controls=0" frameborder="0" allowfullscreen width="100%" height="100%" style="opacity:0.9"></iframe></div>
+						</div>
+					</div>
+							<p class="radio-group" style="text-align:center; margin-top:30px; color: #ffffff;">
+							<label>
+							<input type="radio" name="rotate-cube-side" value="front" checked /> frente
+							</label>
+							<label>
+							<input type="radio" name="rotate-cube-side" value="right" /> direita
+							</label>
+							<label>
+							<input type="radio" name="rotate-cube-side" value="back" /> trás
+							</label>
+							<label>
+							<input type="radio" name="rotate-cube-side" value="left" /> esquerda
+							</label>
+							<label>
+							<input type="radio" name="rotate-cube-side" value="top" /> cima
+							</label>
+							<label>
+							<input type="radio" name="rotate-cube-side" value="bottom" /> baixo
+							</label>
+							</p>
+							<script src="cubo.js"></script>
+											
+				</div>
+			</div>
+			
+			<div class="container">
+			 
+			 <div class="col-12 isotope-item" data-filters="design">
+                            <div class="card card-block d-flex verso ">
+								
+								<div style="font-family:courier; color:#fff; padding-bottom:50px;">                                                  
+									<h2 class="poema" style="padding-top:20px; color:white; text-shadow: 1px 1px 3px magenta; text-align:center"> Mário Viegas</h2>
+									<p class="text" style="padding-top:40px;">  António Mário Lopes Pereira Viegas(Santarém, 10 de Novembro de 1948 — Lisboa, 1 de Abril de 1996) foi um actor, encenador e recitador português.</p>
+									<p class="text">Despertou para o teatro ainda aluno da Faculdade de Letras da Universidade de Lisboa. Daí passou para a Escola de Teatro do Conservatório Nacional, tendo a sua estreia profissional no Teatro Experimental de Cascais.  </p>
+									<p class="text">Foi fundador de três companhias teatrais (a última das quais a Companhia Teatral do Chiado) e actuou em Moçambique, Macau, Brasil, Países Baixos e Espanha. Notabilizou-se como encenador, tendo dirigido obras de autores clássicos como Samuel Beckett, Eduardo De Filippo, Anton Tchekov, August Strindberg, Luigi Pirandello ou Peter Shaffer. Pela sua actividade foi distinguido, diversas vezes, pela Casa da Imprensa, pela Associação Portuguesa de Críticos de Teatro e pela Secretaria de Estado da Cultura, que lhe atribuiu o Prémio Garrett (1987).</p>
+									<p class="text"> No estrangeiro foi premiado no Festival de Teatro de Sitges (1979), com a peça D. João VI de Hélder Costa, e no Festival Europeu de Cinema Humorístico da Corunha (1978), com filme O Rei das Berlengas de Artur Semedo. O seu último êxito teatral foi a peça Europa Não! Portugal Nunca (1995).   </p>
+									<p class="text">A sua carreira no cinema começou com o filme O Funeral do Patrão (1975, Eduardo Geada). No cinema participou em mais de quinze películas, entre elas O Rei das Berlengas de Artur Semedo (1978), Azul, Azul de José de Sá Caetano (1986), Repórter X de José Nascimento (1987), A Divina Comédia de Manoel de Oliveira (1991), Rosa Negra de Margarida Gil (1992), Sostiene Pereira de Roberto Faenza (1996), onde contracenou com Marcello Mastroianni. Teve uma colaboração regular com José Fonseca e Costa — Kilas, o Mau da Fita (1981), Sem Sombra de Pecado (1983), A Mulher do Próximo (1988) e Os Cornos de Cronos (1991).</p>
+									<p class="text">Deu-se a conhecer pelos seus recitais de poesia, gravando uma discografia de catorze títulos, com poemas de Fernando Pessoa, Luís de Camões, Cesário Verde, Camilo Pessanha, Jorge de Sena, Ruy Belo, Eugénio de Andrade, Bertolt Brecht, Pablo Neruda, entre outros. Divulgou nomes como Pedro Oom ou Mário-Henrique Leiria.</p>
+									<p class="text">Na televisão contribuiu igualmente para a divulgação da poesia portuguesa, particularmente com duas séries dos programas Palavras Ditas (1984) e Palavras Vivas (1991). Foi colunista do Diário Económico, onde escreveu sobre teatro e humor. Publicou uma autobiografia, intitulada Auto-Photo Biografia (1995).	</p>
+									<p class="text">Em 1995 candidatou-se a deputado, como independente nas listas da União Democrática Popular, e à Presidência da República Portuguesa (também apoiado pela UDP), adoptando o slogan O sonho ao poder, e buscando apoio no meio universitário lisboeta.</p>
+									<p class="text">Recebeu a Medalha de Mérito do Município de Santarém (1993) e o título de Comendador da Ordem do Infante D. Henrique (1994), das mãos de Mário Soares. Seu jazigo está no Cemitério dos Prazeres, em Lisboa. Em 2001 o Museu Nacional do Teatro dedicou-lhe a exposição Um Rapaz Chamado Mário Viegas.</p>
+									<p class="text" style="text-decoration:underline">Gravações audio</p>
+									<p class="text">Palavras Ditas, 1972, LP Orfeu STAT 011.<br>
+									O Operário em Construção e 3 Poemas de Brecht, 1975, EP Orfeu ATEP 6593.<br>
+									O Operário em Construção, 1975, LP Orfeu STAT 091.<br>
+									Pretextos Para Dizer..., 1978, LP Orfeu STAT 066.<br>
+									Humores, 1980, 2 LP Orfeu STAT 100.<br>
+									O Guardador de Rebanhos, Alberto Caeiro - Fernando Pessoa, 1983, 2 Vinyl Sassetti DIAP 070/2<br>
+									No Centenário de Almada Negreiros, 1993, CD Orfeu 35001.<br>
+									O Operário em Construção / País de Abril, Abril 2011, 2 CD Orfeu. </p>
+									<p class="text" style="text-decoration:underline">Filmografia </p>
+									<p class="text">1976, O Funeral do Patrão.<br>
+									1978, O Rei das Berlengas (D. Lucas Telmo de Midões).<br>
+									1979, D. João VI (Série televisiva).<br>
+									1980, Kilas, o Mau da Fita (Rui Tadeu - aliás Kilas).<br>
+									1980, A Culpa (Adriano).<br>
+									1983, Sem Sombra de Pecado (Aspirante Henrique Sousa Andrade).<br>
+									1985, A Boa Pessoa de Setzuan (Telefilme).<br>
+									1986, 2002 Odisseia no Terreiro do Paço (Telefilme).<br>
+									1986, Filmezinhos de Sam (Telefilmes).<br>
+									1986, Azul, Azul (Mário).<br>
+									1987, Repórter X (Sete Línguas).<br>
+									1987, Balada da Praia dos Cães (Voz do Capitão Dantas).<br>
+									1988, A Mulher do Próximo (Henrique).<br>
+									1989, Rua Sésamo (Série televisiva).<br>
+									1990, Segno di Fuoco (usurário).<br>
+									1991, O Suicidário (Telefilme).<br>
+									1991, Napoléon et l'Europe (Série televisiva).<br>
+									1991, Os Cornos de Cronos (Professor Álvaro).<br>
+									1991, A Divina Comédia (Filósofo).<br>
+									1992, Contradições (Série televisiva).<br>
+									1992, Rosa Negra (Barriga d'Água).<br>
+									1994, Fado Lusitano (Narrador).<br>
+									1995, Afirma Pereira (Editor).<br>
+									1996, O Judeu (D. João VI) (Telefilme). </p>			              
+										</div>
+									</div>
+								</div>
+			
+			</div>
+            
+        </div>
+		<footer class="footer bg-black shape-parent overflow-hidden mt-90" style="color:white; text-align: center;">
+			<div class="container mb-n5">
+				<div class="row justify-content-between gh-1  mb-15">
+					<div class="col-12 col-lg-3 footer-font">
+						<p>CONTATOS</p>
+					</div>
+					<div class="col-12 col-lg-3 footer-font">
+						<p>Termos Legais</p>
+					</div>
+					<div class="col-12 col-lg-3 footer-font">
+						<p>Acessibilidade</p>
+					</div>
+					<div class="col-12 col-lg-3">
+						<div class="footer-copyright">© 2016-2021 - Museu da Fala</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      
+		<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+		<script src="bootstrap.bundle.js"></script>
+         <!-- START: Scripts -->
+        <!-- Object Fit Polyfill -->
+        <script src="../../assets/vendor/object-fit-images/dist/ofi.min.js"></script>
+        <!-- Popper -->
+        <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Bootstrap Validator -->
+        <script src="../../assets/vendor/bootstrap-validator/dist/validator.min.js"></script>
+        <!-- ImagesLoaded -->
+        <script src="../../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <!-- Swiper -->
+        <script src="../../assets/vendor/swiper/dist/js/swiper.min.js"></script>
+        <!-- Animejs -->
+        <script src="../../assets/vendor/animejs/lib/anime.min.js"></script>
+        <!-- Rellax -->
+        <script src="../../assets/vendor/rellax/rellax.min.js"></script>
+        <!-- Countdown -->
+        <script src="../../assets/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+        <!-- Moment.js -->
+        <script src="../../assets/vendor/moment/min/moment.min.js"></script>
+        <script src="../../assets/vendor/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+        <!-- Isotope -->
+        <script src="../../assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="../../assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <!-- Jarallax -->
+        <script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+        <script src="../../assets/vendor/jarallax/dist/jarallax-video.min.js"></script>
+        <!-- Fancybox -->
+        <script src="../../assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+        <!-- Themebau -->
+        <script src="../../assets/js/themebau.min.js"></script>
+        <!-- END: Scripts -->
+    
+</body></html>
+

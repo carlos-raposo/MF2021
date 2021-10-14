@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Museu da Fala | DRUMMOND</title>
+        <meta name="description" content="Themebau">
+        <meta name="author" content="RunWebRun">
+        <link rel="icon" type="image/png" href="../../assets/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Google Fonts -->
+        <link href="./Themebau _ Carousel Dark_files/css2" rel="stylesheet">
+        <!-- START: Styles -->
+        <!-- Swiper -->
+        <link rel="stylesheet" href="../../assets/vendor/swiper/dist/css/swiper.min.css">
+        <!-- Fancybox -->
+        <link rel="stylesheet" href="../../assets/vendor/fancybox/dist/jquery.fancybox.min.css">
+        <!-- Themebau -->
+        <link rel="stylesheet" href="../../assets/css/themebau.min.css">
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="../../assets/css/custom.css">
+        <!-- END: Styles -->
+        <!-- jQuery -->
+        <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
+		<script>
+			// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+			// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+			//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+			//** Call: uniquevar.playclip() to play sound
+
+			var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+				"mp3": "audio/mpeg",
+				"mp4": "audio/mp4",
+				"ogg": "audio/ogg",
+				"wav": "audio/wav"
+			}
+
+			function createsoundbite(sound){
+				var html5audio=document.createElement('audio')
+				if (html5audio.canPlayType){ //check support for HTML5 audio
+					for (var i=0; i<arguments.length; i++){
+						var sourceel=document.createElement('source')
+						sourceel.setAttribute('src', arguments[i])
+						if (arguments[i].match(/\.(\w+)$/i))
+							sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+						html5audio.appendChild(sourceel)
+					}
+					html5audio.load()
+					html5audio.playclip=function(){
+						html5audio.pause()
+						html5audio.currentTime=0
+						html5audio.play()
+					}
+					return html5audio
+				}
+				else{
+					return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+				}
+			}
+
+			//Initialize two sound clips with 1 fallback file each:
+
+			var pedrapt=createsoundbite("drummond/sons/pedrapt.wav", "sons/pedrapt.mp3")
+			var pedraen=createsoundbite("drummond/sons/pedraen.wav", "sons/pedraen.mp3")
+			var pedradn=createsoundbite("drummond/sons/pedradn.wav", "sons/pedradn.mp3")
+			var pedrafr=createsoundbite("drummond/sons/pedrafr.wav", "sons/pedrafr.mp3")
+			var pedrahe=createsoundbite("drummond/sons/pedrahe.wav", "sons/pedrahe.mp3")
+			var pedrait=createsoundbite("drummond/sons/pedrait.wav", "sons/pedrait.mp3")
+			var pedrahl=createsoundbite("drummond/sons/pedrahl.wav", "sons/pedrahl.mp3")
+			var pedrahg=createsoundbite("drummond/sons/pedrahg.wav", "sons/pedrahg.mp3")
+			var pedradt=createsoundbite("drummond/sons/pedradt.wav", "sons/pedradt.mp3")
+			var pedralt=createsoundbite("drummond/sons/pedralt.wav", "sons/pedralt.mp3")
+			var pedraes=createsoundbite("drummond/sons/pedraes.wav", "sons/pedraes.mp3")
+			var pedratp=createsoundbite("drummond/sons/pedratp.wav", "sons/pedratp.mp3")
+
+		</script>
+		
+		<style>
+		.card-portfolio.card-hover-bar .card-img-overlay {
+			padding: 10px 5px;}
+		.card-portfolio .card-img-overlay {
+			justify-content: start;
+			top: -25px;}
+		.h2 {font-weight: bolder;}
+		.text-white {color: #0a0a0a!important;}
+		.card .card-title {
+			color: #0a0a0a;
+		}
+		
+		.row.gv-4>[class*=col] {
+			padding-top: 4px;
+		}
+
+		.row.gh-1>[class*=col] {
+			padding-left: 4px;
+		}
+		
+		.navbar-mobile .navbar-body .navbar-nav .nav-social {
+			margin-top:30px}
+			
+		.nav-social .nav-item {    
+			padding-right: 20px;}	
+		.footer-font {
+			font-size: .900em;
+			color: #;
+		}
+		
+		.footer-font p {margin-bottom:0.5em;
+		}
+		
+		@media (max-width: 619.98px) {
+			.h2, h2 {
+				margin-bottom: 1.1em;
+				font-size: 9vw;
+			}
+		}		
+		</style>
+    </head>
+    <body class="bg-dark cursor-enabled navbar-show">
+        <header class="navbar navbar-top navbar-expand navbar-dark navbar-fixed">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">
+                    <p style="padding-top:30px">museudafala</p>      
+                <a class="navbar-toggle" href="#navbar-mobile-style-2" data-fancybox="" data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="../../index.html" class="nav-link">
+                            <span class="nav-link-name">início</span>
+                        </a>
+                    </li>
+                    <li class="nav-item navbar-dropdown">
+                        <a href="#exposicoes" class="nav-link">
+                            <span class="nav-link-name">exposições</span>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" id="exposicoes">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Crioulo</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Literatura de Cordel</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">O Cante Alentejano</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Drummond</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Herberto Helder</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../clarice/index.html" class="nav-link">
+                                        <span class="nav-link-name">Clarice Lispector</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Crioulo</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../index_crioulo.html" class="nav-link">
+                                        <span class="nav-link-name">Crioulo</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item navbar-dropdown">
+                        <a href="#recursos" class="nav-link">
+                            <span class="nav-link-name">recursos</span>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" id="recursos">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item">
+                                    <a href="https://runwebrun.com/themebau/about-us.html" class="nav-link">
+                                        <span class="nav-link-name">81 museus na internet</span>
+                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="https://runwebrun.com/themebau/services.html" class="nav-link">
+                                        <span class="nav-link-name">cronologia</span>
+                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+					<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center text-white">
+						<li class="nav-item">
+							<a href="https://facebook.com/museudafala" class="nav-link">
+								<svg width="7" height="15" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8.17421 3.65234H9.99996V0.154687C9.68557 0.107422 8.60224 0 7.34088 0C4.70831 0 2.90529 1.82188 2.90529 5.16914V8.25H0V12.1602H2.90529V22H6.46588V12.1602H9.25375L9.69693 8.25H6.46588V5.55586C6.46588 4.42578 6.7424 3.65234 8.17421 3.65234Z" fill="currentColor"></path>
+								</svg>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="https://twitter.com/museu_da_fala" class="nav-link">
+								<svg width="17" height="14" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M22.0706 5.51356C22.086 5.73504 22.086 5.95656 22.086 6.17804C22.086 12.9334 17.0783 20.7172 7.92575 20.7172C5.10601 20.7172 2.48661 19.8787 0.283203 18.4232C0.683835 18.4707 1.069 18.4865 1.48505 18.4865C3.81167 18.4865 5.95347 17.6797 7.6638 16.3033C5.47581 16.2558 3.64221 14.7845 3.01046 12.7594C3.31865 12.8069 3.6268 12.8385 3.9504 12.8385C4.39723 12.8385 4.84411 12.7752 5.2601 12.6645C2.97968 12.1898 1.2693 10.1332 1.2693 7.64935V7.58609C1.93183 7.96579 2.70231 8.20309 3.5189 8.2347C2.17837 7.31709 1.30013 5.75086 1.30013 3.97894C1.30013 3.02972 1.54661 2.15959 1.97807 1.40019C4.42801 4.50103 8.11063 6.52604 12.24 6.74756C12.163 6.36787 12.1168 5.97239 12.1168 5.57687C12.1168 2.76076 14.3356 0.466797 17.0937 0.466797C18.5266 0.466797 19.8209 1.0838 20.73 2.0805C21.8548 1.85902 22.9334 1.43184 23.8887 0.846495C23.5189 2.03307 22.7331 3.02977 21.7008 3.66255C22.7023 3.55186 23.673 3.26702 24.5667 2.87155C23.8888 3.88403 23.0413 4.78577 22.0706 5.51356Z" fill="currentColor"></path>
+								</svg>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<svg width="15" height="15" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.2827 5.3166C8.24087 5.3166 5.78732 7.8148 5.78732 10.912C5.78732 14.0092 8.24087 16.5074 11.2827 16.5074C14.3245 16.5074 16.7781 14.0092 16.7781 10.912C16.7781 7.8148 14.3245 5.3166 11.2827 5.3166ZM11.2827 14.5497C9.31698 14.5497 7.70998 12.9183 7.70998 10.912C7.70998 8.90563 9.3122 7.27425 11.2827 7.27425C13.2532 7.27425 14.8554 8.90563 14.8554 10.912C14.8554 12.9183 13.2484 14.5497 11.2827 14.5497ZM18.2846 5.08772C18.2846 5.81331 17.7107 6.39282 17.0029 6.39282C16.2902 6.39282 15.7211 5.80844 15.7211 5.08772C15.7211 4.36699 16.295 3.78261 17.0029 3.78261C17.7107 3.78261 18.2846 4.36699 18.2846 5.08772ZM21.9243 6.4123C21.843 4.66404 21.4508 3.11545 20.1929 1.83956C18.9399 0.563678 17.419 0.164355 15.7019 0.0766992C13.9323 -0.0255664 8.62827 -0.0255664 6.85865 0.0766992C5.14643 0.159486 3.62552 0.558809 2.36766 1.83469C1.10979 3.11058 0.722392 4.65917 0.636302 6.40743C0.535865 8.20925 0.535865 13.6098 0.636302 15.4117C0.717609 17.1599 1.10979 18.7085 2.36766 19.9844C3.62552 21.2603 5.14165 21.6596 6.85865 21.7473C8.62827 21.8495 13.9323 21.8495 15.7019 21.7473C17.419 21.6645 18.9399 21.2652 20.1929 19.9844C21.446 18.7085 21.8382 17.1599 21.9243 15.4117C22.0247 13.6098 22.0247 8.21412 21.9243 6.4123ZM19.6381 17.345C19.2651 18.2995 18.5429 19.0348 17.6007 19.4195C16.1898 19.9893 12.8419 19.8578 11.2827 19.8578C9.72352 19.8578 6.37081 19.9844 4.96469 19.4195C4.02727 19.0397 3.30507 18.3043 2.92724 17.345C2.36766 15.9084 2.49679 12.4995 2.49679 10.912C2.49679 9.32443 2.37244 5.91071 2.92724 4.47899C3.30029 3.52451 4.02248 2.78917 4.96469 2.40446C6.37559 1.83469 9.72352 1.96618 11.2827 1.96618C12.8419 1.96618 16.1946 1.83956 17.6007 2.40446C18.5381 2.7843 19.2603 3.51964 19.6381 4.47899C20.1977 5.91558 20.0686 9.32443 20.0686 10.912C20.0686 12.4995 20.1977 15.9133 19.6381 17.345Z" fill="currentColor"></path>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</ul>	
+            </div>
+        </header>
+        <!-- style 2 -->
+        <div class="navbar navbar-mobile navbar-mobile-style-2 navbar-dark" id="navbar-mobile-style-2">
+            <div class="shape justify-content-end">
+                <svg data-rellax-speed="0" width="544" height="362" viewBox="0 0 544 362" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: translate3d(0px, 0px, 0px);">
+                    <circle cx="320.5" cy="41.5" r="320.5" fill=" #202020"></circle>
+                </svg>
+            </div>
+            <div class="navbar-head">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img width="107" src="../assets/images/logo.svg" alt="">
+                    </a>
+                    <a class="navbar-toggle" href="#" data-fancybox-close>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row gh-1 justify-content-center">
+                    <div class="col-12 col-md-7 col-lg-5 col-xl-4">
+                        <div class="navbar-body">
+                            <ul class="nav navbar-nav navbar-nav-collapse">
+                                <li class="nav-item">
+                                    <a href="../../index.html" class="nav-link collapsed">
+                                        <span class="nav-link-name">início</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item navbar-collapse">
+                                    <a href="#navbarCollapseProjects" class="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapseProjects">
+                                        <span class="nav-link-name">exposições</span>
+                                        <svg class="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 11L6 6L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                    <div class="navbar-collapse-menu collapse" id="navbarCollapseProjects">
+                                        <ul class="nav navbar-nav">
+                                            <li class="nav-item">
+                                                <a href="../crioulo/index.html" class="nav-link collapsed>
+                                                    <span class="nav-link-name">Crioulo</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../cordel/index.html" class="nav-link collapsed>
+                                                    <span class="nav-link-name">Literatura de Cordel</span>
+                                                </a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="../clarice/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Clarice Lispector</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../cante/index.html" class="nav-link collapsed>
+                                                    <span class="nav-link-name">O Cante Alentejano</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../drummond/index.html" class="nav-link collapsed>
+                                                    <span class="nav-link-name">Drummond de Andrade</span>
+                                                </a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="../fernandopessoa/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Fernando Pessoa</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../herbertohelder/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Herberto Helder</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../marioviegas/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Mário Viegas</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="../monossilabico/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Monossilábico</span>
+                                                </a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="../nheengatu/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Nheengatu</span>
+                                                </a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="../sonsanimais/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">Os Sons dos Animais</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item navbar-collapse">
+                                    <a href="#navbarCollapsePages" class="nav-link collapsed" role="button" data-toggle="collapse" aria-expanded="false" aria-controls="navbarCollapsePages">
+                                        <span class="nav-link-name">recursos</span>
+                                        <svg class="collapse-icon" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 11L6 6L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </a>
+                                    <div class="navbar-collapse-menu collapse" id="navbarCollapsePages">
+                                        <ul class="nav navbar-nav">
+                                            <li class="nav-item">
+                                                <a href="../../recursos/guia/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">81 museus na internet</span>
+                                                </a>
+                                            </li>
+											<li class="nav-item">
+                                                <a href="../../recursos/cronologia/index.html" class="nav-link collapsed">
+                                                    <span class="nav-link-name">cronologia</span>
+                                                </a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <span class="nav-link-name">loja</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../../cafe/index.html" class="nav-link">
+                                        <span class="nav-link-name">café</span>
+                                    </a>
+                                </li>
+								<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center">
+									<li class="nav-item">
+										<a href="https://facebook.com/runwebrun" class="nav-link">
+											<svg width="12" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.17421 3.65234H9.99996V0.154687C9.68557 0.107422 8.60224 0 7.34088 0C4.70831 0 2.90529 1.82188 2.90529 5.16914V8.25H0V12.1602H2.90529V22H6.46588V12.1602H9.25375L9.69693 8.25H6.46588V5.55586C6.46588 4.42578 6.7424 3.65234 8.17421 3.65234Z" fill="currentColor" />
+											</svg>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="https://twitter.com/runwebrun" class="nav-link">
+											<svg width="30" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M22.0706 5.51356C22.086 5.73504 22.086 5.95656 22.086 6.17804C22.086 12.9334 17.0783 20.7172 7.92575 20.7172C5.10601 20.7172 2.48661 19.8787 0.283203 18.4232C0.683835 18.4707 1.069 18.4865 1.48505 18.4865C3.81167 18.4865 5.95347 17.6797 7.6638 16.3033C5.47581 16.2558 3.64221 14.7845 3.01046 12.7594C3.31865 12.8069 3.6268 12.8385 3.9504 12.8385C4.39723 12.8385 4.84411 12.7752 5.2601 12.6645C2.97968 12.1898 1.2693 10.1332 1.2693 7.64935V7.58609C1.93183 7.96579 2.70231 8.20309 3.5189 8.2347C2.17837 7.31709 1.30013 5.75086 1.30013 3.97894C1.30013 3.02972 1.54661 2.15959 1.97807 1.40019C4.42801 4.50103 8.11063 6.52604 12.24 6.74756C12.163 6.36787 12.1168 5.97239 12.1168 5.57687C12.1168 2.76076 14.3356 0.466797 17.0937 0.466797C18.5266 0.466797 19.8209 1.0838 20.73 2.0805C21.8548 1.85902 22.9334 1.43184 23.8887 0.846495C23.5189 2.03307 22.7331 3.02977 21.7008 3.66255C22.7023 3.55186 23.673 3.26702 24.5667 2.87155C23.8888 3.88403 23.0413 4.78577 22.0706 5.51356Z" fill="currentColor" />
+											</svg>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="https://instagram.com/runwebrun" class="nav-link">
+											<svg width="27" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M11.2827 5.3166C8.24087 5.3166 5.78732 7.8148 5.78732 10.912C5.78732 14.0092 8.24087 16.5074 11.2827 16.5074C14.3245 16.5074 16.7781 14.0092 16.7781 10.912C16.7781 7.8148 14.3245 5.3166 11.2827 5.3166ZM11.2827 14.5497C9.31698 14.5497 7.70998 12.9183 7.70998 10.912C7.70998 8.90563 9.3122 7.27425 11.2827 7.27425C13.2532 7.27425 14.8554 8.90563 14.8554 10.912C14.8554 12.9183 13.2484 14.5497 11.2827 14.5497ZM18.2846 5.08772C18.2846 5.81331 17.7107 6.39282 17.0029 6.39282C16.2902 6.39282 15.7211 5.80844 15.7211 5.08772C15.7211 4.36699 16.295 3.78261 17.0029 3.78261C17.7107 3.78261 18.2846 4.36699 18.2846 5.08772ZM21.9243 6.4123C21.843 4.66404 21.4508 3.11545 20.1929 1.83956C18.9399 0.563678 17.419 0.164355 15.7019 0.0766992C13.9323 -0.0255664 8.62827 -0.0255664 6.85865 0.0766992C5.14643 0.159486 3.62552 0.558809 2.36766 1.83469C1.10979 3.11058 0.722392 4.65917 0.636302 6.40743C0.535865 8.20925 0.535865 13.6098 0.636302 15.4117C0.717609 17.1599 1.10979 18.7085 2.36766 19.9844C3.62552 21.2603 5.14165 21.6596 6.85865 21.7473C8.62827 21.8495 13.9323 21.8495 15.7019 21.7473C17.419 21.6645 18.9399 21.2652 20.1929 19.9844C21.446 18.7085 21.8382 17.1599 21.9243 15.4117C22.0247 13.6098 22.0247 8.21412 21.9243 6.4123ZM19.6381 17.345C19.2651 18.2995 18.5429 19.0348 17.6007 19.4195C16.1898 19.9893 12.8419 19.8578 11.2827 19.8578C9.72352 19.8578 6.37081 19.9844 4.96469 19.4195C4.02727 19.0397 3.30507 18.3043 2.92724 17.345C2.36766 15.9084 2.49679 12.4995 2.49679 10.912C2.49679 9.32443 2.37244 5.91071 2.92724 4.47899C3.30029 3.52451 4.02248 2.78917 4.96469 2.40446C6.37559 1.83469 9.72352 1.96618 11.2827 1.96618C12.8419 1.96618 16.1946 1.83956 17.6007 2.40446C18.5381 2.7843 19.2603 3.51964 19.6381 4.47899C20.1977 5.91558 20.0686 9.32443 20.0686 10.912C20.0686 12.4995 20.1977 15.9133 19.6381 17.345Z" fill="currentColor" />
+											</svg>
+										</a>
+									</li>
+								</ul>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div class="content-wrap">
+            
+            <div class="pt-160 pb-20 text-center">
+                <div class="container">
+                    
+                    <div class="row gh-1 gv-4">
+                        <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="50" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                            <a onmousedown="pedrapt.playclip()" ondblclick="pedrapt.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                                <span class="card-img">
+									<img src="imagens3/pedra.png" class="img-responsive"  alt="uma pedra" title="português" >
+                                </span>
+                                <span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                    <span class="card-title h4">No meio do caminho</span>
+									<span class="card-title p">No meio do caminho tinha uma pedra
+									tinha uma pedra no meio do caminho
+									tinha uma pedra
+									no meio do caminho tinha uma pedra.
+									Nunca me esquecerei desse acontecimento
+									na vida de minhas retinas tão fatigadas.
+									Nunca me esquecerei que no meio do caminho
+									tinha uma pedra
+									tinha uma pedra no meio do caminho
+									no meio do caminho tinha uma pedra.</span>
+								</span>
+                            </a>
+                        </div>
+						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="50" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                            <a onmousedown="pedraen.playclip()" ondblclick="pedraen.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                                <span class="card-img">
+									<img src="imagens3/pedra.png" 
+										style="-ms-transform: rotate(33deg); /* IE 9 */ transform: rotate(33deg);" class="img-responsive" 
+										alt="uma pedra" title="inglês" >                                
+								</span>
+                                <span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                    <span class="card-title h4">In the middle of the road</span>
+									<span class="card-title p">In the middle of the road was a stone
+									was a stone in the middle of the road was stone
+									in the middle of the road was a stone.
+									I shall never forget that event
+									in the life of my so tired eyes.
+									I shall never forget that in the middle of the road
+									was a stone
+									was a stone in the middle of the road
+									in the middle of the road was a stone.
+									</span>
+                                </span>
+                            </a>
+                        </div>
+						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                            <a onmousedown="pedradn.playclip()" ondblclick="pedradn.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                                <span class="card-img">
+									<img src="imagens3/pedra.png" style="-ms-transform: rotate(66deg); /* IE 9 */ transform: rotate(66deg);" class="img-responsive"  alt="uma pedra" title="dinamarquês"  >
+								</span>
+                                <span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                    <span class="card-title h4">I midten af vejen</span>
+									<span class="card-title p">I midten af vejen var en sten var en sten 
+									i midten af vejen var en sten i midten af vejen var en sten. 
+									Jeg vil aldrig glemme denne begivenhed i 
+									livet af mine nethinder så træt. Jeg vil aldrig glemme, 
+									at i midten af vejen var en sten
+									var en sten 
+									i midten af vejen 
+									i midten af vejen var en sten.
+									</span>
+                                </span>
+                            </a>
+                        </div>
+						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                            <a onmousedown="pedrafr.playclip()" ondblclick="pedrafr.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                                <span class="card-img">
+									<img src="imagens3/pedra.png" style="-ms-transform: rotate(99deg); /* IE 9 */ transform: rotate(99deg);"class="img-responsive" alt="uma pedra" title="francês">
+                                </span>
+								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                    <span class="card-title h4">Au milieu du chemin</span>
+									<span class="card-title p">Au milieu du chemin y avait une pierre
+									y avait une pierre au milieu du chemin
+									y avait une pierre
+									au milieu du chemin y avait une pierre.
+									Jamais je n’oublierai cet évènement
+									dans la vie de mes rétines si fatiguées.
+									Jamais je noublierai qu’au milieu du chemin
+									y avait une pierre
+									y avait une pierre au milieu du chemin
+									au milieu du chemin y avait une pierre.
+									</span>
+                                </span>
+                            </a>
+                        </div>
+						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                            <a onmousedown="pedrahe.playclip()" ondblclick="pedrahe.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                                <span class="card-img">
+								<img src="imagens3/pedra.png" style="-ms-transform: rotate(132deg); /* IE 9 */ transform: rotate(132deg);" class="img-responsive" alt="uma pedra" title="hebraico" >
+                                </span>
+								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                    <span class="card-title h4">באמצע הכביש הייתה אבן</span>
+									<span class="card-title p">באמצע הכביש היה אבן הייתה אבן באמצע הכביש הייתה אבן באמצע הכביש הייתה אבן. אני לעולם לא אשכח את האירוע הזה בחיים של רשתית כל כך העייף שלי. אני לעולם לא אשכח שבאמצע הכביש היה אבן הייתה אבן באמצע הכביש באמצע הכביש הייתה אבן.
+									</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                            <a onmousedown="pedrait.playclip()" ondblclick="pedrait.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                                <span class="card-img">
+								<img src="imagens3/pedra.png" style="-ms-transform: rotate(165deg); /* IE 9 */ transform: rotate(165deg);" class="img-responsive" alt="uma pedra" title="italiano">
+                                </span>
+								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                    <span class="card-title h4">Nel mezzo del cammino</span>
+									<span class="card-title p">Nel mezzo del cammino c’era un sasso
+									c’era un sasso nel mezzo del cammino
+									c’era un sasso
+									nel mezzo del cammino c’era un sasso.
+									Non dimenticherò questa cosa accaduta
+									nella vita dei miei occhi così stanchi.
+									Non dimenticherò mai che nel mezzo del cammino
+									c’era un sasso
+									c’era un sasso nel mezzo del cammino
+									nel mezzo del cammino c’era un sasso. 
+									</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                            <a onmousedown="pedrahl.playclip()" ondblclick="pedrahl.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                                <span class="card-img">
+								<img src="imagens3/pedra.png" style="-ms-transform: rotate(198deg); /* IE 9 */ transform: rotate(198deg);" class="img-responsive" alt="uma pedra" title="holandês"  >
+                                </span>
+								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                    <span class="card-title h4">In het midden van de weg</span>
+									<span class="card-title p">In het midden van de weg was een steen een steen 
+									 in het midden van de weg was een steen in het midden 
+									 van de weg was een steen. Ik zal nooit deze gebeurtenis 
+									 in het leven van mijn netvliezen zo moe vergeten. Ik zal 
+									 nooit vergeten dat in het midden van de weg was een steen 
+									 een steen in het midden van de weg in het midden van de 
+									 weg was een steen. 
+									</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                            <a onmousedown="pedrahg.playclip()" ondblclick="pedrahg.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                                <span class="card-img">
+								<img src="imagens3/pedra.png" style="-ms-transform: rotate(231deg); /* IE 9 */ transform: rotate(231deg);" class="img-responsive" alt="uma pedra" title="húngaro" >
+                                </span>
+								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                    <span class="card-title h4">Az út közepén volt</span>
+									<span class="card-title p">Az út közepén volt egy kő kő volt a az út közepén volt egy kő a 
+									közepén, az út pedig egy kő. Soha nem fogom elfelejteni ezt az eseményt 
+									az élet az én retinák olyan fáradt. Soha nem fogom elfelejteni, hogy az 
+									út közepén volt egy kő kő volt a közepén, az út közepén, az út pedig egy kő.
+									</span>
+                                </span>
+                            </a>
+                        </div>
+						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                            <a onmousedown="pedradt.playclip()" ondblclick="pedradt.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                                <span class="card-img">
+								<img src="imagens3/pedra.png" style="-ms-transform: rotate(264deg); /* IE 9 */ transform: rotate(264deg);" class="img-responsive" alt="uma pedra" title="alemão">
+                                </span>
+								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                    <span class="card-title h4">Mitten im Weg lag ein Stein</span>
+									<span class="card-title p">Mitten im Weg lag ein Stein
+									Lag ein Stein mitten im Weg
+									Lag ein Stein
+									Mitten im Weg lag ein Stein.
+									Nie werde ich dieses Ereignis
+									Im Leben meiner so ermudeten Netzhaut vergessen.
+									Nie werde ich vergessen dass mitten im Weg
+									Lag ein Stein
+									</span>
+                                </span>
+                            </a>
+                        </div>
+						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                            <a onmousedown="pedralt.playclip()" ondblclick="pedralt.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                                <span class="card-img">
+								<img src="imagens3/pedra.png" style="-ms-transform: rotate(297deg); /* IE 9 */ transform: rotate(297deg);" class="img-responsive" alt="uma pedra" title="latim">
+                                </span>
+								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                    <span class="card-title h4">In media via</span>
+									<span class="card-title p">In media via lapis lapidem lapidem in media 
+									  visus adesse via in media visus adesse via lapis. 
+									  Si oblitus fuero usque ad animam meam in hac re tam retinas 
+									  er expedit distinct. Si oblitus fuero usque in media visus 
+									  adesse via lapis lapis in media visus adesse via in media 
+									  visus adesse via lapis. 
+									</span>
+                                </span>
+                            </a>
+                        </div>
+						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                            <a onmousedown="pedraes.playclip()" ondblclick="pedraes.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                                <span class="card-img">
+								<img src="imagens3/pedra.png" style="-ms-transform: rotate(330deg); /* IE 9 */ transform: rotate(330deg);" class="img-responsive" alt="uma pedra" title="espanhol">
+                                </span>
+								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                    <span class="card-title h4">En medio del camino</span>
+									<span class="card-title p">En medio del camino había una piedra,
+									había una piedra en medio del camino,
+									había una piedra,
+									en medio del camino había una piedra.
+									Nunca me olvidaré de ese acontecimiento
+									en la vida de mis retinas tan fatigadas.
+									Nunca me olvidaré que en medio del camino
+									había una piedra,
+									había una piedra en medio del camino
+									en medio del camino había una piedra.
+									</span>
+                                </span>
+                            </a>
+                        </div>
+						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
+                            <a onmousedown="pedratp.playclip()" ondblclick="pedratp.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                                <span class="card-img">
+								<img src="imagens3/pedra.png" style="-ms-transform: rotate(360deg); /* IE 9 */ transform: rotate(360deg);" class="img-responsive" alt="uma pedra" title="tupi">
+                                </span>
+								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                    <span class="card-title h4">Pytéripé pé i tyb'amé</span>
+									<span class="card-title p">Pytéripé pé i tyb'amé oîepé itá
+									I tyb'amé oîepé itá pytéripé pé
+									I tyb'amé oîepé itá
+									Pytéripé pé i tyb'amé oîepé itá.
+									Aan xe sessaraine cuapabuera sui
+									ecobépe xe essápupé caneõgatu.
+									Aan xe sessaraine pytéripé pé
+									I tyb'amé oîepé itá
+									I tyb'amé oîepé itá pytéripé pé
+									Pytéripé pé i tyb'amé oîepé itá
+									</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+		<footer class="footer bg-black shape-parent overflow-hidden mt-90" style="color:white; text-align: center;">
+			<div class="container mb-n5">
+				<div class="row justify-content-between gh-1  mb-15">
+					<div class="col-12 col-lg-3 footer-font">
+						<p>CONTATOS</p>
+					</div>
+					<div class="col-12 col-lg-3 footer-font">
+						<p>Termos Legais</p>
+					</div>
+					<div class="col-12 col-lg-3 footer-font">
+						<p>Acessibilidade</p>
+					</div>
+					<div class="col-12 col-lg-3">
+						<div class="footer-copyright">© 2016-2021 - Museu da Fala</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+         <!-- START: Scripts -->
+        <!-- Object Fit Polyfill -->
+        <script src="../../assets/vendor/object-fit-images/dist/ofi.min.js"></script>
+        <!-- Popper -->
+        <script src="../../assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="../../assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Bootstrap Validator -->
+        <script src="../../assets/vendor/bootstrap-validator/dist/validator.min.js"></script>
+        <!-- ImagesLoaded -->
+        <script src="../../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <!-- Swiper -->
+        <script src="../../assets/vendor/swiper/dist/js/swiper.min.js"></script>
+        <!-- Animejs -->
+        <script src="../../assets/vendor/animejs/lib/anime.min.js"></script>
+        <!-- Rellax -->
+        <script src="../../assets/vendor/rellax/rellax.min.js"></script>
+        <!-- Countdown -->
+        <script src="../../assets/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+        <!-- Moment.js -->
+        <script src="../../assets/vendor/moment/min/moment.min.js"></script>
+        <script src="../../assets/vendor/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+        <!-- Isotope -->
+        <script src="../../assets/vendor/isotope-layout/dist/isotope.pkgd.min.js"></script>
+        <script src="../../assets/vendor/isotope-packery/packery-mode.pkgd.min.js"></script>
+        <!-- Jarallax -->
+        <script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+        <script src="../../assets/vendor/jarallax/dist/jarallax-video.min.js"></script>
+        <!-- Fancybox -->
+        <script src="../../assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+        <!-- Themebau -->
+        <script src="../../assets/js/themebau.min.js"></script>
+        <!-- END: Scripts -->
+    
+</body></html>
