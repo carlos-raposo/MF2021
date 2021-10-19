@@ -4,7 +4,7 @@
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
     padding-right: 16px;
 	padding-left: 40px;}
-.footrepair	{
+.container.footrepair	{
     padding-left: 70px;}
 .repair2 {margin: 0 0 28px -26px!important}	
 }
