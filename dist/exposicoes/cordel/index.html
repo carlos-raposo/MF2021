@@ -23,11 +23,13 @@
         <!-- jQuery -->
         <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 		<style>
+		.swiper-full-horizontal .swiper-slide {width: 400px;}
+		.card-portfolio.card-overlay .card-img {height: 550px; width:400px}
 		.card-portfolio .card-img-overlay {
 			justify-content: start;
 			top: -25px;}
 		ul.nav.navbar-nav {text-transform: uppercase;}	
-		.h2 {font-weight: bolder;}
+		.h2 {font-weight: bolder; font-size: 2.5em;}
 		.text-white {color: #0a0a0a!important;}
 		.card .card-title {
 			color: #0a0a0a;
@@ -37,6 +39,15 @@
 		
 		.nav-social .nav-item {    
 			padding-right: 20px;}
+			
+			
+			
+		
+		@media (max-height: 720px) and (orientation: portrait){
+		.swiper-full-horizontal .swiper-slide {width: 300px;}
+		.card-portfolio.card-overlay .card-img {height: 400px; ; width:300px}
+		}
+		
 		@media (max-width: 619.98px) {
 			.h2, h2 {
 				margin-bottom: 1.1em;
@@ -400,14 +411,15 @@
             </div>
         </div>
         <div class="content-wrap">
-            <div class="swiper text-white swiper-full swiper-full-horizontal swiper-portfolio-animejs" data-swiper-slides="auto" data-swiper-gap="100" data-swiper-speed="600" data-swiper-loop="true" data-swiper-center="true" data-swiper-breakpoints="500:auto, 0:1">
-                <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+            <div class="swiper text-white swiper-full swiper-full-horizontal swiper-portfolio-animejs " data-swiper-slides="auto" data-swiper-gap="100" data-swiper-speed="600" data-swiper-loop="true" data-swiper-center="true" data-swiper-breakpoints="500:auto, 0:1">
+                <div class="swiper-container swiper-container-initialized swiper-container-horizontal ">
                     <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-3775px, 0px, 0px);">	
                         
+						
 						<div class="swiper-slide">
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black text-center" href="portfolio-single-style-1.html">
                                 <span class="card-img">
-                                    <img src="images/cordel_1920.png" alt="">
+                                    <img src="images/capa_cordel.png" alt="2 homens sentados tocando viola">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
                                 </span>
                                 <span class="card-img-overlay">
@@ -417,148 +429,108 @@
                             </div>
                         </div>
 						
+						<div class="swiper-slide">
+                            <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="dicas.html">
+                                <span class="card-img">
+                                    <img src="images/capa_dicas.png" alt="">
+                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
+                                </span>
+                            </a>
+                        </div>
+						
+						<div class="swiper-slide">
+                            <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="discussao.html">
+                                <span class="card-img">
+                                    <img src="images/capa_discussao.png" alt="">
+                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
+                                </span>
+                            </a>
+                        </div>
 						
 						<div class="swiper-slide">
                             <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="aisesesse.html">
                                 <span class="card-img">
-                                    <img src="images/aisesesse-slide.png" alt="">
+                                    <img src="images/capa_aisesesse.png" alt="">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
                                 </span>
-                                <span class="card-img-overlay">
-                                    <span class="card-title h2">AI SE SESSE</span>
-                                    <span class="card-category subtitle">Zé da Luz</span>
-                                </span>
                             </a>
+                        </div>
+						<div class="swiper-slide">
+                            <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="sogra.html">
+                                <span class="card-img">
+                                    <img src="images/capa_sogra.png" alt="mulher idosa com ar autoritário apontando para uma enxada">
+                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
+                                </span>
                         </div>
 						
                         <div class="swiper-slide">
                             <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="corona.html">
                                 <span class="card-img">
-                                    <img src="images/corona-slide.png" alt="">
+                                    <img src="images/capa_corona.png" alt="">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
-                                </span>
-                                <span class="card-img-overlay">
-                                    <span class="card-title h2">CORDEL DO CORONA VIRUS</span>
-                                    <span class="card-category subtitle">Tião Simpatia</span>
                                 </span>
                             </a>
                         </div>
-						
+						<div class="swiper-slide">
+                            <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="nascimento.html">
+								<span class="card-img">
+									<img src="images/capa_nascimento.png" alt="">
+                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
+							   </span>
+                            </a>
+                        </div>
 						<div class="swiper-slide">
                             <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="agregado.html">
                                 <span class="card-img">
-                                    <img src="images/patativa-slide.png" alt="">
+                                    <img src="images/capa_agregado.png" alt="">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
-                                </span>
-                                <span class="card-img-overlay">
-                                    <span class="card-title h2">O AGREGADO E O OPERÁRIO</span>
-                                    <span class="card-category subtitle">Patativa do Assaré</span>
                                 </span>
                             </a>
                         </div>
 						
 						<div class="swiper-slide">
-                            <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="discussao.html">
+                            <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="cocoverde.html">
                                 <span class="card-img">
-                                    <img src="images/discussao-slide.png" alt="">
+                                    <img src="images/capa_cocoverde.png" alt="">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
                                 </span>
-                                <span class="card-img-overlay">
-                                    <span class="card-title h2">DISCUSSÃO</span>
-                                    <span class="card-category subtitle">Z</span>
-                                </span>
-                            </div>
+							</a>	
                         </div>
 						
 						<div class="swiper-slide">
-                            <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="portfolio-single-style-1.html">
+                            <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="desencantado.html">
                                 <span class="card-img">
-                                    <img src="images/cocoverde-slide.png" alt="">
+                                    <img src="images/capa_desencantado.png" alt="">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
-                                </span>
-                                <span class="card-img-overlay">
-                                    <span class="card-title h2">COCO VERDE E MELANCIA</span>
-                                    <span class="card-category subtitle">José Camelo</span>
-                                </span>
-                            </div>
-                        </div>
-						
-						<div class="swiper-slide">
-                            <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="">
-                                <span class="card-img">
-                                    <img src="images/desencantado-600.png" alt="">
-                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
-                                </span>
-                                <span class="card-img-overlay">
-                                    <span class="card-title h2">DESENCANTADO</span>
-                                    <span class="card-category subtitle">Z</span>
-                                </span>
-                            </div>
-                        </div>
-						
-						<div class="swiper-slide">
-                            <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="">
-                                <span class="card-img">
-                                    <img src="images/lampiaonoinferno-slide.png" alt="">
-                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
-                                </span>
-                                <span class="card-img-overlay">
-                                    <span class="card-title h2">LAMPIÃO NO INFERNO</span>
-                                    <span class="card-category subtitle">Z</span>
-                                </span>
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="">
-                                <span class="card-img">
-                                    <img src="images/festa-600.png" alt="">
-                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
-                                </span>
-                                <span class="card-img-overlay">
-                                    <span class="card-title h2">A FESTA DOS BICHOS</span>
-                                    <span class="card-category subtitle">Z</span>
-                                </span>
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="">
-                                <span class="card-img">
-                                    <img src="images/miserias-600.png" alt="">
-                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
-                                </span>
-                                <span class="card-img-overlay">
-                                    <span class="card-title h2">MISÉRIAS</span>
-                                    <span class="card-category subtitle">Z</span>
-                                </span>
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="">
-                                <span class="card-img">
-                                    <img src="images/sogra-600.png" alt="">
-                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
-                                </span>
-                                <span class="card-img-overlay">
-                                    <span class="card-title h2">A ALMA DE UMA SOGRA</span>
-                                    <span class="card-category subtitle">Z</span>
-                                </span>
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="cordel/nascimento.html">
-								<span class="card-img">
-									<img src="images/nascimento-600.png" alt="">
-                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
-							   </span>
-                                <span class="card-img-overlay">
-                                    <span class="card-title h2">NASCIMENTO DE JESUS</span>
-                                    <span class="card-category subtitle">Z</span>
                                 </span>
                             </a>
                         </div>
 						
+						<div class="swiper-slide">
+                            <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="lampiaonoinferno.html">
+                                <span class="card-img">
+                                    <img src="images/capa_lampiao.png" alt="">
+                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
+                                </span>
+                            </a>
+                        </div>
+						<div class="swiper-slide">
+                            <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="festa.html">
+                                <span class="card-img">
+                                    <img src="images/capa_festa.png" alt="cabra e macaco vestidos de noivos mais uma comitiva de bichos">
+                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
+                                </span>
+                            </a>
+                        </div>
+						<div class="swiper-slide">
+                            <a class="card card-portfolio card-overlay card-image-sm card-bg-show text-white text-center" href="miserias.html">
+                                <span class="card-img">
+                                    <img src="images/capa_miserias.png" alt="">
+                                    <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
+                                </span>
+                            </a>
+                        </div>
 						
-					
 					</div>
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                 <div class="swiper-button-wrapper container">
@@ -569,8 +541,7 @@
                             <path d="M20.5 1L25 5.5L20.5 10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path>
                             <path d="M7 5.5H25" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
                 </div>
-                <div class="swiper-pagination swiper-pagination-bullets" data-swiper-total="11"><span class="swiper-pagination-bullet swiper-pagination-bullet-active">01</span><span class="swiper-pagination-bullet">02</span><span class="swiper-pagination-bullet">03</span><span class="swiper-pagination-bullet">04</span><span class="swiper-pagination-bullet">05</span><span class="swiper-pagination-bullet">06</span><span class="swiper-pagination-bullet">07</span><span class="swiper-pagination-bullet">08</span><span class="swiper-pagination-bullet">09</span>
-				<span class="swiper-pagination-bullet">10</span><span class="swiper-pagination-bullet">11</span><span class="swiper-pagination-bullet">15</span><span class="swiper-pagination-bullet">13</span></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
          <!-- START: Scripts -->
@@ -606,5 +577,8 @@
         <!-- Themebau -->
         <script src="../../assets/js/themebau.min.js"></script>
         <!-- END: Scripts -->
+		<!-- Initialize Swiper -->
     
-</body></html>
+    
+	</body>
+</html>
