@@ -3,14 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Museu da Fala | NASCIMENTO</title>
-        <meta name="description" content="Cordel O Nascimento de Jesus">
+        <title>Museu da Fala | AGREGADO</title>
+        <meta name="description" content="Themebau">
         <meta name="author" content="RunWebRun">
         <link rel="icon" type="image/png" href="../../assets/images/favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-        <!-- START: Styles -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+		<!-- START: Styles -->
         <!-- Swiper -->
         <link rel="stylesheet" href="../../assets/vendor/swiper/dist/css/swiper.min.css" />
         <!-- Fancybox -->
@@ -23,6 +24,12 @@
         <!-- jQuery -->
         <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 		<style>
+		body {font-family: 'Open Sans', sans-serif;
+			font-weight: 100}
+		.navbar-mobile-style-2 .navbar-body>.navbar-nav a{font-family: 'Inter', sans-serif; font-weight:300}
+		.navbar-mobile .navbar-collapse-menu>.navbar-nav a{font-family:'Open Sans', sans-serif;}
+		.navbar-mobile .navbar-collapse-menu>.navbar-nav a:hover {color:#90EE90; font-family:'Open Sans', sans-serif; letter-spacing: 0.07em; font-size:1.2em}
+		
 		.card, h3, h4, a  {color:white;}
 		.gallery-item img {
 			width: auto;}
@@ -35,11 +42,24 @@
 		ul.nav.navbar-nav {text-transform: uppercase;}
 		.verso {padding-left:6.5vw; margin-top: 2em;}
 		.verso h4 {padding-left:25%}
+		
 		footer .row.gh-1 {margin-left:-30px}
-		footer .row.gh-1>[class*=col] {padding-left: 4px;}
-		footer .row.gv-4>[class*=col] {padding-top: 4px;}
-		footer .row.gv-1>[class*=col] {padding-top: 30px;}
-		footer .nav-item p {margin-bottom:0.5em;}
+		
+		footer .row.gh-1>[class*=col] {
+			padding-left: 4px;
+		}
+
+		footer .row.gv-4>[class*=col] {
+			padding-top: 4px;
+		}
+		
+		footer .row.gv-1>[class*=col] {
+			padding-top: 30px;
+		}
+		
+		footer .nav-item p {margin-bottom:0.5em;
+		}
+		
 		/* START scroll to top */
 		.scroll {
 			color: #fff;
@@ -136,7 +156,6 @@
 				font-size: 55px;
 			}
 		}
-
 		
 		@media only screen and (min-width: 1024px){
 			.verso {
@@ -146,16 +165,17 @@
 			}
 			img.footer-image {margin-top:-50px}
 			}
-		 @media (min-width: 1200px) {
+			
+		@media (min-width: 1200px) {
 			.container, .container-lg, .container-md, .container-sm, .container-xl {
 				max-width: 1300px;
 			}
-		} 
-		@media only screen and (min-width: 1824px){
+		}	
+		  @media only screen and (min-width: 1824px){
 			.verso {
 				line-height: 1.5em;
-				padding-left: 28%;
-				padding-right: 28%;
+				padding-left: 25%;
+				padding-right: 25%;
 			}
 			}
 		</style>
@@ -163,7 +183,7 @@
 	</head>
     <body class="bg-dark cursor-enabled navbar-show">
 		<a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
-		<header class="navbar navbar-top navbar-expand navbar-fixed navbar-dark">
+        <header class="navbar navbar-top navbar-expand navbar-fixed navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="../../index.html">
                     <p style="padding-top:30px">museudafala</p>      
@@ -174,7 +194,7 @@
                 </a>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <a href="../index.html" class="nav-link">
+                        <a href="../../index.html" class="nav-link">
                             <span class="nav-link-name">início</span>
                         </a>
                     </li>
@@ -187,44 +207,59 @@
                         </a>
                         <div class="dropdown-menu" id="exposicoes">
                             <ul class="nav navbar-nav">
-                             <!--     <li class="nav-item">
+                             <!--    <li class="nav-item">
                                     <a href="../index_crioulo.html" class="nav-link">
                                         <span class="nav-link-name">Crioulo</span>
                                     </a>
-                                </li>  -->
+                                </li> -->
 								<li class="nav-item">
-                                    <a href="../index_crioulo.html" class="nav-link">
+                                    <a href="../cordel.html" class="nav-link">
                                         <span class="nav-link-name">Literatura de Cordel</span>
                                     </a>
                                 </li>
 								<li class="nav-item">
-                                    <a href="../index_crioulo.html" class="nav-link">
-                                        <span class="nav-link-name">O Cante Alentejano</span>
-                                    </a>
-                                </li>
-								<li class="nav-item">
-                                    <a href="../index_crioulo.html" class="nav-link">
-                                        <span class="nav-link-name">Drummond</span>
-                                    </a>
-                                </li>
-								<li class="nav-item">
-                                    <a href="../index_crioulo.html" class="nav-link">
-                                        <span class="nav-link-name">Herberto Helder</span>
-                                    </a>
-                                </li>
-								<li class="nav-item">
-                                    <a href="../index_crioulo.html" class="nav-link">
+                                    <a href="../clarice.html" class="nav-link">
                                         <span class="nav-link-name">Clarice Lispector</span>
                                     </a>
                                 </li>
 								<li class="nav-item">
-                                    <a href="../index_crioulo.html" class="nav-link">
-                                        <span class="nav-link-name">Crioulo</span>
+                                    <a href="../cante.html" class="nav-link">
+                                        <span class="nav-link-name">O Cante Alentejano</span>
                                     </a>
                                 </li>
 								<li class="nav-item">
-                                    <a href="../index_crioulo.html" class="nav-link">
-                                        <span class="nav-link-name">Crioulo</span>
+                                    <a href="../drummond.html" class="nav-link">
+                                        <span class="nav-link-name">Drummond</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../fernandopessoa.html" class="nav-link">
+                                        <span class="nav-link-name">Fernando Pessoa</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../herberto.html" class="nav-link">
+                                        <span class="nav-link-name">Herberto Helder</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../mv.html" class="nav-link">
+                                        <span class="nav-link-name">Mário Viegas</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../monossilabico.html" class="nav-link">
+                                        <span class="nav-link-name">Monossilábico</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../monossilabico.html" class="nav-link">
+                                        <span class="nav-link-name">Nheengatu</span>
+                                    </a>
+                                </li>
+								<li class="nav-item">
+                                    <a href="../sonsanimais.html" class="nav-link">
+                                        <span class="nav-link-name">Os Sons dos Animais</span>
                                     </a>
                                 </li>
                             </ul>
@@ -314,12 +349,12 @@
                                     <div class="navbar-collapse-menu collapse show" id="navbarCollapseCordeis">
                                         <ul class="nav navbar-nav">
                                             <li class="nav-item" class="nav-link collapsed">
-                                                <a href="dicas.html">
+                                                <a href="dicas.html" class="nav-link collapsed">
                                                     <span class="nav-link-name">DICAS</span>
                                                 </a>
                                             </li>
 											<li class="nav-item" class="nav-link collapsed">
-                                                <a href="nascimento.html">
+                                                <a href="nascimento.html" class="nav-link collapsed">
                                                     <span class="nav-link-name">Nascimento de Jesus</span>
                                                 </a>
                                             </li>
@@ -390,7 +425,7 @@
                                     </a>
                                     <div class="navbar-collapse-menu collapse" id="navbarCollapseProjects">
                                         <ul class="nav navbar-nav">
-                                        <!--      <li class="nav-item" class="nav-link collapsed">
+                                          <!--   <li class="nav-item" class="nav-link collapsed">
                                                 <a href="../../exposicoes/crioulo/index.html">
                                                     <span class="nav-link-name">Crioulo</span>
                                                 </a>
@@ -517,16 +552,16 @@
                     <div class="row gh-1 gv-1 isotope-grid">
 						<div class="col-12  isotope-item" data-filters="design">
                             <div class="card card-block d-flex ">
-								<a href="images/nascimento-600.png" class="gallery-item gallery-item-sm" data-fancybox="gallery-1" data-animation-effect="fade">
+								<a href="images/patativa-600.png" class="gallery-item gallery-item-sm" data-fancybox="gallery-1" data-animation-effect="fade">
 									
 									
-									<img src="images/nascimento-600.png"
-										srcset="images/nascimento-300.png 300w,
-												 images/nascimento-600.png 600w"
+									<img src="images/patativa-600.png"
+										srcset="images/patativa-300.png 300w,
+												 images/patativa-600.png 600w"
 										 sizes="(max-width:500px) 300px,
 												600px"
 										 
-										 alt="Presépio">
+										 alt="figura do patativa">
 								</a>						
 							</div>
                         </div>
@@ -534,403 +569,125 @@
 					<div class="row gh-1 gv-1 isotope-grid" style="margin-top: 30px;">
                         <div class="col-12 col-sm-6 isotope-item" data-filters="design">
                             <div class="card card-block d-flex verso ">
+								
 								<h4>1</h4>
-								<p><b>A narrativa que faço</b>
-								<p>Não é minha invenção
-								<p>Pra contar já me benzi
-								<p>E fiz minha oração
-								<p>Peço a Deus discernimento
-								<p>Pra falar do nascimento
-								<p>De quem trouxe a salvação						
+								<p><b>Sou matuto do Nordeste</b>
+								<p>criado dentro da mata
+								<p>caboclo cabra da peste
+								<p>poeta cabeça chata
+								<p>por ser poeta roceiro
+								<p>eu sempre fui companheiro
+								<p>da dor, da mágoa e do pranto
+								<p>por isto, por minha vez
+								<p>vou falar para vocês
+								<p>o que é que eu sou e o que canto.
 							</div>
                         </div>
-                        <div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
+						<div class="col-12 col-sm-6 isotope-item" data-filters="design">
+                            <div class="card card-block d-flex verso ">
 								<h4>2</h4>
-								<p><b>É que a tal ignorância</b>
-								<p>Cumprirei o meu papel
-								<p>Seguindo sempre a risca
-								<p>O tema desse cordel
-								<p>A vinda do Deus menino
-								<p>Sua saga seu destino
-								<p>Prometendo ser fiel.		
+								<p><b>Sou poeta agricultor</b>
+								<p>do interior do Ceará
+								<p>a desdita, o pranto e a dor
+								<p>canto aqui e canto acolá
+								<p>sou amigo do operário
+								<p>que ganha um pobre salário
+								<p>e do mendigo indigente
+								<p>e canto com emoção
+								<p>o meu querido sertão
+								<p>e a vida de sua gente.					
 							</div>
                         </div>
 						<div class="col-12 col-sm-6 isotope-item" data-filters="design">
                             <div class="card card-block d-flex verso ">
 								<h4>3</h4>
-								<p><b>Tudo isso começou</b>
-								<p>Com José e com Maria
-								<p>Que ficaram radiantes
-								<p>E replenos de alegria
-								<p>Quando Miguel o arcanjo
-								<p>Com sua boca de anjo
-								<p>A boa nova dizia.</p>						
+								<p><b>Procurando resolver</b>
+								<p>um espinhoso problema
+								<p>eu procure defender
+								<p>no meu modesto poema
+								<p>que a santa verdade encerra
+								<p>os camponeses sem terra
+								<p>que o céu deste Brasil cobre
+								<p>e as famílias da cidade
+								<p>que sofrem necessidade
+								<p>morando no bairro pobre.					
 							</div>
                         </div>
-                        <div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
+						<div class="col-12 col-sm-6 isotope-item" data-filters="design">
+                            <div class="card card-block d-flex verso ">
 								<h4>4</h4>
-								<p><b>Assim deu ele a notícia</b>
-								<p>Com jeito e com muito tino
-								<p>Que do ventre de Maria
-								<p>Nasceria um menino
-								<p>Maria daria a luz
-								<p>Ao filho de Deus, Jesus,
-								<p>O sagrado ser divino.	
+								<p><b>Vão no mesmo itinerário</b>
+								<p>sofrendo a mesma opressão
+								<p>nas cidades, o operário
+								<p>e o camponês no sertão
+								<p>embora um do outro ausente
+								<p>o que um sente o outro sente
+								<p>se queimam na mesma brasa
+								<p>e vivem na mesma Guerra
+								<p>os agregados sem terra
+								<p>e os operários sem casa.					
 							</div>
                         </div>
 						<div class="col-12 col-sm-6 isotope-item" data-filters="design">
                             <div class="card card-block d-flex verso ">
 								<h4>5</h4>
-								<p><b>Com o casal satisfeito</b>
-								<p>Não havia desengano
-								<p>Mas veio de Cesar Augusto
-								<p>O Imperador Romano
-								<p>Uma nova lei criada
-								<p>E a família sagrada
-								<p>Tinha que mudar de plano.						
+								<p><b>Operário da cidade</b>
+								<p>se você sofre bastante
+								<p>a mesma necessidade
+								<p>sofre o seu irmão distante
+								<p>levando vida grosseira
+								<p>sem direito de carteira
+								<p>seu fracasso continua
+								<p>é grande martírio aquele
+								<p>a sua sorte é a dele
+								<p>e a sorte dele é a sua.					
 							</div>
                         </div>
-                        <div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
+						<div class="col-12 col-sm-6 isotope-item" data-filters="design">
+                            <div class="card card-block d-flex verso ">
 								<h4>6</h4>
-								<p><b>A sua terra natal</b>
-								<p>Todos tinham que voltar
-								<p>Porque Cesar resolveu
-								<p>A população contar
-								<p>O motivo foi exposto
-								<p>Foi por causa do imposto
-								<p>Que ele decidiu cobrar.	
+								<p><b>Disto eu já vivo ciente</b>
+								<p>se na cidade o operário
+								<p>trabalha constantemente
+								<p>por um pequeno salário
+								<p>lá nos campos o agregado
+								<p>se encontra subordinado
+								<p>sob o jugo do patrão
+								<p>padecendo vida amarga
+								<p>tal qual burro de carga
+								<p>debaixo da sujeição.					
 							</div>
                         </div>
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
+						<div class="col-12 col-sm-6 isotope-item" data-filters="design">
+                            <div class="card card-block d-flex verso ">
 								<h4>7</h4>
-								<p><b>A família de José</b>
-								<p>Voltava para Belém
-								<p>A fim de cumprir a lei
-								<p>E se registrar também
-								<p>Com dor a pobre Maria
-								<p>No caminho padecia
-								<p>Mesmo assim dizia amém.	
+								<p><b>Camponeses meus irmãos</b>
+								<p>e operários da cidade
+								<p>é preciso dar as mãos
+								<p>cheios de fraternidade
+								<p>em favor de cada um
+								<p>formar um corpo comum
+								<p>praciano e camponês
+								<p>pois só com esta aliança
+								<p>a estrela da bonança
+								<p>brilhará para vocês.					
 							</div>
                         </div>
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
+						<div class="col-12 col-sm-6 isotope-item" data-filters="design">
+                            <div class="card card-block d-flex verso ">
 								<h4>8</h4>
-								<p><b>Foi uma viagem longa,</b>
-								<p>Deixou Maria cansada
-								<p>E se aproximava a hora
-								<p>Por todos tão esperada
-								<p>Sem achar hospedaria
-								<p>José fez o que podia
-								<p>De maneira improvisada.	
+								<p><b>Uns com os outros se entendendo</b>
+								<p>esclarecendo as razões
+								<p>e todos juntos fazendo
+								<p>suas reivindicações
+								<p>por uma democracia
+								<p>de direito e garantia
+								<p>lutando de mais a mais
+								<p>são estes os belos planos
+								<p>pois nos direitos humanos
+								<p>nós todos somos iguais.					
 							</div>
                         </div>
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>9</h4>
-								<p><b>Ele avistou um estábulo</b>
-								<p>Onde montou seu abrigo
-								<p>O ambiente era limpo
-								<p>Lá não corriam perigo
-								<p>Com palha forrou o chão
-								<p>Improvisando um colchão
-								<p>Fugindo do desabrigo.
-							</div>
-                        </div>
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>10</h4>
-								<p><b>Por sobre a palha, José,</b>
-								<p>Uma manta estendeu
-								<p>Ali deitou o casal
-								<p>Que descanso mereceu
-								<p>Para geral alegria
-								<p>O menino de Maria
-								<p>A meia noite nasceu.
-							</div>
-                        </div>
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>11</h4>
-								<p><b>E foi numa manjedoura</b>
-								<p>Que a criança ficou
-								<p>Forrada com palha limpa
-								<p>Que o bom José arrumou
-								<p>Num pano foi enrolado
-								<p>Nas palhinhas colocado
-								<p>Pela mãe que lhe embalou.
-							</div>
-                        </div>
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>12</h4>
-								<p><b>Nasceu o filho de Deus</b>
-								<p>E de Jesus foi chamado
-								<p>Como advertiu o anjo
-								<p>Quando deu o seu recado
-								<p>Foi despido de riqueza
-								<p>No meio da singeleza
-								<p>Que Jesus foi adorado
-							</div>
-                        </div>
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>13</h4>
-								<p><b>Nas colinas de Belém</b>
-								<p>Os pastores agrupados
-								<p>Vigiavam seus rebanhos
-								<p>E ficaram assustados
-								<p>Quando lá no céu brilhou
-								<p>Uma luz que os espantou
-								<p>Deixando-lhes ofuscados.
-							</div>
-                        </div>
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>14</h4>
-								<p><b>Era um anjo que surgia</b>
-								<p>E acalmou cada pastor
-								<p>Eu trago boa notícia
-								<p>Escutem-me, por favor,
-								<p>Nesta noite em Belém
-								<p>Nasceu para nosso bem
-								<p>Jesus nosso Salvador.
-							</div>
-                        </div>
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>15</h4>
-								<p><b>E logo no céu surgiu</b>
-								<p>Encantando os pastores
-								<p>Mais anjos que lindamente
-								<p>Cantarolavam louvores
-								<p>Em homenagem a Jesus
-								<p>Que chegou trazendo luz
-								<p>E prenúncio de amores.
-							</div>
-                        </div>
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>16</h4>
-								<p><b>E Glória a Deus nas alturas</b>
-								<p>Se ouviu com suavidade
-								<p>E paz na terra aos homens
-								<p>Que tinham boa vontade
-								<p>Os anjos assim cantavam
-								<p>Pastores se encantavam
-								<p>Diante da novidade.
-							</div>
-                        </div>
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>17</h4>
-								<p><b>A luz foi diminuindo</b>
-								<p>Todos logo perceberam
-								<p>Os anjos também sumiram
-								<p>E os pastores se acenderam
-								<p>E cheios de esperança
-								<p>Foram atrás da criança
-								<p>A pista eles não perderam.
-							</div>
-                        </div>
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>18</h4>
-								<p><b>Quando viram o estábulo</b>
-								<p>Entraram devagarinho
-								<p>Na manjedoura o menino
-								<p>Ao lado dele um burrinho
-								<p>Tinha uma vaca também
-								<p>Como de fato convém
-								<p>Jesus não estava sozinho.
-							</div>
-                        </div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>19</h4>
-								<p><b>Pelos homens da colina</b>
-								<p>Jesus Rei foi adorado
-								<p>Ele era o salvador
-								<p>Pelo anjo anunciado
-								<p>Os pastores finalmente
-								<p>Contaram pra toda gente
-								<p>Que Jesus tinha chegado.
-							</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>20</h4>
-								<p><b>Três homens sábios moravam</b>
-								<p>Num país muito distante
-								<p>E do céu e das estrelas
-								<p>Faziam estudo constante
-								<p>Uma estrela reluzente
-								<p>Aparece de repente
-								<p>Com um brilho intrigante.
-							</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>21</h4>
-								<p><b>Diziam os três Reis Magos</b>
-								<p>Que o sinal emitido
-								<p>Era algo especial
-								<p>Que havia acontecido
-								<p>E foram seguindo a luz
-								<p>Para visitar Jesus
-								<p>O rei que tinha nascido.
-							</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>22</h4>
-								<p><b>Os três Reis Magos levaram</b>
-								<p>Presentes para ofertar
-								<p>A grande estrela guiava
-								<p>Melchior e Baltazar,
-								<p>E Gaspar ia também
-								<p>Pra cidade de Belém
-								<p>O novo rei adorar.
-							</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>23</h4>
-								<p><b>Quando o rei Herodes soube</b>
-								<p>Que nasceu o rei menino
-								<p>Ficou bastante zangado
-								<p>Cometendo desatino
-								<p>Aos Magos pediu favor
-								<p>Caso vissem o Salvador
-								<p>Lhe revelasse o destino.	
-							</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>24</h4>
-								<p><b>Os Reis Magos prosseguiram</b>
-								<p>Cada um com seu presente
-								<p>Era Ouro, incenso e mirra
-								<p>Para o pequeno inocente
-								<p>Que logo foi adorado
-								<p>E também presenteado
-								<p>Pelos reis do oriente
-							</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>25</h4>
-								<p><b>Os Reis seguiram viagem</b>
-								<p>Logo após a adoração
-								<p>Pararam para dormir
-								<p>Num sonho a revelação
-								<p>Um anjo veio avisar:
-								<p>Herodes quer é matar
-								<p>Jesus, rei da salvação.
-							</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>26</h4>
-								<p><b>Os três Reis Magos pegaram</b>
-								<p>Na volta um novo curso
-								<p>Pra não cruzar com Herodes
-								<p>Fazendo o mesmo percurso
-								<p>Acharam os três por bem
-								<p>Desviar Jerusalém
-								<p>Só tinham esse recurso.
-							</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>27</h4>
-								<p><b>José também teve um sonho</b>
-								<p>Sonho pior não teria
-								<p>Um anjo lhe avisou
-								<p>Para fugir com Maria
-								<p>Deixar depressa o abrigo
-								<p>Jesus corria perigo
-								<p>Se foram na correria.
-							</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>28</h4>
-								<p><b>Partiram para o Egito</b>
-								<p>Como o anjo aconselhou
-								<p>A fuga foi cansativa
-								<p>Mas a família chegou
-								<p>Sã e salva a seu destino
-								<p>Salvaram Jesus menino
-								<p>Do rei que louco ficou.
-								
-							</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>29</h4>
-								<p><b>Quando Herodes descobriu</b>
-								<p>Que tinha sido enganado
-								<p>Ficou com ódio dos Magos
-								<p>E completamente irado
-								<p>Com medo do novo rei
-								<p>Não respeitou sua grei
-								<p>Estava desatinado.
-							</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>30</h4>
-								<p><b>Para não perder o trono</b>
-								<p>Diante dos desenganos
-								<p>Ordenou os seus soldados
-								<p>Que executassem seus planos
-								<p>E começou a matança
-								<p>Que era assassinar criança
-								<p>E com menos de dois anos.
-							</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>31</h4>
-								<p><b>Quem não amava Herodes</b>
-								<p>Passou mesmo a odiar.
-								<p>E no Egito a família
-								<p>Sagrada pode escapar
-								<p>Munidos de muita fé
-								<p>Voltaram pra Nazaré
-								<p>Para viver em seu lar.
-										</div>
-						</div>
-						
-						<div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h4>32</h4>
-								<p><b>Foi um anjo que avisou</b>
-								<p>Que José já poderia
-								<p>Voltar para Nazaré
-								<p>Pois perigo não corria
-								<p>Herodes tinha morrido
-								<p>Ele voltou comovido
-								<p>Com Jesus e com Maria.
-							</div>
-						</div>
 						
                     </div>
                 </div>
@@ -939,19 +696,11 @@
 			<div class="container isotope mt-130 mb-100">
                 
                 <div class="row gh-1 gv-1 isotope-grid" style="margin-top: 0px;">
-                        <div class="col-12 col-sm-6 isotope-item" data-filters="design">
+                        <div class="col-12 col-sm-12 isotope-item" data-filters="design">
                             <div class="card card-block d-flex verso">
-								<h3>CRÉDITOS</h3>
-								<p>Autora: Dalinha Catunda</p>
-								<p>Xilogravura: Erivaldo</p>						
-							</div>
-                        </div>
-                        <div class="col-12 col-sm-6 isotope-item" data-filters="photography">
-                            <div class="card card-block d-flex verso">
-								<h5>FALE COM A AUTORA</h5>
-								<p><a href="https://cordeldesaia.blogspot.com/">Cordel de Saia</a>
-								<p><a href="https://cantinhodadalinha.blogspot.com/">Cantinha da Dalinda</a>
-								<p><a href="https://www.facebook.com/profile.php?id=790748006">Facebook da Dalinda</a>	
+								<h4>CRÉDITOS</h4>
+								<p>Autor: Patativa do Assaré</p>
+								<a href="https://www.culturagenial.com/patativa-do-assare-poemas/">culturagenial.com</a>	
 							</div>
                         </div>
 				</div>	
@@ -1040,7 +789,6 @@
                 </div>
             </div>
         </footer>
-        <!-- START: Scripts -->
 		<script>
 		$(document).ready(function() {
 		$(window).scroll(function() {
@@ -1059,6 +807,7 @@
 		});
 		});
 		</script>
+        <!-- START: Scripts -->
         <!-- Object Fit Polyfill -->
         <script src="../../assets/vendor/object-fit-images/dist/ofi.min.js"></script>
         <!-- Popper -->

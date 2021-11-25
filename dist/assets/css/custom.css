@@ -1,4 +1,24 @@
+
+body {font-family: 'Open Sans', sans-serif;
+			font-weight: 100}
+
+body p .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-family: 'Open Sans', sans-serif;
+			font-weight: 100}
+		.navbar-mobile-style-2 .navbar-body>.navbar-nav a{font-family: 'Inter', sans-serif; font-weight:300}
+		.navbar-mobile .navbar-collapse-menu>.navbar-nav a{font-family:'Open Sans', sans-serif;}
+		.navbar-mobile .navbar-collapse-menu>.navbar-nav a:hover {color:#90EE90; font-family:'Open Sans', sans-serif; letter-spacing: 0.07em; font-size:1.2em}
+		
+
+.nav .nav-link { font-weight: 300}
+
+
 .footrepair {width: 90%;}
+
+footer .nav-item, .footer-copyright {
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 100;
+			color: #;
+		}
 
 @media (max-width: 1024px){
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
