@@ -9,8 +9,10 @@
         <link rel="icon" type="image/png" href="../../assets/images/favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-        <!-- START: Styles -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;700&display=swap" rel="stylesheet">
+		<!-- START: Styles -->
         <!-- Swiper -->
         <link rel="stylesheet" href="../../assets/vendor/swiper/dist/css/swiper.min.css" />
         <!-- Fancybox -->
@@ -20,10 +22,19 @@
         <!-- Custom Styles -->
         <link rel="stylesheet" href="../../assets/css/custom.css">
         <!-- END: Styles -->
+		<!-- Google Analytics  -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-58595099-1', 'auto');
+		ga('send', 'pageview');	
+		</script>
+		<!-- End Google Analytics -->
         <!-- jQuery -->
         <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 		<style>
-		
 		.card, h3, h4, a  {color:white;}
 		.gallery-item img {
 			width: auto;}
@@ -157,7 +168,7 @@
                 </a>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
-                        <a href="../index.html" class="nav-link">
+                        <a href="../../index.html" class="nav-link">
                             <span class="nav-link-name">início</span>
                         </a>
                     </li>
@@ -170,65 +181,55 @@
                         </a>
                         <div class="dropdown-menu" id="exposicoes">
                             <ul class="nav navbar-nav">
-                             <!--    <li class="nav-item">
-                                    <a href="../index_crioulo.html" class="nav-link">
-                                        <span class="nav-link-name">Crioulo</span>
-                                    </a>
-                                </li>  -->
 								<li class="nav-item">
-                                    <a href="../cordel.html" class="nav-link">
+                                    <a href="index.html" class="nav-link">
                                         <span class="nav-link-name">Literatura de Cordel</span>
                                     </a>
                                 </li>
 								<li class="nav-item">
-                                    <a href="../clarice.html" class="nav-link">
-                                        <span class="nav-link-name">Clarice Lispector</span>
-                                    </a>
-                                </li>
+									<a href="../../exposicoes/cante/index.html" class="nav-link">
+										<span class="nav-link-name">O Cante Alentejano</span>
+									</a>
+								</li>
 								<li class="nav-item">
-                                    <a href="../cante.html" class="nav-link">
-                                        <span class="nav-link-name">O Cante Alentejano</span>
-                                    </a>
-                                </li>
+									<a href="../../exposicoes/drummond/index.html" class="nav-link">
+										<span class="nav-link-name">Drummond de Andrade</span>
+									</a>
+								</li>
 								<li class="nav-item">
-                                    <a href="../drummond.html" class="nav-link">
-                                        <span class="nav-link-name">Drummond</span>
-                                    </a>
-                                </li>
+									<a href="../../exposicoes/fernandopessoa/index.html" class="nav-link">
+										<span class="nav-link-name">Fernando Pessoa</span>
+									</a>
+								</li>
 								<li class="nav-item">
-                                    <a href="../fernandopessoa.html" class="nav-link">
-                                        <span class="nav-link-name">Fernando Pessoa</span>
-                                    </a>
-                                </li>
+									<a href="../../exposicoes/herbertohelder/index.html" class="nav-link"> 
+										<span class="nav-link-name">Herberto Helder</span>
+									</a>
+								</li>
 								<li class="nav-item">
-                                    <a href="../herberto.html" class="nav-link">
-                                        <span class="nav-link-name">Herberto Helder</span>
-                                    </a>
-                                </li>
+									<a href="../../exposicoes/marioviegas/index.html" class="nav-link">
+										<span class="nav-link-name">Mário Viegas</span>
+									</a>
+								</li>
 								<li class="nav-item">
-                                    <a href="../mv.html" class="nav-link">
-                                        <span class="nav-link-name">Mário Viegas</span>
-                                    </a>
-                                </li>
+									<a href="../../exposicoes/monossilabico/index.html" class="nav-link">
+										<span class="nav-link-name">Monossilabico</span>
+									</a>
+								</li>
 								<li class="nav-item">
-                                    <a href="../monossilabico.html" class="nav-link">
-                                        <span class="nav-link-name">Monossilábico</span>
-                                    </a>
-                                </li>
+									<a href="../../exposicoes/nheengatu/index.html" class="nav-link">
+										<span class="nav-link-name">Nheengatu</span>
+									</a>
+								</li>
 								<li class="nav-item">
-                                    <a href="../monossilabico.html" class="nav-link">
-                                        <span class="nav-link-name">Nheengatu</span>
-                                    </a>
-                                </li>
-								<li class="nav-item">
-                                    <a href="../sonsanimais.html" class="nav-link">
-                                        <span class="nav-link-name">Os Sons dos Animais</span>
-                                    </a>
-                                </li>
+									<a href="../../exposicoes/sonsanimais/index.html" class="nav-link">
+										<span class="nav-link-name">Os Sons dos Animais</span>
+									</a>
+								</li>
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item navbar-dropdown">
+					<li class="nav-item navbar-dropdown">
                         <a href="#recursos" class="nav-link">
                             <span class="nav-link-name">recursos</span>
                             <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -238,19 +239,13 @@
                         <div class="dropdown-menu" id="recursos">
                             <ul class="nav navbar-nav">
                                 <li class="nav-item">
-                                    <a href="https://runwebrun.com/themebau/about-us.html" class="nav-link">
+                                    <a href="../../recursos/guia/index.html" class="nav-link">
                                         <span class="nav-link-name">81 museus na internet</span>
-                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="https://runwebrun.com/themebau/services.html" class="nav-link">
+                                    <a href="../../recursos/cronologia/index.html" class="nav-link">
                                         <span class="nav-link-name">cronologia</span>
-                                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 9L5 5L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
                                     </a>
                                 </li>
                             </ul>
@@ -311,13 +306,13 @@
                                     </a>
                                     <div class="navbar-collapse-menu collapse show" id="navbarCollapseCordeis">
                                         <ul class="nav navbar-nav">
-                                            <li class="nav-item">
-                                                <a href="dicas.html" class="nav-link collapsed">
+                                            <li class="nav-item" class="nav-link collapsed">
+                                                <a href="dicas.html">
                                                     <span class="nav-link-name">DICAS</span>
                                                 </a>
                                             </li>
-											<li class="nav-item">
-                                                <a href="nascimento.html" class="nav-link collapsed">
+											<li class="nav-item" class="nav-link collapsed">
+                                                <a href="nascimento.html">
                                                     <span class="nav-link-name">Nascimento de Jesus</span>
                                                 </a>
                                             </li>
@@ -456,7 +451,7 @@
                                     <div class="navbar-collapse-menu collapse" id="navbarCollapsePages">
                                         <ul class="nav navbar-nav">
                                             <li class="nav-item">
-                                                <a href="../../recursos/sonsanimais/index.html" class="nav-link collapsed">
+                                                <a href="../../recursos/guia/index.html" class="nav-link collapsed">
                                                     <span class="nav-link-name">81 museus na internet</span>
                                                 </a>
                                             </li>

@@ -23,6 +23,16 @@
         <!-- Custom Styles -->
         <link rel="stylesheet" href="assets/css/custom.css">
         <!-- END: Styles -->
+		<!-- Google Analytics  -->
+		<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-58595099-1', 'auto');
+		ga('send', 'pageview');	
+		</script>
+		<!-- End Google Analytics -->
         <!-- jQuery -->
         <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
 		<style>	
@@ -30,18 +40,19 @@
 			transition-duration: 2s;
 		}
 		.card-portfolio.card-hover-bar .card-img-overlay {
-			padding: 10px 5px;}
+			padding: 10px 5px;
+			background-color:#0a0a0a}
 		.card-portfolio .card-img-overlay {
 			justify-content: start;
 			top: -25px;}
 		.h2 {font-weight: bolder;}
 		.text-white {color: #0a0a0a!important;}
 		.card .card-title {
-			color: #0a0a0a;
+			color: #ffffff;
 		}
 		
 		.row.gv-4>[class*=col] {
-			padding-top: 4px;
+			padding-top: 18px;
 		}
 
 		.row.gh-1>[class*=col] {
@@ -54,14 +65,10 @@
 		.nav-social .nav-item {    
 			padding-right: 20px;}
 			
-		.footer-font {
-			font-size: .900em;
-			color: #;
-		}
-		.footer-font p {margin-bottom:0.5em;
-		}
+		.footer-font {font-size: .900em;}
+		.footer-font p {margin-bottom:0.5em;}
 		
-		.cartaz {margin: 8% auto 10%;}
+		.cartaz {margin: 4% auto 3%;}
 		
 		@media (max-width: 619.98px) {
 			.h2, h2 {
@@ -97,6 +104,7 @@
 		</style>
     </head>
     <body class="bg-dark cursor-enabled navbar-show">
+		<a class="skip-main" href="#content">Avançar para conteúdo</a> <!-- para acessibilidade -->
         <header class="navbar navbar-top navbar-expand navbar-dark navbar-fixed">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
@@ -121,11 +129,6 @@
                         </a>
                         <div class="dropdown-menu" id="exposicoes">
                             <ul class="nav navbar-nav">
-                          <!-- 	<li class="nav-item">
-                                    <a href="../index_crioulo.html" class="nav-link">
-                                        <span class="nav-link-name">Crioulo</span>
-                                    </a>
-                                </li>  -->
 								<li class="nav-item">
                                     <a href="exposicoes/cordel/index.html" class="nav-link">
                                         <span class="nav-link-name">Literatura de Cordel</span>
@@ -172,7 +175,7 @@
                                     </a>
                                 </li>
 								<li class="nav-item">
-                                    <a href="exposicoes/sonsanimais/index.htmll" class="nav-link">
+                                    <a href="exposicoes/sonsanimais/index.html" class="nav-link">
                                         <span class="nav-link-name">Sons dos Animais</span>
                                     </a>
                                 </li>
@@ -233,7 +236,7 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">
+							<a href="https://www.instagram.com/museudafala" class="nav-link">
 								<svg width="15" height="15" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M11.2827 5.3166C8.24087 5.3166 5.78732 7.8148 5.78732 10.912C5.78732 14.0092 8.24087 16.5074 11.2827 16.5074C14.3245 16.5074 16.7781 14.0092 16.7781 10.912C16.7781 7.8148 14.3245 5.3166 11.2827 5.3166ZM11.2827 14.5497C9.31698 14.5497 7.70998 12.9183 7.70998 10.912C7.70998 8.90563 9.3122 7.27425 11.2827 7.27425C13.2532 7.27425 14.8554 8.90563 14.8554 10.912C14.8554 12.9183 13.2484 14.5497 11.2827 14.5497ZM18.2846 5.08772C18.2846 5.81331 17.7107 6.39282 17.0029 6.39282C16.2902 6.39282 15.7211 5.80844 15.7211 5.08772C15.7211 4.36699 16.295 3.78261 17.0029 3.78261C17.7107 3.78261 18.2846 4.36699 18.2846 5.08772ZM21.9243 6.4123C21.843 4.66404 21.4508 3.11545 20.1929 1.83956C18.9399 0.563678 17.419 0.164355 15.7019 0.0766992C13.9323 -0.0255664 8.62827 -0.0255664 6.85865 0.0766992C5.14643 0.159486 3.62552 0.558809 2.36766 1.83469C1.10979 3.11058 0.722392 4.65917 0.636302 6.40743C0.535865 8.20925 0.535865 13.6098 0.636302 15.4117C0.717609 17.1599 1.10979 18.7085 2.36766 19.9844C3.62552 21.2603 5.14165 21.6596 6.85865 21.7473C8.62827 21.8495 13.9323 21.8495 15.7019 21.7473C17.419 21.6645 18.9399 21.2652 20.1929 19.9844C21.446 18.7085 21.8382 17.1599 21.9243 15.4117C22.0247 13.6098 22.0247 8.21412 21.9243 6.4123ZM19.6381 17.345C19.2651 18.2995 18.5429 19.0348 17.6007 19.4195C16.1898 19.9893 12.8419 19.8578 11.2827 19.8578C9.72352 19.8578 6.37081 19.9844 4.96469 19.4195C4.02727 19.0397 3.30507 18.3043 2.92724 17.345C2.36766 15.9084 2.49679 12.4995 2.49679 10.912C2.49679 9.32443 2.37244 5.91071 2.92724 4.47899C3.30029 3.52451 4.02248 2.78917 4.96469 2.40446C6.37559 1.83469 9.72352 1.96618 11.2827 1.96618C12.8419 1.96618 16.1946 1.83956 17.6007 2.40446C18.5381 2.7843 19.2603 3.51964 19.6381 4.47899C20.1977 5.91558 20.0686 9.32443 20.0686 10.912C20.0686 12.4995 20.1977 15.9133 19.6381 17.345Z" fill="currentColor"></path>
 								</svg>
@@ -277,11 +280,6 @@
                                     </a>
                                     <div class="navbar-collapse-menu collapse" id="navbarCollapseProjects">
                                         <ul class="nav navbar-nav">
-                                           <!--  <li class="nav-item">
-                                                <a href="exposicoes/crioulo/index.html" class="nav-link collapsed>
-                                                    <span class="nav-link-name">Crioulo</span>
-                                                </a>
-                                            </li> -->
                                             <li class="nav-item">
                                                 <a href="exposicoes/cordel/index.html" class="nav-link collapsed>
                                                     <span class="nav-link-name">Literatura de Cordel</span>
@@ -293,12 +291,12 @@
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="exposicoes/cante/index.html" class="nav-link collapsed>
+                                                <a href="exposicoes/cante/index.html" class="nav-link collapsed">
                                                     <span class="nav-link-name">O Cante Alentejano</span>
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a href="exposicoes/drummond/index.html" class="nav-link collapsed>
+                                                <a href="exposicoes/drummond/index.html" class="nav-link collapsed">
                                                     <span class="nav-link-name">Drummond de Andrade</span>
                                                 </a>
                                             </li>
@@ -384,7 +382,7 @@
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="https://www.youtube.com/watch?v=rVGbg8s8l0M&list=PLX2Zin3BkUJHysgB7HmNsrzVOd6tP1pcl" class="nav-link">
+										<a href="https://www.instagram.com/museudafala" class="nav-link">
 											<svg width="27" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M11.2827 5.3166C8.24087 5.3166 5.78732 7.8148 5.78732 10.912C5.78732 14.0092 8.24087 16.5074 11.2827 16.5074C14.3245 16.5074 16.7781 14.0092 16.7781 10.912C16.7781 7.8148 14.3245 5.3166 11.2827 5.3166ZM11.2827 14.5497C9.31698 14.5497 7.70998 12.9183 7.70998 10.912C7.70998 8.90563 9.3122 7.27425 11.2827 7.27425C13.2532 7.27425 14.8554 8.90563 14.8554 10.912C14.8554 12.9183 13.2484 14.5497 11.2827 14.5497ZM18.2846 5.08772C18.2846 5.81331 17.7107 6.39282 17.0029 6.39282C16.2902 6.39282 15.7211 5.80844 15.7211 5.08772C15.7211 4.36699 16.295 3.78261 17.0029 3.78261C17.7107 3.78261 18.2846 4.36699 18.2846 5.08772ZM21.9243 6.4123C21.843 4.66404 21.4508 3.11545 20.1929 1.83956C18.9399 0.563678 17.419 0.164355 15.7019 0.0766992C13.9323 -0.0255664 8.62827 -0.0255664 6.85865 0.0766992C5.14643 0.159486 3.62552 0.558809 2.36766 1.83469C1.10979 3.11058 0.722392 4.65917 0.636302 6.40743C0.535865 8.20925 0.535865 13.6098 0.636302 15.4117C0.717609 17.1599 1.10979 18.7085 2.36766 19.9844C3.62552 21.2603 5.14165 21.6596 6.85865 21.7473C8.62827 21.8495 13.9323 21.8495 15.7019 21.7473C17.419 21.6645 18.9399 21.2652 20.1929 19.9844C21.446 18.7085 21.8382 17.1599 21.9243 15.4117C22.0247 13.6098 22.0247 8.21412 21.9243 6.4123ZM19.6381 17.345C19.2651 18.2995 18.5429 19.0348 17.6007 19.4195C16.1898 19.9893 12.8419 19.8578 11.2827 19.8578C9.72352 19.8578 6.37081 19.9844 4.96469 19.4195C4.02727 19.0397 3.30507 18.3043 2.92724 17.345C2.36766 15.9084 2.49679 12.4995 2.49679 10.912C2.49679 9.32443 2.37244 5.91071 2.92724 4.47899C3.30029 3.52451 4.02248 2.78917 4.96469 2.40446C6.37559 1.83469 9.72352 1.96618 11.2827 1.96618C12.8419 1.96618 16.1946 1.83956 17.6007 2.40446C18.5381 2.7843 19.2603 3.51964 19.6381 4.47899C20.1977 5.91558 20.0686 9.32443 20.0686 10.912C20.0686 12.4995 20.1977 15.9133 19.6381 17.345Z" fill="currentColor" />
 											</svg>
@@ -398,29 +396,28 @@
             </div>
         </div>
 		
-        <div class="content-wrap">
+        <div class="content-wrap" id="content">
 			
             <div class="pt-130 pb-20 text-center">
                 <div class="container">
-				
                     <div class="row gh-1 gv-4">
 						<div class="col-12 cartaz show-on-scroll show-on-scroll-ready" data-show-duration="1500" data-show-distance="20" data-show-delay="50" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
 							<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="4000">
 							  <div class="carousel-inner">
 								<div class="carousel-item active">
-								  <img src="assets/images/logo_mf_white.png" class="d-block w-100" alt="...">
+								  <img src="assets/images/logo_mf_white.png" class="d-block w-100" alt="logotipo">
 								</div>
 								
 								<div class="carousel-item">
-									<img src="assets/images/banner2.png" class="d-block w-100" alt="...">
+									<img src="assets/images/banner2.png" class="d-block w-100" alt="apoios">
 								</div>
 								
 								<div class="carousel-item">
-								  <img src="assets/images/logo_mf_white.png" class="d-block w-100" alt="...">
+								  <img src="assets/images/logo_mf_white.png" class="d-block w-100" alt="logotipo">
 								</div>
 								
 								<div class="carousel-item">
-									<img src="assets/images/apoios_banner.png" class="d-block w-100" alt="...">
+									<img src="assets/images/apoios_banner.png" class="d-block w-100" alt="visite as exposições">
 								</div>
 							  </div>
 							  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" style="opacity:0">
@@ -433,20 +430,10 @@
 							  </a>
 							</div>
 						</div>
-					<!-- 	<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="50" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a href="exposicoes/crioulo/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" href="#">
-                                <span class="card-img">
-                                   <img src="assets/images/exposicoes/crioulo.png" alt="">
-                                </span>
-                                <span class="card-img-overlay">
-                                    <span class="card-title h3">O Crioulo de Cabo-Verde</span>
-                                </span>
-                            </a>
-                        </div> -->
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="50" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a href="exposicoes/cordel/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" href="#">
+                            <a href="exposicoes/cordel/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-white" href="#">
                                 <span class="card-img" style="background-color:#68B3DF">
-                                    <img src="assets/images/exposicoes/cordel.png" alt="">
+                                    <img src="assets/images/exposicoes/cordel.png" alt="dois homens tocam violam">
                                 </span>
                                 <span class="card-img-overlay">
                                     <span class="card-title h3">Literatura de Cordel</span>
@@ -456,7 +443,7 @@
                         <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="exposicoes/cante/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark">
                                 <span class="card-img" style="background-color:#E5FF70">
-                                    <img src="assets/images/exposicoes/cante.png" alt="">
+                                    <img src="assets/images/exposicoes/cante.png" alt="silhueta de grupo de homens">
                                 </span>
                                 <span class="card-img-overlay">
                                     <span class="card-title h3">O Cante Alentejano</span>
@@ -466,7 +453,7 @@
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="exposicoes/drummond/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark">
                                 <span class="card-img" style="background-color:#DDD8E9">
-                                    <img src="assets/images/exposicoes/cd.png" alt="">
+                                    <img src="assets/images/exposicoes/cd.png" alt="caricatura de drummond de andrade">
                                 </span>
                                 <span class="card-img-overlay">
                                     <span class="card-title h3">Drummond</span>
@@ -476,7 +463,7 @@
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="exposicoes/herbertohelder/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark">
                                 <span class="card-img" style="background-color:#F04248">
-                                    <img src="assets/images/exposicoes/herberto.png" alt="">
+                                    <img src="assets/images/exposicoes/herberto.png" alt="rosto de herberto helder">
                                 </span>
                                 <span class="card-img-overlay">
                                     <span class="card-title h3">Herberto Helder</span>
@@ -486,7 +473,7 @@
                         <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="250" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="exposicoes/clarice/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark">
                                 <span class="card-img" style="background-color:#EEF5DB">
-                                    <img src="assets/images/exposicoes/clariceop.png" alt="">
+                                    <img src="assets/images/exposicoes/clariceop.png" alt="rosto de clarice lispector">
                                 </span>
                                 <span class="card-img-overlay">
                                     <span class="card-title h3">Clarice</span>
@@ -496,7 +483,7 @@
                         <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="250" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="exposicoes/marioviegas/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark">
                                 <span class="card-img" style="background-color:#E56399">
-                                    <img src="assets/images/exposicoes/mv.png" alt="">
+                                    <img src="assets/images/exposicoes/mv.png" alt="rosto de mário viegas">
                                 </span>
                                 <span class="card-img-overlay">
                                     <span class="card-title h3">Mário Viegas</span>
@@ -506,7 +493,7 @@
                         <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="250" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="exposicoes/monossilabico/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark">
                                 <span class="card-img" style="background-color:#090B09">
-                                    <img src="assets/images/exposicoes/mono2.png" alt="">
+                                    <img src="assets/images/exposicoes/mono2.png" alt="monossilábico">
                                 </span>
                                 <span class="card-img-overlay">
                                     <span class="card-title h3">Monossilábico</span>
@@ -516,7 +503,7 @@
                         <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="exposicoes/nheengatu/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark">
                                 <span class="card-img" style="background-color:#329F5B">
-                                    <img src="assets/images/exposicoes/tupi2.png" alt="">
+                                    <img src="assets/images/exposicoes/tupi2.png" alt="silhuetas de dois nativos brasileiros">
                                 </span>
                                 <span class="card-img-overlay">
                                     <span class="card-title h3">Nheengatu</span>
@@ -526,7 +513,7 @@
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="exposicoes/fernandopessoa/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark">
                                 <span class="card-img" style="background-color:#195476">
-                                    <img src="assets/images/exposicoes/fp.png" alt="">
+                                    <img src="assets/images/exposicoes/fp.png" alt="rosto de fernando pessoa">
                                 </span>
                                 <span class="card-img-overlay">
                                     <span class="card-title h3">Fernando Pessoa</span>
@@ -536,7 +523,7 @@
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="recursos/cronologia/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark">
                                 <span class="card-img" style="border: 5px solid red; background-color:#C2FFC2 ">
-                                    <img src="assets/images/exposicoes/cronologia.png" alt="">
+                                    <img src="assets/images/exposicoes/cronologia.png" alt="seta para a direita com a palavra cronologia">
                                 </span>
                                 <span class="card-img-overlay">
                                     <span class="card-title h3">Cronologia</span>
@@ -546,7 +533,7 @@
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="exposicoes/sonsanimais/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark">
                                 <span class="card-img" style="background-color:#ECC203">
-                                    <img src="assets/images/exposicoes/animais2.png" alt="">
+                                    <img src="assets/images/exposicoes/animais2.png" alt="silhueta de gato com balão de fala miau">
                                 </span>
                                 <span class="card-img-overlay">
                                     <span class="card-title h3">Sons dos Animais</span>
@@ -556,7 +543,7 @@
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="exposicoes/sonsanimais/index.html" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark">
                                 <span class="card-img" style="background-color:#DEDACE">
-                                    <img src="assets/images/exposicoes/guia.png" alt="">
+                                    <img src="assets/images/exposicoes/guia.png" alt="representação da fachada de um museu">
                                 </span>
                                 <span class="card-img-overlay">
                                     <span class="card-title h3">Guia 81 Museus na internet</span>
@@ -566,7 +553,7 @@
 						<div class="col-12 col-md-12 col-lg-4 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <div>
 								<div>                              	
-									<img class="card-img" style="background-color:" src="assets/images/square.png" alt="">
+									<img class="card-img" src="assets/images/square.png" alt="fundo negro">
 									<h1 style="color:white;
 									position: absolute;
 										top: 36%;
@@ -577,22 +564,22 @@
                         </div>
 						<div class="col-12 col-md-6 col-lg-4 apoio show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <div>
-								<img class="card-img" style="background-color:" src="assets/images/apoios/logo_cml_white.svg" alt="">                              	
+								<img class="card-img" style="background-color:" src="assets/images/apoios/logo_cml_white.svg" alt="logotipo camara municipal de lisboa">                              	
                             </div>
                         </div>
 						<div class="col-12 col-md-6 col-lg-4 apoio show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <div>
-								<img class="card-img" style="background-color:" src="assets/images/apoios/logo_nova_white.svg" alt="">                              	
+								<img class="card-img" style="background-color:" src="assets/images/apoios/logo_nova_white.svg" alt="logotipo universidade nova de lisboa">                              	
                             </div>
                         </div>
 						<div class="col-12 col-md-6 col-lg-4 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="cafe/index.html">
-								<img class="card-img" style="background-color:#6f4e37" src="assets/images/cafe2.png" alt="">                              	
+								<img class="card-img" style="background-color:#6f4e37" src="assets/images/cafe2.png" alt="café expresso">                              	
                             </a>
                         </div>
 						<div class="col-12 col-md-12 col-lg-8 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
                             <a href="cafe/index.html">
-								<img class="card-img" style="background-color:#6f4e372e" src="assets/images/rectangle_21.png" alt="">                              		
+								<img class="card-img" style="background-color:#6f4e372e" src="assets/images/rectangle_21.png" alt="fundo castanho">                              		
 								<h1 style="position: absolute; top: 30%; text-align: center; width: 100%; color:white">Café do Museu</h1>
 						   </a>
                         </div>
@@ -608,7 +595,7 @@
                     <div class="col-lg-3">
                         <ul class="nav flex-column text-white repair2">
                             <li class="nav-item">
-                                <a href="callto:+351 915122373" class="nav-link">+351 915-122-373</a>
+                                <a href="callto:+351915122373" class="nav-link">+351 915-122-373</a>
                             </li>
                             <li class="nav-item">
                                 <a href="mailto:museudafala@gmail.com" class="nav-link">museudafala@gmail.com</a>
@@ -669,7 +656,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://www.youtube.com/watch?v=rVGbg8s8l0M&list=PLX2Zin3BkUJHysgB7HmNsrzVOd6tP1pcl" class="nav-link">
+                                <a href="https://www.instagram.com/museudafala" class="nav-link">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M11.2827 5.3166C8.24087 5.3166 5.78732 7.8148 5.78732 10.912C5.78732 14.0092 8.24087 16.5074 11.2827 16.5074C14.3245 16.5074 16.7781 14.0092 16.7781 10.912C16.7781 7.8148 14.3245 5.3166 11.2827 5.3166ZM11.2827 14.5497C9.31698 14.5497 7.70998 12.9183 7.70998 10.912C7.70998 8.90563 9.3122 7.27425 11.2827 7.27425C13.2532 7.27425 14.8554 8.90563 14.8554 10.912C14.8554 12.9183 13.2484 14.5497 11.2827 14.5497ZM18.2846 5.08772C18.2846 5.81331 17.7107 6.39282 17.0029 6.39282C16.2902 6.39282 15.7211 5.80844 15.7211 5.08772C15.7211 4.36699 16.295 3.78261 17.0029 3.78261C17.7107 3.78261 18.2846 4.36699 18.2846 5.08772ZM21.9243 6.4123C21.843 4.66404 21.4508 3.11545 20.1929 1.83956C18.9399 0.563678 17.419 0.164355 15.7019 0.0766992C13.9323 -0.0255664 8.62827 -0.0255664 6.85865 0.0766992C5.14643 0.159486 3.62552 0.558809 2.36766 1.83469C1.10979 3.11058 0.722392 4.65917 0.636302 6.40743C0.535865 8.20925 0.535865 13.6098 0.636302 15.4117C0.717609 17.1599 1.10979 18.7085 2.36766 19.9844C3.62552 21.2603 5.14165 21.6596 6.85865 21.7473C8.62827 21.8495 13.9323 21.8495 15.7019 21.7473C17.419 21.6645 18.9399 21.2652 20.1929 19.9844C21.446 18.7085 21.8382 17.1599 21.9243 15.4117C22.0247 13.6098 22.0247 8.21412 21.9243 6.4123ZM19.6381 17.345C19.2651 18.2995 18.5429 19.0348 17.6007 19.4195C16.1898 19.9893 12.8419 19.8578 11.2827 19.8578C9.72352 19.8578 6.37081 19.9844 4.96469 19.4195C4.02727 19.0397 3.30507 18.3043 2.92724 17.345C2.36766 15.9084 2.49679 12.4995 2.49679 10.912C2.49679 9.32443 2.37244 5.91071 2.92724 4.47899C3.30029 3.52451 4.02248 2.78917 4.96469 2.40446C6.37559 1.83469 9.72352 1.96618 11.2827 1.96618C12.8419 1.96618 16.1946 1.83956 17.6007 2.40446C18.5381 2.7843 19.2603 3.51964 19.6381 4.47899C20.1977 5.91558 20.0686 9.32443 20.0686 10.912C20.0686 12.4995 20.1977 15.9133 19.6381 17.345Z" fill="currentColor" />
                                     </svg>
