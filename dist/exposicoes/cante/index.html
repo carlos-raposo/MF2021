@@ -43,9 +43,13 @@
 			padding-right: 20px;}
 			
 			.subtitle {text-align:left;}
+			.h3 {font-weight:400}
 			
 			@media (min-width: 619.98px) {
 			.subtitle {font-size:1.2em}
+			.swiper-full-horizontal .swiper-slide {
+				width: 80%;
+			}
 			}
 			
 	
@@ -58,20 +62,26 @@
 			}
 			}
 			@media (min-width: 1024px){
-			.card-portfolio .card-img-overlay {
-				padding: 5% 20px;
-				-webkit-box-pack: start;
-				-ms-flex-pack: center;
-				justify-content: start;
+				.card-portfolio .card-img-overlay {
+					padding: 5% 20px;
+					-webkit-box-pack: start;
+					-ms-flex-pack: center;
+					justify-content: start;
+				}
+				.subtitle {font-size:1.3em}
+				span.card-title.h3 {margin-bottom: 3vw;}
 			}
-			.subtitle {font-size:1.3em}
-			}
-			
+				
 			@media (min-width: 1200px) {
-			.container, .container-lg, .container-md, .container-sm, .container-xl {
-				max-width: 1300px;
+				.container, .container-lg, .container-md, .container-sm, .container-xl {
+					max-width: 1300px;
+				}
+				.subtitle.palavras {
+					font-size: 2.5em;
+				}
+				.card-category { font-size: 1.4em;
+				}
 			}
-		 
 		</style>	
     </head>
     <body class="bg-dark cursor-enabled navbar-show">
@@ -396,6 +406,21 @@
                                 </span>
                             </div>
                         </div>
+						<div class="swiper-slide">
+                            <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black text-center card-hover-appearance">
+                                <span class="card-img">
+                                    <img src="img/modas.jpg" alt="">
+                                    <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
+                                </span>
+                                <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
+                                    <span class="card-title h3">OS TEMAS</span>
+                                    <span class="card-category subtitle" style="overflow: auto;">Na sua forma original, AS MODAS tinham como temas principais O TRABALHO, A CONTEMPLAÇÃO, A NOSTALGIA, O AMOR e A VIDA. 
+									Mais do que reivindicar melhores formas de vida, o cante servia para se purgarem as dificuldades. Com o declínio da economia agrícola e depois da revolução de 
+									1974, os grupos corais introduziram nos seus reportórios novos temas, alguns inspirados nos acontecimentos políticos da época, mais reivindicativos, não deixando, 
+									porém, de cantar as antigas modas do cancioneiro popular.</span>
+                                </span>
+                            </div>
+                        </div>
 						
 						<div class="swiper-slide">
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black text-center">
@@ -415,7 +440,7 @@
                                     <span class="background-color" style="background-color: rgba(14, 140, 14, 0);"></span>
                                 </span>
                                 <span class="card-img-overlay container">
-									<iframe style="background-image:url(''); width:100%; height: 100%;" src="https://www.instagram.com/museudafala" alt="Third slide"> 
+									<iframe style="background-image:url(''); width:100%; height: 100%;" src="https://www.youtube.com/embed/GBhgE3EMQy4" alt="Third slide"> 
 									</iframe>
                                 </span>
                             </div>
@@ -424,7 +449,7 @@
 						<div class="swiper-slide">
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black text-center card-hover-appearance">
                                 <span class="card-img">
-                                    <img src="img/question.png" alt="Ponto de Interrogação">
+                                    <img src="img/question.jpg" alt="Ponto de Interrogação">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
                                 <span class="card-img-overlay"  style="background-color: rgba(255, 255, 255, 0.9);">
@@ -437,7 +462,7 @@
 						<div class="swiper-slide">
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black text-center card-hover-appearance">
                                 <span class="card-img">
-                                    <img src="img/gregoriano.png" alt="">
+                                    <img src="img/gregoriano.jpg" alt="">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
                                 <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
@@ -536,7 +561,7 @@
 						<div class="swiper-slide">
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black text-center card-hover-appearance">
                                 <span class="card-img">
-                                    <img src="img/slide03.jpg" alt="">
+                                    <img src="img/slide3.jpg" alt="">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
                                 <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9); font-weight:bolder; padding-top:6px; -webkit-box-pack: center;-ms-flex-pack: center; justify-content: center;">
@@ -570,21 +595,6 @@
                                     <span class="card-category subtitle" style="overflow: auto;"><span class="h5">Quando as mulheres</span> deixam de ter 
 									acesso ao local onde, de modo privilegiado, o cante passa a acontecer – nas tabernas – estas ficam privadas do seu papel de intérpretes. Só depois 
 									de 1974, com a revolução de Abril, com os novos movimentos sociais e culturais, as mulheres voltaram a cantar organizando-se em grupos corais femininos ou mistos .</span>
-                                </span>
-                            </div>
-                        </div>
-						<div class="swiper-slide">
-                            <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black text-center card-hover-appearance">
-                                <span class="card-img">
-                                    <img src="img/modas.jpg" alt="">
-                                    <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
-                                </span>
-                                <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
-                                    <span class="card-title h3">OS TEMAS</span>
-                                    <span class="card-category subtitle" style="overflow: auto;">Na sua forma original, AS MODAS tinham como temas principais O TRABALHO, A CONTEMPLAÇÃO, A NOSTALGIA, O AMOR e A VIDA. 
-									Mais do que reivindicar melhores formas de vida, o cante servia para se purgarem as dificuldades. Com o declínio da economia agrícola e depois da revolução de 
-									1974, os grupos corais introduziram nos seus reportórios novos temas, alguns inspirados nos acontecimentos políticos da época, mais reivindicativos, não deixando, 
-									porém, de cantar as antigas modas do cancioneiro popular.</span>
                                 </span>
                             </div>
                         </div>

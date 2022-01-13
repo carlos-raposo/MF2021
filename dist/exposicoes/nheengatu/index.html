@@ -33,31 +33,65 @@
 		ga('send', 'pageview');	
 		</script>
 		<!-- End Google Analytics -->
+		
+		<script>
+			document.onreadystatechange = function() {
+				if (document.readyState !== "complete") {
+					document.querySelector(
+					  "body").style.visibility = "hidden";
+					document.querySelector(
+					  "#loader").style.visibility = "visible";
+				} else {
+					document.querySelector(
+					  "#loader").style.display = "none";
+					document.querySelector(
+					  "body").style.visibility = "visible";
+				}
+			};
+		</script>
         <!-- jQuery -->
         <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 		<style>
 			.navbar-mobile .navbar-body .navbar-nav .nav-social {margin-top:30px}
 			.nav-social .nav-item {padding-right: 20px;}
-			.h2.nheengatu {top: -28%;}
+			
 			.subtitle.nheengatu {font-size:2em; letter-spacing: 12px; font-family: helvetic;}
 			.subtitle.palavras {font-size:1.4em;}
 			.subtitle {overflow: auto;}
 			.subtitle p {margin-bottom: 1em;}
-			.card-portfolio .card-img-overlay {padding: 3% 3% 1% 3%}
-			
+			.card-portfolio .card-img-overlay {padding: 3% 3% 1% 3%; justify-content: space-between;}
+			.card-portfolio .card-category {margin-top: auto; margin-bottom: auto;}
 			audio::-webkit-media-controls-panel
 				{background-color:powderblue;}
 			audio {background-color:powderblue;
 							height: 34px;}
+			.row .audio {align-self: flex-end;
+					width: 100%;}
 			figcaption{padding-bottom: 5px; 
 						padding-top: 5px;}				
 			article.col-6 {padding-right: 10px;}
 			
+			
+			
+          
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+			
+			
 			@media (min-width: 619.98px){
-				.h2.nheengatu {font-size:5em; top: -20%;}
+				.h2.nheengatu {font-size:5em; top: 10%;}
 				.subtitle.nheengatu {font-size:4em; letter-spacing: 18px;}
 				.subtitle {font-size:1.1em;}
 				.subtitle.palavras {font-size:2em;}
+				.swiper-full-horizontal .swiper-slide {
+				width: 80%;
+			}
 				}
 			@media (min-width: 1024px) {
 				.card-portfolio .card-img-overlay {padding: 1% 2% 0 2%;}
@@ -66,19 +100,30 @@
 			.container, .container-lg, .container-md, .container-sm, .container-xl {
 				max-width: 1300px;
 			}
-			.swiper-full-horizontal .swiper-slide {
-				width: 1000px;
-			}
+			
 			.subtitle.palavras {
 				font-size: 2.5em;
 			}
 			.card-category { font-size: 1.4em;
 			}
-		}		
+			}		
 		</style>	
     </head>
     <body class="bg-dark cursor-enabled navbar-show">
-        <header class="navbar navbar-top navbar-expand navbar-dark navbar-fixed">
+        
+		
+		<div id="loader" class="d-flex flex-column align-items-center justify-content-center center">
+		   <div class="row">
+			   <div class="spinner-border text-light" style="width: 6rem; height: 6rem;" role="status">
+				   <span class="sr-only">Loading...</span>
+			   </div>
+			</div>
+			<div class="row" style="color:white; margin-top:3vw">
+			  <strong>Carregando o seu conteúdo</strong>
+			</div>
+		</div>
+		
+		<header class="navbar navbar-top navbar-expand navbar-dark navbar-fixed">
             <div class="container">
                 <a class="navbar-brand" href="../../index.html">
                     <p style="padding-top:30px">museudafala
@@ -380,6 +425,7 @@
             </div>
         </div>
         <div class="content-wrap">
+		
             <div class="swiper text-white swiper-full swiper-full-horizontal swiper-portfolio-animejs" data-swiper-slides="auto" data-swiper-gap="100" data-swiper-speed="600" data-swiper-loop="true" data-swiper-center="true" data-swiper-breakpoints="500:auto, 0:1">
                 <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
                     <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-3775px, 0px, 0px);">	
@@ -390,7 +436,7 @@
                                     <img src="img/background.png" alt="">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
                                 </span>
-                                <span class="card-img-overlay" style="padding:25px 30px;">
+                                <span class="card-img-overlay" style="padding:25px 30px; justify-content: center;">
                                     <span class="card-title h2 text-white nheengatu">NHEENGATU</span>
                                     <span class="card-category subtitle text-white nheengatu" style=" text-shadow: 4px 17px 14px rgba(255,0,0,0.6);">a fala boa</span>
                                 </span>
@@ -414,19 +460,28 @@
 										<div class="row audio">
 											<article style="width:100%; float:left;" class="col-6">
 												<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Brasileiro</figcaption>
-												<audio controls style="width:100%;">
-												  <source src="audio/nheengatu_br_1.ogg" type="audio/ogg">
-												  <source src="audio/nheengatu_br_1.mp3" type="audio/mp3">
+												<audio controls id="myaudio1" style="width:100%;">
+												  <source src="audio/nheengatu1br.mp3" type="audio/mpeg">
+												  <source src="audio/nheengatu1br.ogg" type="audio/ogg">
+												  
 												  Your browser does not support the audio element.
 												</audio>
+												<script>
+												  var audio = document.getElementById("myaudio1");
+												  audio.volume = 0.5;
+												</script>
 											</article>
 											<article style="width:100%; float:left;" class="col-6">
 												<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Português</figcaption>
-												<audio controls style="width:100%;" >
-												  <source src="audio/nheengatu_pt_1.ogg" type="audio/ogg">
-												  <source src="audio/nheengatu_pt_1.mp3" type="audio/mp3">
+												<audio controls id="myaudio2" style="width:100%;" >
+												  <source src="audio/nheengatu1pt.ogg" type="audio/ogg">
+												  <source src="audio/nheengatu1pt.mp3" type="audio/mpeg">
 												  Your browser does not support the audio element.
 												</audio>
+												<script>
+												  var audio = document.getElementById("myaudio2");
+												  audio.volume = 0.5;
+												</script>
 											</article>
 										</div>
                                 </span>
@@ -448,19 +503,30 @@
 									<div class="row">
 											<article style="width:100%; float:left;" class="col-6">
 												<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Brasileiro</figcaption>
-												<audio controls style="width:100%;">
-												  <source src="audio/nheengatu_pt_1.ogg" type="audio/ogg">
-												  <source src="audio/nheengatu_pt_1.mp3" type="audio/mpeg">
+												<audio controls preload="none" id="myaudio3" style="width:100%;">
+												  <source src="audio/nheengatu2br.mp3" type="audio/mpeg">
+												  <source src="audio/nheengatu2br.wav" type="audio/wav">
+												  <source src="audio/nheengatu2br.ogg" type="audio/ogg">
 												  Your browser does not support the audio element.
 												</audio>
+												<script>
+												  var audio = document.getElementById("myaudio3");
+												  audio.volume = 0.5;
+												</script>
 											</article>
 											<article style="width:100%; float:left;" class="col-6">
 												<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Português</figcaption>
-												<audio controls style="width:100%;" >
-												  <source src="audio/nheengatu_pt_1.ogg" type="audio/ogg">
-												  <source src="audio/nheengatu_pt_1.mp3" type="audio/mpeg">
+												<audio controls preload="none" id="myaudio4" class="myaudio" style="width:100%;" >
+												  <source src="audio/nheengatu2pt.mp3" type="audio/mpeg">
+												  <source src="audio/nheengatu2pt.wav" type="audio/wav">
+												  <source src="audio/nheengatu2pt.ogg" type="audio/ogg">
+												  
 												  Your browser does not support the audio element.
 												</audio>
+												<script>
+												  var audio = document.getElementById("myaudio4");
+												  audio.volume = 0.5;
+												</script>
 											</article>
 										</div>
 									
@@ -485,19 +551,29 @@
 									<div class="row audio">
 											<article style="width:100%; float:left;" class="col-6">
 												<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Brasileiro</figcaption>
-												<audio controls style="width:100%;">
-												  <source src="audio/nheengatu_br_1.ogg" type="audio/ogg">
-												  <source src="audio/nheengatu_br_1.mp3" type="audio/mpeg">
+												<audio controls preload="none"  id="myaudio5" style="width:100%;">
+												  <source src="audio/nheengatu3br.ogg" type="audio/ogg">
+												  <source src="audio/nheengatu3br.mp3" type="audio/mpeg">
+												  <source src="audio/nheengatu3br.wav" type="audio/wav">
 												  Your browser does not support the audio element.
 												</audio>
+												<script>
+												  var audio = document.getElementById("myaudio5");
+												  audio.volume = 0.5;
+												</script>
 											</article>
 											<article style="width:100%; float:left;" class="col-6">
 												<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Português</figcaption>
-												<audio controls style="width:100%;" >
-												  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-												  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+												<audio controls preload="none" id="myaudio6" style="width:100%;" >
+												
+												  <source src="audio/nheengatu3pt.mp3" type="audio/mpeg">
+												  
 												  Your browser does not support the audio element.
 												</audio>
+												<script>
+												  var audio = document.getElementById("myaudio6");
+												  audio.volume = 0.5;
+												</script>
 											</article>
 									</div>
 								</span>
@@ -506,30 +582,41 @@
 						<div class="swiper-slide">
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black card-hover-appearance">
                                 <span class="card-img">
-                                    <img src="img/mapalinguas.png" alt="Silhuetas">
+                                    <img src="img/mapalinguas.png" alt="mapa linguas nativas">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
                                 <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
-                                   <span class="card-category subtitle">Em 1968 foram registradas 1,492 línguas faladas na América do Sul, distribuídos 
-								   segundo os seguintes troncos linguísticos: 130 línguasTupi, 108 Karib, 83 Aruak, 34 Pano, 26 Tukano, 66 Gê e mais 
+                                   <span class="card-category subtitle">
+								   Em 1968 foram registradas 1,492 línguas faladas na América do Sul, distribuídos 
+								   segundo os seguintes troncos linguísticos: 130 línguas Tupi, 108 Karib, 83 Aruak, 34 Pano, 26 Tukano, 66 Gê e mais 
 								   271 línguas isoladas ou não classificadas.
 								   </span>
 										<div class="row">
 											<article style="width:100%; float:left;" class="col-6">
 												<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Brasileiro</figcaption>
-												<audio controls style="width:100%;">
-												  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-												  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+												<audio id="myaudio7" controls preload="none"  style="width:100%;">
+												 <source src="audio/nheengatu4br.ogg" type="audio/ogg">
+												  <source src="audio/nheengatu4br.mp3" type="audio/mpeg">
+												  <source src="audio/nheengatu4br.wav" type="audio/wav">
 												  Your browser does not support the audio element.
 												</audio>
+												<script>
+												  var audio = document.getElementById("myaudio7");
+												  audio.volume = 0.5;
+												</script>
 											</article>
 											<article style="width:100%; float:left;" class="col-6">
 												<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Português</figcaption>
-												<audio controls style="width:100%;" >
-												  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-												  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+												<audio controls preload="none"  id="myaudio8" style="width:100%;" >
+												 <source src="audio/nheengatu4pt.ogg" type="audio/ogg">
+												  <source src="audio/nheengatu4pt.mp3" type="audio/mpeg">
+												  <source src="audio/nheengatu4pt.wav" type="audio/wav">
 												  Your browser does not support the audio element.
 												</audio>
+												<script>
+												  var audio = document.getElementById("myaudio8");
+												  audio.volume = 0.5;
+												</script>
 											</article>
 										</div>								   
                                 </span>
@@ -538,38 +625,49 @@
 						<div class="swiper-slide">
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black text-center card-hover-appearance" href="portfolio-single-style-1.html">
                                 <span class="card-img">
-                                    <img src="img/onca.jpg" alt="Silhuetas">
+                                    <img src="img/onca.jpg" alt="onça">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
 								<span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
 									<span class="card-category subtitle">
 										<h2>O que aconteceu com as línguas nativas?</h2>
+									</span>
 										<div class="row">
 											<article style="width:100%; float:left;" class="col-6">
 												<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Brasileiro</figcaption>
-												<audio controls style="width:100%;">
-												  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-												  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+												<audio id="myaudio9" controls preload="none"  style="width:100%;">
+												  <source src="audio/nheengatu5br.ogg" type="audio/ogg">
+												  <source src="audio/nheengatu5br.mp3" type="audio/mpeg">
+												  <source src="audio/nheengatu5br.wav" type="audio/wav">
 												  Your browser does not support the audio element.
 												</audio>
+												<script>
+												  var audio = document.getElementById("myaudio9");
+												  audio.volume = 0.5;
+												</script>
 											</article>
 											<article style="width:100%; float:left;" class="col-6">
 												<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Português</figcaption>
-												<audio controls style="width:100%;" >
-												  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-												  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+												<audio controls preload="none"  id="myaudio10" style="width:100%;" >
+												  <source src="audio/nheengatu5pt.ogg" type="audio/ogg">
+												  <source src="audio/nheengatu5pt.mp3" type="audio/mpeg">
+												  <source src="audio/nheengatu5pt.wav" type="audio/wav">
 												  Your browser does not support the audio element.
 												</audio>
+												<script>
+												  var audio = document.getElementById("myaudio10");
+												  audio.volume = 0.5;
+												</script>
 											</article>
 										</div>	
-									</span>
+									
 								</span>	
                             </div>
                         </div>
 						<div class="swiper-slide">
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black card-hover-appearance">
                                 <span class="card-img">
-                                    <img src="img/vieira.jpg" alt="Silhuetas">
+                                    <img src="img/vieira.jpg" alt="padre antonio viera com nativos">
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
                                 <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
@@ -580,17 +678,15 @@
 									<div class="row audio">
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Brasileiro</figcaption>
-											<audio controls style="width:100%;">
-											  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-											  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+											<audio controls preload="none" style="width:100%;">
+												<source src="audio/nheengatu6br.mp3" type="audio/mpeg">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Português</figcaption>
-											<audio controls style="width:100%;" >
-											  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-											  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+											<audio controls preload="none"  style="width:100%;" >
+												<source src="audio/nheengatu6pt.mp3" type="audio/mpeg">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
@@ -611,17 +707,19 @@
 									<div class="row audio">
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Brasileiro</figcaption>
-											<audio controls style="width:100%;">
-											  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-											  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+											<audio controls preload="none" style="width:100%;">
+												<source src="audio/nheengatu7br.ogg" type="audio/ogg">
+												<source src="audio/nheengatu7br.mp3" type="audio/mpeg">
+												<source src="audio/nheengatu7br.wav" type="audio/wav">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Português</figcaption>
-											<audio controls style="width:100%;" >
-											  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-											  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+											<audio controls preload="none" style="width:100%;" >
+												<source src="audio/nheengatu7pt.ogg" type="audio/ogg">
+												<source src="audio/nheengatu7pt.mp3" type="audio/mpeg">
+												<source src="audio/nheengatu7pt.wav" type="audio/wav">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
@@ -646,17 +744,19 @@
 									<div class="row audio">
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Brasileiro</figcaption>
-											<audio controls style="width:100%;">
-											  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-											  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+											<audio controls preload="none" style="width:100%;">
+												<source src="audio/nheengatu8br.ogg" type="audio/ogg">
+												<source src="audio/nheengatu8br.mp3" type="audio/mpeg">
+												<source src="audio/nheengatu8br.wav" type="audio/wav">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Português</figcaption>
-											<audio controls style="width:100%;" >
-											  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-											  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+											<audio controls preload="none" style="width:100%;" >
+												<source src="audio/nheengatu8pt.ogg" type="audio/ogg">
+												<source src="audio/nheengatu8pt.mp3" type="audio/mpeg">
+												<source src="audio/nheengatu8pt.wav" type="audio/wav">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
@@ -679,17 +779,19 @@
 									<div class="row audio">
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Brasileiro</figcaption>
-											<audio controls style="width:100%;">
-											  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-											  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+											<audio controls preload="none" style="width:100%;">
+											  <source src="audio/nheengatu9br.ogg" type="audio/ogg">
+												<source src="audio/nheengatu9br.mp3" type="audio/mpeg">
+												<source src="audio/nheengatu9br.wav" type="audio/wav">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Português</figcaption>
-											<audio controls style="width:100%;" >
-											  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-											  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+											<audio controls preload="none" style="width:100%;" >
+											    <source src="audio/nheengatu9pt.ogg" type="audio/ogg">
+												<source src="audio/nheengatu9pt.mp3" type="audio/mpeg">
+												<source src="audio/nheengatu9pt.wav" type="audio/wav">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
@@ -711,17 +813,19 @@
 									<div class="row audio">
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Brasileiro</figcaption>
-											<audio controls style="width:100%;">
-											  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-											  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+											<audio controls preload="none" style="width:100%;">
+												<source src="audio/nheengatu10br.ogg" type="audio/ogg">
+												<source src="audio/nheengatu10br.mp3" type="audio/mpeg">
+												<source src="audio/nheengatu10br.wav" type="audio/wav">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Português</figcaption>
-											<audio controls style="width:100%;" >
-											  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-											  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+											<audio controls preload="none" style="width:100%;" >
+												<source src="audio/nheengatu10pt.ogg" type="audio/ogg">
+												<source src="audio/nheengatu10pt.mp3" type="audio/mpeg">
+												<source src="audio/nheengatu10pt.wav" type="audio/wav">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
@@ -744,17 +848,19 @@
 									<div class="row audio">
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Brasileiro</figcaption>
-											<audio controls style="width:100%;">
-											  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-											  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+											<audio controls preload="none" style="width:100%;">
+												<source src="audio/nheengatu11br.ogg" type="audio/ogg">
+												<source src="audio/nheengatu11br.mp3" type="audio/mpeg">
+												<source src="audio/nheengatu11br.wav" type="audio/wav">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Português</figcaption>
-											<audio controls style="width:100%;" >
-											  <source src="https://www.w3schools.com/TagS/horse.ogg" type="audio/ogg">
-											  <source src="https://www.w3schools.com/TagS/horse.mp3" type="audio/mpeg">
+											<audio controls preload="none" style="width:100%;" >
+												<source src="audio/nheengatu11pt.ogg" type="audio/ogg">
+												<source src="audio/nheengatu11pt.mp3" type="audio/mpeg">
+												<source src="audio/nheengatu11pt.wav" type="audio/wav">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
@@ -820,6 +926,8 @@
         <script src="../../assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
         <!-- Themebau -->
         <script src="../../assets/js/themebau.min.js"></script>
+		
+		
         <!-- END: Scripts -->
     
 </body></html>

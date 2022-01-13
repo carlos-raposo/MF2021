@@ -1,0 +1,4 @@
+
+ptpt
+<emphasis level="strong">Oi!</emphasis>!<break time="400ms" />  Abacaxi<break time="400ms" />  Açaí<break time="400ms" />  Arapúca<break time="400ms" />Bauru<break time="400ms" /> Bibóca<break time="400ms" /> Caju<break time="400ms" /> Capenga<break time="400ms" /> Catapora<break time="400ms" /> Cupim<break time="400ms" /> Curumim<break time="400ms" /> Cutucar<break time="400ms" />Gambáh<break time="400ms" /> Guará<break time="400ms" /> Jacaré<break time="400ms" /> Jaboti<break time="400ms" /> Jaguar<break time="400ms" /> Maráca<break time="400ms" /> Mandioca<break time="400ms" /> Mingau<break time="400ms" /> Oca<break time="400ms" /> Péréréca<break time="400ms" /> Piá<break time="400ms" /> Pipoca<break time="400ms" /> Pitanga<break time="400ms" /> Tapera<break time="400ms" /> Tiririca<break time="500ms" /> Xáráh
+https://freetts.com/
