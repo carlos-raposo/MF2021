@@ -34,21 +34,6 @@
 		</script>
 		<!-- End Google Analytics -->
 		
-		<script>
-			document.onreadystatechange = function() {
-				if (document.readyState !== "complete") {
-					document.querySelector(
-					  "body").style.visibility = "hidden";
-					document.querySelector(
-					  "#loader").style.visibility = "visible";
-				} else {
-					document.querySelector(
-					  "#loader").style.display = "none";
-					document.querySelector(
-					  "body").style.visibility = "visible";
-				}
-			};
-		</script>
         <!-- jQuery -->
         <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 		<style>
@@ -70,18 +55,16 @@
 			figcaption{padding-bottom: 5px; 
 						padding-top: 5px;}				
 			article.col-6 {padding-right: 10px;}
-			
-			
-			
+				
           
-        .center {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
+			.center {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
 			
 			
 			@media (min-width: 619.98px){
@@ -110,8 +93,6 @@
 		</style>	
     </head>
     <body class="bg-dark cursor-enabled navbar-show">
-        
-		
 		<div id="loader" class="d-flex flex-column align-items-center justify-content-center center">
 		   <div class="row">
 			   <div class="spinner-border text-light" style="width: 6rem; height: 6rem;" role="status">
@@ -926,8 +907,26 @@
         <script src="../../assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
         <!-- Themebau -->
         <script src="../../assets/js/themebau.min.js"></script>
+		<!-- Loader -->
+		<script>
+			document.onreadystatechange = function() {
+				if (document.readyState !== "complete") {
+					document.querySelector(
+					  "body").style.visibility = "hidden";
+					document.querySelector(
+					  "#loader").style.visibility = "visible";
+				} else {
+					document.querySelector(
+					  "#loader").style.visibility = "hidden";
+					document.querySelector(
+					  "body").style.visibility = "visible";
+				}
+			};
+		</script>
+		<!-- End Loader -->
 		
 		
         <!-- END: Scripts -->
     
-</body></html>
+</body>
+</html>
