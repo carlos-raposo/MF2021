@@ -1,12 +1,91 @@
 
 body {font-family: 'Open Sans', sans-serif;
-			font-weight: 100}
+			font-weight: 100;
+			--text-color: #121212;
+			--bkg-color: #eee;}
+.card-portfolio.card-hover-bar .card-img-overlay,
+.navbar-top::before {--bkg-color: #eee;}
+.card-portfolio.card-hover-appearance:hover .card-img-overlay {--bkg-color: #eee; background-color: #eee}			
+.fancybox-content,
+.navbar-head {--text-color: #121212;
+					--bkg-color: #eee;}
+.navbar .navbar-nav .nav-link,
+.nav .nav-link, .nav .nav-link.active,
+.subtitle.palavras,
+.swiper-full-horizontal.swiper-full .swiper-button-wrapper,
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next,
+a.btn-with-ball, a.btn,
+.swiper-pagination,
+.navbar-mobile-style-2 .navbar-head {--text-color: #121212;}
+a.creditos {color:#f00}
+.fa-sun {color:#fff}
+.fa-moon {color: #121212;}					
+.fa-sun:before {display:none}					
+.fa-moon:before {display:block}
 
+img.d-block.bannerstart.logo-white {display:none!important}
+img.card-img.dark-mode {display:none!important}
+
+img.d-block.bannerstart.logo-dark {display:block!important}
+img.card-img.light-mode {display:block!important}
+
+button.dark-mode {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	float: left; 
+	padding-right: 14px;
+}
+
+
+button.dark-mode :focus {
+    border: none;
+    outline: none;
+}
+
+i.fas {display: inline; font-size:24px;}
+					
+body.dark-theme {
+  --text-color: #eee;
+  --bkg-color: #0e0e0e;
+}
+.dark-theme .navbar-top::before {
+  --bkg-color: #0e0e0e;
+}
+
+.dark-theme .card-portfolio.card-hover-appearance:hover .card-img-overlay {--bkg-color: #0e0e0e; background-color: #0e0e0e}
+
+.dark-theme .fa-sun:before {display:block}
+.dark-theme .fa-moon:before {display:none}
+
+.dark-theme img.d-block.bannerstart.logo-white {display:block!important}
+.dark-theme img.card-img.dark-mode {display:block!important}
+
+.dark-theme img.d-block.bannerstart.logo-dark {display:none!important}
+.dark-theme img.card-img.light-mode {display:none!important}
+	
+.dark-theme .card-portfolio.card-hover-bar .card-img-overlay {--bkg-color: #0e0e0e;}						
+.dark-theme .fancybox-content, 
+.dark-theme .navbar-head,
+.dark-theme .navbar-mobile-style-2 .navbar-head {--bkg-color: #0e0e0e; --text-color: #eee;}
+.dark-theme .navbar .navbar-nav .nav-link,
+.dark-theme .navbar-mobile-style-2 .navbar-head,
+.dark-theme .subtitle.palavras  {--text-color: #eee;}
+.dark-theme .nav .nav-link, .nav .nav-link.active,
+.dark-theme .swiper-full-horizontal.swiper-full .swiper-button-wrapper,
+.dark-theme .swiper .swiper-button-prev,
+.dark-theme .swiper .swiper-button-next,
+.dark-theme a.btn-with-ball,.dark-theme a.btn,
+.dark-theme .swiper-pagination {--text-color: #eee;}
+.dark-theme a.creditos {color:#0f0}
 body p .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {font-family: 'Open Sans', sans-serif;
 			font-weight: 100}
 		.navbar-mobile-style-2 .navbar-body>.navbar-nav a{font-family: 'Inter', sans-serif; font-weight:300}
 		.navbar-mobile .navbar-collapse-menu>.navbar-nav a{font-family:'Open Sans', sans-serif;}
 		.navbar-mobile .navbar-collapse-menu>.navbar-nav a:hover {color:#90EE90; font-family:'Open Sans', sans-serif; letter-spacing: 0.07em; font-size:1.2em}
+img.bannerstart {width:100%; margin:0 auto}
+a.navbar-brand p{margin-bottom:2em}
 ul.nav.navbar-nav {text-transform: uppercase;}		
 .navbar-mobile-style-2 .navbar-body>.navbar-nav {font-size: 55px;}
 .nav .nav-link { font-weight: 300}
@@ -61,4 +140,51 @@ footer .nav-item, .footer-copyright {
 .container.footrepair	{
     padding-left: 70px;}
 .repair2 {margin: 0 0 28px -26px!important}	
+}
+@media (min-width: 1023px) {
+img.bannerstart {width:80%; margin:0 auto}
+}
+
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body {
+    --text-color: #eee;
+    --bkg-color: #0e0e0e;
+  }
+  body.light-theme {
+    --text-color: #222;
+    --bkg-color: #fff;
+  }
+}
+
+
+body,
+.card-portfolio.card-hover-bar .card-img-overlay,
+.card-portfolio.card-hover-appearance:hover .card-img-overlay
+.fancybox-content,
+.dark-theme .navbar-mobile-style-2 .navbar-head,
+.navbar-head,
+.navbar .navbar-nav .nav-link,
+.nav .nav-link, .nav .nav-link.active,
+.navbar-top::before {
+  background: var(--bkg-color);
+  color: var(--text-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+.h3,
+.card .card-title,
+.subtitle.palavras,
+.navbar .navbar-toggle,
+.navbar-mobile-style-2 .navbar-head,
+.swiper-full-horizontal.swiper-full .swiper-button-wrapper,
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next,
+.swiper-pagination,
+.btn-with-ball, .btn-with-ball:hover {
+  color: var(--text-color);
 }

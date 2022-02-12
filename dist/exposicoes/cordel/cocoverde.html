@@ -20,6 +20,8 @@
         <!-- Custom Styles -->
         <link rel="stylesheet" href="../../assets/css/custom.css">
         <!-- END: Styles -->
+		<!-- Fontawesome -->
+		<script src="https://kit.fontawesome.com/a62bf9c2b5.js" crossorigin="anonymous"></script>
 		<!-- Google Analytics  -->
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -33,7 +35,6 @@
         <!-- jQuery -->
         <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 		<style>
-		.card, h3, h4, a  {color:white;}
 		.gallery-item img {
 			width: auto;}
 		.gallery-item-sm img{position:relative}	
@@ -181,17 +182,24 @@
 		</style>
 	
 	</head>
-    <body class="bg-dark cursor-enabled navbar-show">
+    <body class=" cursor-enabled navbar-show">
 		<a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
-		<header class="navbar navbar-top navbar-expand navbar-fixed navbar-dark">
+		<header class="navbar navbar-top navbar-expand navbar-fixed">
             <div class="container">
                 <a class="navbar-brand" href="../../index.html">
-                    <p style="padding-top:30px">museudafala</p>      
-                <a class="navbar-toggle" href="#navbar-mobile-style-2" data-fancybox="" data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
+                    <p style="padding-top:30px">museudafala</p>
+				</a>		
+                <div>
+					<button class="btn-toggle dark-mode">
+							<i class="fas fa-moon" title="mudar para tema escuro"></i>
+							<i class='fas fa-sun' title="mudar para tema claro"></i>
+					</button>
+					<a class="navbar-toggle" style="float: left;" href="#navbar-mobile-style-2" data-fancybox="" data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <a href="../../index.html" class="nav-link">
@@ -277,7 +285,7 @@
                             </ul>
                         </div>
                     </li>
-					<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center text-white">
+					<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center">
 						<li class="nav-item">
 							<a href="https://facebook.com/museudafala" class="nav-link">
 								<svg width="7" height="15" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -304,7 +312,7 @@
             </div>
         </header>
         <!-- style 2 -->
-        <div class="navbar navbar-mobile navbar-mobile-style-2 navbar-dark" id="navbar-mobile-style-2">
+        <div class="navbar navbar-mobile navbar-mobile-style-2" id="navbar-mobile-style-2">
             
             <div class="navbar-head">
                 <div class="container">
@@ -332,13 +340,13 @@
                                     </a>
                                     <div class="navbar-collapse-menu collapse show" id="navbarCollapseCordeis">
                                         <ul class="nav navbar-nav">
-                                            <li class="nav-item" class="nav-link collapsed">
-                                                <a href="dicas.html">
+                                            <li class="nav-item">
+                                                <a href="dicas.html" class="nav-link collapsed">
                                                     <span class="nav-link-name">DICAS</span>
                                                 </a>
                                             </li>
-											<li class="nav-item" class="nav-link collapsed">
-                                                <a href="nascimento.html">
+											<li class="nav-item">
+                                                <a href="nascimento.html" class="nav-link collapsed">
                                                     <span class="nav-link-name">Nascimento de Jesus</span>
                                                 </a>
                                             </li>
@@ -527,7 +535,7 @@
         <div class="content-wrap">
             <div class="container isotope mt-130">
                 
-                <div class="pt-0 show-on-scroll" data-show-duration="800">
+                <div class="pt-0" data-show-duration="800">
                     <div class="row gh-1 gv-1 isotope-grid">
 						<div class="col-12  isotope-item" data-filters="design">
                             <div class="card card-block d-flex ">
@@ -2544,18 +2552,17 @@
 								<p>Pilõezinhos/Paraíba, 1885. 
 								<p>Rio Tinto/Paraíba 1964.				
 								<p>Poeta e cordelista brasileiro. Um dos maiores autores da literatura de cordel brasileira, trabalhou como marceneiro e carpinteiro e a partir da década de 1920 iniciou-se nas poesias em folhetos.</p>
-								<a href="http://www.ablc.com.br/coco-verde-e-melancia/">ablc.com.br</a>						
+								<a class="creditos" href="http://www.ablc.com.br/coco-verde-e-melancia/">ablc.com.br</a>						
 							</div>
                         </div>
 				</div>
 				
 			</div>
-        <footer class="footer bg-dark text-white shape-parent overflow-hidden pt-160 pb-40">
+        <footer class="footer shape-parent overflow-hidden pt-160 pb-40">
             <div class="container mb-n5 footrepair">
-                
                 <div class="row justify-content-between gh-1 gv-4 mb-30">
                     <div class="col-lg-3">
-                        <ul class="nav flex-column text-white repair2">
+                        <ul class="nav flex-column repair2">
                             <li class="nav-item">
                                 <a href="callto:+351 915122373" class="nav-link">+351 915-122-373</a>
                             </li>
@@ -2568,7 +2575,7 @@
                     <div class="col-12 col-lg-6">
                         <div class="row gh-1 gv-1">
                             <div class="col-12 col-lg-4">
-                                <ul class="nav flex-column text-white">
+                                <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="../../acerca.html" class="nav-link">Acerca de nós</a>
                                     </li>
@@ -2578,7 +2585,7 @@
                                 </ul>
                             </div>
                             <div class="col-12 col-lg-4">
-                                <ul class="nav flex-column text-white">
+                                <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="../../termos.html" class="nav-link">Termos legais</a>
                                     </li>
@@ -2588,7 +2595,7 @@
                                 </ul>
                             </div>
                             <div class="col-12 col-lg-4">
-                                <ul class="nav flex-column text-white">
+                                <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a href="../../mapa.html" class="nav-link">Mapa do site</a>
                                     </li>
@@ -2602,7 +2609,7 @@
                 </div>
                 <div class="row justify-content-between mt-100 mt-lg-0">
                     <div class="col-auto">
-                        <ul class="nav text-white align-items-center">
+                        <ul class="nav align-items-center">
                             <li class="nav-item">
                                 <a href="https://www.facebook.com/museudafala" class="nav-link">
                                     <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2651,6 +2658,7 @@
 		});
 		});
 		</script>
+		<script src="../../assets/js/script.js"></script>
         <!-- Object Fit Polyfill -->
         <script src="../../assets/vendor/object-fit-images/dist/ofi.min.js"></script>
         <!-- Popper -->

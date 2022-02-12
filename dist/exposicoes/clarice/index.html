@@ -23,6 +23,8 @@
 		ga('send', 'pageview');	
 		</script>
 		<!-- End Google Analytics -->
+		<!-- Fontawesome -->
+		<script src="https://kit.fontawesome.com/a62bf9c2b5.js" crossorigin="anonymous"></script>
 		<!-- START: Styles -->
         <!-- Swiper -->
         <link rel="stylesheet" href="../../assets/vendor/swiper/dist/css/swiper.min.css">
@@ -38,7 +40,7 @@
 					padding-left: 0px;
 					}
 		.h2 {font-weight: bolder;}
-		.text-white {color: #0a0a0a!important;}
+		.  {color: #0a0a0a!important;}
 		.card .card-title {
 			color: #0a0a0a;
 		}
@@ -179,16 +181,23 @@ and (min-width : 1824px){
 		
 		</style>
     </head>
-    <body class="bg-dark cursor-enabled navbar-show">
-        <header class="navbar navbar-top navbar-expand navbar-dark navbar-fixed">
+    <body class="cursor-enabled navbar-show">
+        <header class="navbar navbar-top navbar-expand navbar-fixed">
             <div class="container">
                 <a class="navbar-brand" href="../../index.html">
                     <p style="padding-top:30px">museudafala</p>      
-                <a class="navbar-toggle" href="#navbar-mobile-style-2" data-fancybox="" data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
+                </a>		
+                <div>
+					<button class="btn-toggle dark-mode">
+							<i class="fas fa-moon" title="mudar para tema escuro"></i>
+							<i class='fas fa-sun' title="mudar para tema claro"></i>
+					</button>	
+					<a class="navbar-toggle" style="float: left;" href="#navbar-mobile-style-2" data-fancybox="" data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <a href="../../index.html" class="nav-link">
@@ -285,7 +294,7 @@ and (min-width : 1824px){
                             </ul>
                         </div>
                     </li>
-					<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center text-white">
+					<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center  ">
 						<li class="nav-item">
 							<a href="https://facebook.com/museudafala" class="nav-link">
 								<svg width="7" height="15" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -312,7 +321,7 @@ and (min-width : 1824px){
             </div>
         </header>
         <!-- style 2 -->
-        <div class="navbar navbar-mobile navbar-mobile-style-2 navbar-dark" id="navbar-mobile-style-2">
+        <div class="navbar navbar-mobile navbar-mobile-style-2" id="navbar-mobile-style-2">
             <div class="navbar-head">
                 <div class="container">
                     <a class="navbar-brand" href="../../index.html">
@@ -469,7 +478,7 @@ and (min-width : 1824px){
 					  <div class="cabecalho">
 						<div class="container text-align">
 						  <img class="img-fluid mx-auto" style="display: block;" src="lispector.jpg">
-						  <h2 style="text-align:center; color:white">Conversa com Clarice!</h2>
+						  <h2 style="text-align:center;">Conversa com Clarice!</h2>
 						</div>
 					  </div>
 
@@ -486,12 +495,12 @@ and (min-width : 1824px){
 				</div>
 			</div>
         </div>
-		<footer class="footer bg-dark text-white shape-parent overflow-hidden pt-160 pb-40">
+		<footer class="footer shape-parent overflow-hidden pt-160 pb-40">
             <div class="container mb-n5 footrepair">
                 
                 <div class="row justify-content-between gh-1 gv-4 mb-30">
                     <div class="col-lg-3">
-                        <ul class="nav flex-column text-white repair2">
+                        <ul class="nav flex-column   repair2">
                             <li class="nav-item">
                                 <a href="callto:+351 915122373" class="nav-link">+351 915-122-373</a>
                             </li>
@@ -504,7 +513,7 @@ and (min-width : 1824px){
                     <div class="col-12 col-lg-6">
                         <div class="row gh-1 gv-1">
                             <div class="col-12 col-lg-4">
-                                <ul class="nav flex-column text-white">
+                                <ul class="nav flex-column  ">
                                     <li class="nav-item">
                                         <a href="../../acerca.html" class="nav-link">Acerca de nós</a>
                                     </li>
@@ -514,7 +523,7 @@ and (min-width : 1824px){
                                 </ul>
                             </div>
                             <div class="col-12 col-lg-4">
-                                <ul class="nav flex-column text-white">
+                                <ul class="nav flex-column  ">
                                     <li class="nav-item">
                                         <a href="../../termos.html" class="nav-link">Termos legais</a>
                                     </li>
@@ -524,7 +533,7 @@ and (min-width : 1824px){
                                 </ul>
                             </div>
                             <div class="col-12 col-lg-4">
-                                <ul class="nav flex-column text-white">
+                                <ul class="nav flex-column  ">
                                     <li class="nav-item">
                                         <a href="../../mapa.html" class="nav-link">Mapa do site</a>
                                     </li>
@@ -538,7 +547,7 @@ and (min-width : 1824px){
                 </div>
                 <div class="row justify-content-between mt-100 mt-lg-0">
                     <div class="col-auto">
-                        <ul class="nav text-white align-items-center">
+                        <ul class="nav   align-items-center">
                             <li class="nav-item">
                                 <a href="https://facebook.com/museudafala" class="nav-link">
                                     <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -573,6 +582,8 @@ and (min-width : 1824px){
 		<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
 		
          <!-- START: Scripts -->
+		 <!-- Dark mode -->
+		<script src="../../assets/js/script.js"></script>
         <!-- Object Fit Polyfill -->
         <script src="../../assets/vendor/object-fit-images/dist/ofi.min.js"></script>
         <!-- Popper -->

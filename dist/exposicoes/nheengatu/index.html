@@ -23,6 +23,23 @@
         <!-- Custom Styles -->
         <link rel="stylesheet" href="../../assets/css/custom.css">
         <!-- END: Styles -->
+		<!-- Loader -->
+		<script>
+			document.onreadystatechange = function() {
+				if (document.readyState !== "complete") {
+					document.querySelector(
+					  "body").style.visibility = "hidden";
+					document.querySelector(
+					  "#loader").style.visibility = "visible";
+				} else {
+					document.querySelector(
+					  "#loader").style.visibility = "hidden";
+					document.querySelector(
+					  "body").style.visibility = "visible";
+				}
+			};
+		</script>
+		<!-- End Loader -->
 		<!-- Google Analytics  -->
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -33,7 +50,8 @@
 		ga('send', 'pageview');	
 		</script>
 		<!-- End Google Analytics -->
-		
+		<!-- Fontawesome -->
+		<script src="https://kit.fontawesome.com/a62bf9c2b5.js" crossorigin="anonymous"></script>
         <!-- jQuery -->
         <script src="../../assets/vendor/jquery/dist/jquery.min.js"></script>
 		<style>
@@ -92,28 +110,35 @@
 			}		
 		</style>	
     </head>
-    <body class="bg-dark cursor-enabled navbar-show">
-		<div id="loader" class="d-flex flex-column align-items-center justify-content-center center">
+    <body class="cursor-enabled navbar-show">
+		<div id="loader" style="z-index: 10000;" class="d-flex flex-column align-items-center justify-content-center center">
 		   <div class="row">
-			   <div class="spinner-border text-light" style="width: 6rem; height: 6rem;" role="status">
+			   <div class="spinner-border" style="width: 6rem; height: 6rem;" role="status">
 				   <span class="sr-only">Loading...</span>
 			   </div>
 			</div>
-			<div class="row" style="color:white; margin-top:3vw">
+			<div class="row" style=" margin-top:3vw">
 			  <strong>Carregando o seu conteúdo</strong>
 			</div>
 		</div>
 		
-		<header class="navbar navbar-top navbar-expand navbar-dark navbar-fixed">
+		<header class="navbar navbar-top navbar-expand navbar-fixed">
             <div class="container">
                 <a class="navbar-brand" href="../../index.html">
                     <p style="padding-top:30px">museudafala
                 </p>
-                <a class="navbar-toggle" href="#navbar-mobile-style-2" data-fancybox="" data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
+                </a>		
+                <div>
+					<button class="btn-toggle dark-mode">
+							<i class="fas fa-moon" title="mudar para tema escuro"></i>
+							<i class='fas fa-sun' title="mudar para tema claro"></i>
+					</button>	
+					<a class="navbar-toggle" style="float: left;" href="#navbar-mobile-style-2" data-fancybox="" data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <a href="../../index.html" class="nav-link">
@@ -129,11 +154,6 @@
                         </a>
                         <div class="dropdown-menu" id="exposicoes">
                             <ul class="nav navbar-nav">
-                          <!-- 	<li class="nav-item">
-                                    <a href="../index_crioulo.html" class="nav-link">
-                                        <span class="nav-link-name">Crioulo</span>
-                                    </a>
-                                </li>  -->
 								<li class="nav-item">
                                     <a href="../cordel/index.html" class="nav-link">
                                         <span class="nav-link-name">Literatura de Cordel</span>
@@ -225,7 +245,7 @@
                             <span class="nav-link-name">café</span>
                         </a>
                     </li>
-					<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center text-white">
+					<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center  ">
 						<li class="nav-item">
 							<a href="https://facebook.com/museudafala" class="nav-link">
 								<svg width="7" height="15" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -252,7 +272,7 @@
             </div>
         </header>
         <!-- style 2 -->
-        <div class="navbar navbar-mobile navbar-mobile-style-2 navbar-dark" id="navbar-mobile-style-2">
+        <div class="navbar navbar-mobile navbar-mobile-style-2" id="navbar-mobile-style-2">
             <div class="navbar-head">
                 <div class="container">
                     <a class="navbar-brand" href="../../index.html">
@@ -407,7 +427,7 @@
         </div>
         <div class="content-wrap">
 		
-            <div class="swiper text-white swiper-full swiper-full-horizontal swiper-portfolio-animejs" data-swiper-slides="auto" data-swiper-gap="100" data-swiper-speed="600" data-swiper-loop="true" data-swiper-center="true" data-swiper-breakpoints="500:auto, 0:1">
+            <div class="swiper   swiper-full swiper-full-horizontal swiper-portfolio-animejs" data-swiper-slides="auto" data-swiper-gap="100" data-swiper-speed="600" data-swiper-loop="true" data-swiper-center="true" data-swiper-breakpoints="500:auto, 0:1">
                 <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
                     <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-3775px, 0px, 0px);">	
                         
@@ -418,8 +438,8 @@
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>
                                 </span>
                                 <span class="card-img-overlay" style="padding:25px 30px; justify-content: center;">
-                                    <span class="card-title h2 text-white nheengatu">NHEENGATU</span>
-                                    <span class="card-category subtitle text-white nheengatu" style=" text-shadow: 4px 17px 14px rgba(255,0,0,0.6);">a fala boa</span>
+                                    <span class="card-title h2   nheengatu">NHEENGATU</span>
+                                    <span class="card-category subtitle nheengatu" style="color:#eee; text-shadow: 4px 17px 14px rgba(255,0,0,0.6);">a fala boa</span>
                                 </span>
                             </div>
                         </div>
@@ -434,7 +454,7 @@
                                  </picture>    
 									<span class="background-color" style="background-color: rgba(14, 14, 14, .0);"></span>                                
 								</span>
-                                <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
+                                <span class="card-img-overlay">
                                     <span class="card-title h2"></span>
                                     <span class="card-category subtitle">
 										<p>Em sua forma original, o tupi, que até meados do século XVII foi o idioma mais usado no território brasileiro, não existe mais. 
@@ -483,7 +503,7 @@
 								  </picture>
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
-                                <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
+                                <span class="card-img-overlay">
                                     <span class="card-category subtitle palavras">Oi!&nbsp;  Abacaxi &nbsp;Açai &nbsp;Arapuca &nbsp;Bauru &nbsp;Biboca&nbsp; 
 									Caju&nbsp; Capenga&nbsp; Catapora&nbsp; Cupim&nbsp; Curumim&nbsp; Cutucar &nbsp;Gambá &nbsp;Guará&nbsp;
 									Jacaré &nbsp;Jaboti &nbsp;Jaguar &nbsp;Maracá&nbsp; Mandioca &nbsp;Mingau&nbsp; Oca
@@ -534,14 +554,14 @@
                                   </picture>  
 									<span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
-								<span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
-                                    <span class="card-category subtitle">Quando no início do século XVI os portugueses chegaram ao Brasil existiam centenas de línguas indígenas. 
+								<span class="card-img-overlay">
+                                    <span class="card-category subtitle"><p>Quando no início do século XVI os portugueses chegaram ao Brasil existiam centenas de línguas indígenas. 
 									Para quem queria mandar e confessar, tal abundância de línguas, era um problema.
 									Ainda em 1639, o jesuíta espanhol Cristóval de Acuña, que acompanhou a expedição de Pedro Teixeira em percurso idêntico ao realizado 
 									cem anos antes por Orellana, identificava – graças aos intérpretes – apenas nas margens do grande rio e nas bocas de seus principais 
 									afluentes, povos que "passam de 150, todos de línguas diferentes".  O papel dos intérpretes foi de extrema importância. 
 									"O entender o capitão [Orellana] a sua língua [dos Omagua] foi, depois de Deus, o que nos ajudou a não ficarmos no rio. 
-									Porque se os não entendesse, nem os índios ficariam em paz conosco, nem teríamos acertado com estas povoações"
+									Porque se os não entendesse, nem os índios ficariam em paz conosco, nem teríamos acertado com estas povoações"</p>
 									</span>
 									<div class="row audio">
 											<article style="width:100%; float:left;" class="col-6">
@@ -585,11 +605,11 @@
                                   </picture>  
 									<span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
-                                <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
+                                <span class="card-img-overlay">
                                    <span class="card-category subtitle">
-								   Em 1968 foram registradas 1,492 línguas faladas na América do Sul, distribuídos 
+								   <p>Em 1968 foram registradas 1,492 línguas faladas na América do Sul, distribuídos 
 								   segundo os seguintes troncos linguísticos: 130 línguas Tupi, 108 Karib, 83 Aruak, 34 Pano, 26 Tukano, 66 Gê e mais 
-								   271 línguas isoladas ou não classificadas.
+								   271 línguas isoladas ou não classificadas.</p>
 								   </span>
 										<div class="row">
 											<article style="width:100%; float:left;" class="col-6">
@@ -633,7 +653,7 @@
                                   </picture>   
 									<span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
-								<span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
+								<span class="card-img-overlay">
 									<span class="card-category subtitle">
 										<h2>O que aconteceu com as línguas nativas?</h2>
 									</span>
@@ -673,15 +693,15 @@
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black card-hover-appearance">
                                 <span class="card-img">
                                   <picture>  
-									<source srcset="img/vieira.webp" type="image/webp" alt="padre antonio viera com nativos">
-									<source srcset="img/vieira.avif" type="image/avif" alt="padre antonio viera com nativos"> 
-									<source srcset="img/vieira.jpg" type="image/png" alt="padre antonio viera com nativos">
+									<source srcset="img/vieira.webp" type="image/webp">
+									<source srcset="img/vieira.avif" type="image/avif"> 
+									<source srcset="img/vieira.jpg" type="image/png">
 									<img src="img/vieira.jpg" alt="padre antonio viera com nativos">
 								  </picture>
 									
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
-                                <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
+                                <span class="card-img-overlay">
                                     <span class="card-category subtitle"><p>Desconsideradas as diferenças dialetais existia uma língua  falada pelos Tupinambás desde o litoral paulista até ao litoral norte da Foz do Rio Amazonas.
 								   A Coroa Portuguesa incumbiu os Jesuítas para a "aperfeiçoar" e divulgar.</p>
 									<p>É uma variedade desta "Língua Geral", trabalhada pelos jesuítas e usada nos seus seminários,  que foi introduzida na Amazônia e que se veio a designar por Nheengatu, "Fala Boa" em Tupi. </p></span>
@@ -709,14 +729,14 @@
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black card-hover-appearance">
                                 <span class="card-img">
 								   <picture>  
-									<source srcset="img/livros.webp" type="image/webp" alt="capas de gramaticas antigas">
-									<source srcset="img/livros.avif" type="image/avif" alt="capas de gramaticas antigas"> 
-									<source srcset="img/livros.jpg" type="image/jpg" alt="capas de gramaticas antigas">	
+									<source srcset="img/livros.webp" type="image/webp">
+									<source srcset="img/livros.avif" type="image/avif"> 
+									<source srcset="img/livros.jpg" type="image/jpg">	
 								    <img src="img/livros.jpg" alt="capas de gramaticas antigas">
 								  </picture>	
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
-                                <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
+                                <span class="card-img-overlay">
                                     <span class="card-category subtitle">
 									<p>Até 1727  a Coroa Portuguesa encorajou o projeto da Língua Geral como instrumento de comunicação. Os Jesuítas foram incumbidos de construir uma gramática e de instruir os índios apenas nesta língua.</p>
 									</span>
@@ -747,14 +767,14 @@
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black card-hover-appearance">
                                 <span class="card-img">
                                    <picture>  
-									<source srcset="img/gravura7.webp" type="image/webp" alt="pintura com colonos vestindo nativos">
-									<source srcset="img/gravura7.avif" type="image/avif" alt="pintura com colonos vestindo nativos"> 
-									<source srcset="img/gravura7.jpg" type="image/jpg" alt="pintura com colonos vestindo nativos">	 
+									<source srcset="img/gravura7.webp" type="image/webp">
+									<source srcset="img/gravura7.avif" type="image/avif"> 
+									<source srcset="img/gravura7.jpg" type="image/jpg">	 
 									<img src="img/gravura7.jpg" alt="pintura com colonos vestindo nativos">
                                    </picture>   
 									<span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
-                                <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
+                                <span class="card-img-overlay">
                                     <span class="card-category subtitle">
 									<p>Ao longo do século XVII até cerca de metade do século XVIII milhares de índios foram obrigados a abandonar as suas terras e a trocar as suas línguas 
 									maternas pela Língua Geral.</p>
@@ -789,14 +809,14 @@
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black card-hover-appearance">
                                 <span class="card-img">
                                    <picture>  
-									<source srcset="img/rugendas.webp" type="image/webp" alt="Pintura com colonos desembarcando africanos">
-									<source srcset="img/rugendas.avif" type="image/avif" alt="Pintura com colonos desembarcando africanos"> 
-									<source srcset="img/rugendas.jpg" type="image/jpg" alt="Pintura com colonos desembarcando africanos">	 
+									<source srcset="img/rugendas.webp" type="image/webp">
+									<source srcset="img/rugendas.avif" type="image/avif"> 
+									<source srcset="img/rugendas.jpg" type="image/jpg">	 
 									<img src="img/rugendas.jpg" alt="Pintura com colonos desembarcando africanos">
                                    </picture> 
 									<span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
-                                <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
+                                <span class="card-img-overlay">
                                    <span class="card-category subtitle">
 									<p>A língua portuguesa chegou a estar quase banida. Em Belém e São Luiz todos falavam a tal Língua Geral, sem excetuar as famílias dos colonos e as pessoas gradas. Os jesuítas a usavam até nos sermões e prédicas.</p>
 									<p>Marquês de Pombal, superministro do rei de Portugal, não conseguia comunicar-se com a maioria de seus funcionários da década de 1750. O novo governador, que não falava a Língua Geral, ficou horrorizado porque bastava deixar o palácio do governo em Belém para encontrar dificuldade em se fazer entender. Ele mesmo conta que, uma vez, apresentado aos filhos de um dos principais lusos da colônia, homem de posses, descobriu que as crianças falavam fluentemente a Língua Geral e apenas entendiam, muito pouco, a língua portuguesa.</p>
@@ -806,9 +826,9 @@
 										<article style="width:100%; float:left;" class="col-6">
 											<figcaption style="font-size:0.8rem; text-align: center;">ouvir em PT-Brasileiro</figcaption>
 											<audio controls preload="none" style="width:100%;">
-											  <source src="audio/nheengatu9br.ogg" type="audio/ogg">
-												<source src="audio/nheengatu9br.mp3" type="audio/mpeg">
-												<source src="audio/nheengatu9br.wav" type="audio/wav">
+											  <source src="audio/nheengatu9br.ogg">
+												<source src="audio/nheengatu9br.mp3">
+												<source src="audio/nheengatu9br.wav">
 											  Your browser does not support the audio element.
 											</audio>
 										</article>
@@ -829,14 +849,14 @@
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black card-hover-appearance">
                                 <span class="card-img">
                                    <picture>  
-									<source srcset="img/marques.webp" type="image/webp" alt="Pintura retrato Marquês de Pombal">
-									<source srcset="img/marques.avif" type="image/avif" alt="Pintura retrato Marquês de Pombal"> 
-									<source srcset="img/marques.jpg" type="image/jpg" alt="Pintura retrato Marquês de Pombal"> 
+									<source srcset="img/marques.webp" type="image/webp">
+									<source srcset="img/marques.avif" type="image/avif"> 
+									<source srcset="img/marques.jpg" type="image/jpg"> 
 									<img src="img/marques.jpg" alt="Pintura retrato Marquês de Pombal">
 								  </picture>	
 								  <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
-                                <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
+                                <span class="card-img-overlay">
                                    <span class="card-category subtitle">
 									<p>No reinado de D. José I, sob orientação do seu Primeiro-ministro, futuro Marquês de Pombal, os jesuítas são expulsos e inicia-se a portugalização do território.</p>
 									<p>O projeto de uma língua franca de origem indígena foi abandonado. O Nheengatu é reprimido e os índios chegam a ter de trabalhar 10 anos para receber em troca uma educação em português.</p>
@@ -868,14 +888,14 @@
                             <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-black card-hover-appearance">
                                 <span class="card-img">
                                    <picture>  
-									<source srcset="img/indiosmodernos.webp" type="image/webp" alt="Nativos modernos">
-									<source srcset="img/indiosmodernos.avif" type="image/avif" alt="Nativos modernos"> 
-									<source srcset="img/indiosmodernos.jpg" type="image/jpg" alt="Nativos modernos">  
+									<source srcset="img/indiosmodernos.webp" type="image/webp">
+									<source srcset="img/indiosmodernos.avif" type="image/avif"> 
+									<source srcset="img/indiosmodernos.jpg" type="image/jpg">  
 									<img src="img/indiosmodernos.jpg" alt="Nativos modernos">
 								   </picture>	
                                     <span class="background-color" style="background-color: rgba(14, 14, 14, 0);"></span>
                                 </span>
-                                <span class="card-img-overlay" style="background-color: rgba(255, 255, 255, 0.9);">
+                                <span class="card-img-overlay">
                                    <span class="card-category subtitle">
 									<p>No entanto, as marcas da Língua Geral deixadas durante um século e meio não se apagariam de um dia para o outro nem por meio de decretos.</p>
 									<p>Esta língua sobreviveu e ainda no século XIX era, na prática, a língua franca da imensa região Amazônica.</p>
@@ -905,7 +925,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="card card-portfolio card-overlay card-image-sm card-bg-show text-white" href="gramatica.html">
+                            <div class="card card-portfolio card-overlay card-image-sm card-bg-show  " href="gramatica.html">
                                 <span class="card-img">
                                     <span class="background-color" style="background-color: rgba(14, 140, 14, 0);"></span>
                                 </span>
@@ -931,6 +951,8 @@
             </div>
         </div>
          <!-- START: Scripts -->
+		 <!-- Dark mode -->
+		<script src="../../assets/js/script.js"></script>
         <!-- Object Fit Polyfill -->
         <script src="../../assets/vendor/object-fit-images/dist/ofi.min.js"></script>
         <!-- Popper -->
@@ -962,23 +984,7 @@
         <script src="../../assets/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
         <!-- Themebau -->
         <script src="../../assets/js/themebau.min.js"></script>
-		<!-- Loader -->
-		<script>
-			document.onreadystatechange = function() {
-				if (document.readyState !== "complete") {
-					document.querySelector(
-					  "body").style.visibility = "hidden";
-					document.querySelector(
-					  "#loader").style.visibility = "visible";
-				} else {
-					document.querySelector(
-					  "#loader").style.visibility = "hidden";
-					document.querySelector(
-					  "body").style.visibility = "visible";
-				}
-			};
-		</script>
-		<!-- End Loader -->
+		
 		
 		
         <!-- END: Scripts -->
