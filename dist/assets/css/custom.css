@@ -6,9 +6,14 @@ body {font-family: 'Open Sans', sans-serif;
 .card-portfolio.card-hover-bar .card-img-overlay,
 .navbar-top::before {--bkg-color: #eee;}
 .card-portfolio.card-hover-appearance:hover .card-img-overlay {--bkg-color: #eee; background-color: #eee}			
+.fancybox-container-5,
+.fancybox-container,
+.navbar-mobile-style-2,
 .fancybox-content,
+.card .card-title,
+p.card-title, 
 .navbar-head {--text-color: #121212;
-					--bkg-color: #eee;}
+			  --bkg-color: #eee;}
 .navbar .navbar-nav .nav-link,
 .nav .nav-link, .nav .nav-link.active,
 .subtitle.palavras,
@@ -37,7 +42,6 @@ button.dark-mode {
 	float: left; 
 	padding-right: 14px;
 }
-
 
 button.dark-mode :focus {
     border: none;
@@ -68,7 +72,23 @@ body.dark-theme {
 .dark-theme .card-portfolio.card-hover-bar .card-img-overlay {--bkg-color: #0e0e0e;}						
 .dark-theme .fancybox-content, 
 .dark-theme .navbar-head,
+.dark-theme .card .card-title,
+.dark-theme p.card-title,
 .dark-theme .navbar-mobile-style-2 .navbar-head {--bkg-color: #0e0e0e; --text-color: #eee;}
+
+
+
+.dark-theme .fancybox-container-5 {--bkg-color: #0e0e0e; --text-color: #eee;}
+.dark-theme .fancybox-container {--bkg-color: #0e0e0e; --text-color: #eee;}
+.dark-theme .navbar-mobile-style-2 {--bkg-color: #0e0e0e; --text-color: #eee;}
+
+
+
+
+
+
+
+
 .dark-theme .navbar .navbar-nav .nav-link,
 .dark-theme .navbar-mobile-style-2 .navbar-head,
 .dark-theme .subtitle.palavras  {--text-color: #eee;}
@@ -162,10 +182,15 @@ body,
 .card-portfolio.card-hover-bar .card-img-overlay,
 .card-portfolio.card-hover-appearance:hover .card-img-overlay
 .fancybox-content,
+.fancybox-container-5,
+.fancybox-container,
+.navbar-mobile-style-2,
 .dark-theme .navbar-mobile-style-2 .navbar-head,
 .navbar-head,
 .navbar .navbar-nav .nav-link,
 .nav .nav-link, .nav .nav-link.active,
+.card .card-title,
+p.card-title,
 .navbar-top::before {
   background: var(--bkg-color);
   color: var(--text-color);
@@ -185,6 +210,7 @@ h4,
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next,
 .swiper-pagination,
-.btn-with-ball, .btn-with-ball:hover {
+.btn-with-ball, 
+.btn-with-ball:hover {
   color: var(--text-color);
 }

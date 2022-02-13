@@ -23,6 +23,8 @@
         <!-- Custom Styles -->
         <link rel="stylesheet" href="../../assets/css/custom.css">
         <!-- END: Styles -->
+		<!-- Fontawesome -->
+		<script src="https://kit.fontawesome.com/a62bf9c2b5.js" crossorigin="anonymous"></script>
 		<!-- Google Analytics  -->
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -96,10 +98,8 @@
 			justify-content: start;
 			top: -25px;}
 		.h2 {font-weight: bolder;}
-		.text-white {color: #0a0a0a!important;}
-		.card .card-title {
-			color: #0a0a0a;
-		}
+		.  {color: #0a0a0a!important;}
+		
 		
 		.row.gv-4>[class*=col] {
 			padding-top: 4px;
@@ -134,16 +134,23 @@
 		}		
 		</style>
     </head>
-    <body class="bg-dark cursor-enabled navbar-show">
-        <header class="navbar navbar-top navbar-expand navbar-dark navbar-fixed">
+    <body class="cursor-enabled navbar-show">
+        <header class="navbar navbar-top navbar-expand navbar-fixed">
             <div class="container">
                 <a class="navbar-brand" href="../../index.html">
                     <p style="padding-top:30px">museudafala</p>      
-                <a class="navbar-toggle" href="#navbar-mobile-style-2" data-fancybox="" data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
+                </a>		
+                <div>
+					<button class="btn-toggle dark-mode">
+							<i class="fas fa-moon" title="mudar para tema escuro"></i>
+							<i class='fas fa-sun' title="mudar para tema claro"></i>
+					</button>	
+					<a class="navbar-toggle" style="float: left;" href="#navbar-mobile-style-2" data-fancybox="" data-base-class="fancybox-navbar" data-keyboard="false" data-auto-focus="false" data-touch="false" data-close-existing="true" data-small-btn="false" data-toolbar="false">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <a href="../../index.html" class="nav-link">
@@ -250,7 +257,7 @@
                             <span class="nav-link-name">café</span>
                         </a>
                     </li>
-					<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center text-white">
+					<ul class="nav nav-gap-sm navbar-nav nav-social align-items-center">
 						<li class="nav-item">
 							<a href="https://facebook.com/museudafala" class="nav-link">
 								<svg width="7" height="15" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -277,7 +284,7 @@
             </div>
         </header>
         <!-- style 2 -->
-        <div class="navbar navbar-mobile navbar-mobile-style-2 navbar-dark" id="navbar-mobile-style-2">
+        <div class="navbar navbar-mobile navbar-mobile-style-2" id="navbar-mobile-style-2">
             
             <div class="navbar-head">
                 <div class="container">
@@ -437,11 +444,11 @@
                     
                     <div class="row gh-1 gv-4">
                         <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="50" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a onmousedown="pedrapt.playclip()" ondblclick="pedrapt.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                            <a onmousedown="pedrapt.playclip()" ondblclick="pedrapt.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center" >
                                 <span class="card-img">
 									<img src="imagens3/pedra.png" class="img-responsive"  alt="uma pedra" title="português" >
                                 </span>
-                                <span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                <span class="card-img-overlay">
                                     <span class="card-title h4">No meio do caminho</span>
 									<span class="card-title p">No meio do caminho tinha uma pedra
 									tinha uma pedra no meio do caminho
@@ -457,13 +464,13 @@
                             </a>
                         </div>
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="50" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a onmousedown="pedraen.playclip()" ondblclick="pedraen.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                            <a onmousedown="pedraen.playclip()" ondblclick="pedraen.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center    " >
                                 <span class="card-img">
 									<img src="imagens3/pedra.png" 
 										style="-ms-transform: rotate(33deg); /* IE 9 */ transform: rotate(33deg);" class="img-responsive" 
 										alt="uma pedra" title="inglês" >                                
 								</span>
-                                <span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                <span class="card-img-overlay">
                                     <span class="card-title h4">In the middle of the road</span>
 									<span class="card-title p">In the middle of the road was a stone
 									was a stone in the middle of the road was stone
@@ -479,11 +486,11 @@
                             </a>
                         </div>
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a onmousedown="pedradn.playclip()" ondblclick="pedradn.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                            <a onmousedown="pedradn.playclip()" ondblclick="pedradn.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center    " >
                                 <span class="card-img">
 									<img src="imagens3/pedra.png" style="-ms-transform: rotate(66deg); /* IE 9 */ transform: rotate(66deg);" class="img-responsive"  alt="uma pedra" title="dinamarquês"  >
 								</span>
-                                <span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+                                <span class="card-img-overlay">
                                     <span class="card-title h4">I midten af vejen</span>
 									<span class="card-title p">I midten af vejen var en sten var en sten 
 									i midten af vejen var en sten i midten af vejen var en sten. 
@@ -498,11 +505,11 @@
                             </a>
                         </div>
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a onmousedown="pedrafr.playclip()" ondblclick="pedrafr.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                            <a onmousedown="pedrafr.playclip()" ondblclick="pedrafr.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center  " >
                                 <span class="card-img">
 									<img src="imagens3/pedra.png" style="-ms-transform: rotate(99deg); /* IE 9 */ transform: rotate(99deg);"class="img-responsive" alt="uma pedra" title="francês">
                                 </span>
-								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+								<span class="card-img-overlay">
                                     <span class="card-title h4">Au milieu du chemin</span>
 									<span class="card-title p">Au milieu du chemin y avait une pierre
 									y avait une pierre au milieu du chemin
@@ -519,11 +526,11 @@
                             </a>
                         </div>
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a onmousedown="pedrahe.playclip()" ondblclick="pedrahe.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                            <a onmousedown="pedrahe.playclip()" ondblclick="pedrahe.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center  " >
                                 <span class="card-img">
 								<img src="imagens3/pedra.png" style="-ms-transform: rotate(132deg); /* IE 9 */ transform: rotate(132deg);" class="img-responsive" alt="uma pedra" title="hebraico" >
                                 </span>
-								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+								<span class="card-img-overlay">
                                     <span class="card-title h4">באמצע הכביש הייתה אבן</span>
 									<span class="card-title p">באמצע הכביש היה אבן הייתה אבן באמצע הכביש הייתה אבן באמצע הכביש הייתה אבן. אני לעולם לא אשכח את האירוע הזה בחיים של רשתית כל כך העייף שלי. אני לעולם לא אשכח שבאמצע הכביש היה אבן הייתה אבן באמצע הכביש באמצע הכביש הייתה אבן.
 									</span>
@@ -531,11 +538,11 @@
                             </a>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a onmousedown="pedrait.playclip()" ondblclick="pedrait.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                            <a onmousedown="pedrait.playclip()" ondblclick="pedrait.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center    " >
                                 <span class="card-img">
 								<img src="imagens3/pedra.png" style="-ms-transform: rotate(165deg); /* IE 9 */ transform: rotate(165deg);" class="img-responsive" alt="uma pedra" title="italiano">
                                 </span>
-								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+								<span class="card-img-overlay">
                                     <span class="card-title h4">Nel mezzo del cammino</span>
 									<span class="card-title p">Nel mezzo del cammino c’era un sasso
 									c’era un sasso nel mezzo del cammino
@@ -552,11 +559,11 @@
                             </a>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a onmousedown="pedrahl.playclip()" ondblclick="pedrahl.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                            <a onmousedown="pedrahl.playclip()" ondblclick="pedrahl.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center    " >
                                 <span class="card-img">
 								<img src="imagens3/pedra.png" style="-ms-transform: rotate(198deg); /* IE 9 */ transform: rotate(198deg);" class="img-responsive" alt="uma pedra" title="holandês"  >
                                 </span>
-								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+								<span class="card-img-overlay">
                                     <span class="card-title h4">In het midden van de weg</span>
 									<span class="card-title p">In het midden van de weg was een steen een steen 
 									 in het midden van de weg was een steen in het midden 
@@ -570,11 +577,11 @@
                             </a>
                         </div>
                         <div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a onmousedown="pedrahg.playclip()" ondblclick="pedrahg.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                            <a onmousedown="pedrahg.playclip()" ondblclick="pedrahg.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center    " >
                                 <span class="card-img">
 								<img src="imagens3/pedra.png" style="-ms-transform: rotate(231deg); /* IE 9 */ transform: rotate(231deg);" class="img-responsive" alt="uma pedra" title="húngaro" >
                                 </span>
-								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+								<span class="card-img-overlay" >
                                     <span class="card-title h4">Az út közepén volt</span>
 									<span class="card-title p">Az út közepén volt egy kő kő volt a az út közepén volt egy kő a 
 									közepén, az út pedig egy kő. Soha nem fogom elfelejteni ezt az eseményt 
@@ -585,11 +592,11 @@
                             </a>
                         </div>
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a onmousedown="pedradt.playclip()" ondblclick="pedradt.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                            <a onmousedown="pedradt.playclip()" ondblclick="pedradt.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center    " >
                                 <span class="card-img">
 								<img src="imagens3/pedra.png" style="-ms-transform: rotate(264deg); /* IE 9 */ transform: rotate(264deg);" class="img-responsive" alt="uma pedra" title="alemão">
                                 </span>
-								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+								<span class="card-img-overlay" >
                                     <span class="card-title h4">Mitten im Weg lag ein Stein</span>
 									<span class="card-title p">Mitten im Weg lag ein Stein
 									Lag ein Stein mitten im Weg
@@ -604,11 +611,11 @@
                             </a>
                         </div>
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a onmousedown="pedralt.playclip()" ondblclick="pedralt.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                            <a onmousedown="pedralt.playclip()" ondblclick="pedralt.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center    " >
                                 <span class="card-img">
 								<img src="imagens3/pedra.png" style="-ms-transform: rotate(297deg); /* IE 9 */ transform: rotate(297deg);" class="img-responsive" alt="uma pedra" title="latim">
                                 </span>
-								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+								<span class="card-img-overlay">
                                     <span class="card-title h4">In media via</span>
 									<span class="card-title p">In media via lapis lapidem lapidem in media 
 									  visus adesse via in media visus adesse via lapis. 
@@ -621,11 +628,11 @@
                             </a>
                         </div>
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a onmousedown="pedraes.playclip()" ondblclick="pedraes.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                            <a onmousedown="pedraes.playclip()" ondblclick="pedraes.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center    " >
                                 <span class="card-img">
 								<img src="imagens3/pedra.png" style="-ms-transform: rotate(330deg); /* IE 9 */ transform: rotate(330deg);" class="img-responsive" alt="uma pedra" title="espanhol">
                                 </span>
-								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+								<span class="card-img-overlay">
                                     <span class="card-title h4">En medio del camino</span>
 									<span class="card-title p">En medio del camino había una piedra,
 									había una piedra en medio del camino,
@@ -642,11 +649,11 @@
                             </a>
                         </div>
 						<div class="col-12 col-md-6 col-lg-3 show-on-scroll show-on-scroll-ready" data-show-duration="500" data-show-distance="20" data-show-delay="150" style="transform: translateY(0px); transition-duration: 500ms; opacity: 1;">
-                            <a onmousedown="pedratp.playclip()" ondblclick="pedratp.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center bg-white text-dark" >
+                            <a onmousedown="pedratp.playclip()" ondblclick="pedratp.pause()" class="card card-portfolio card-overlay card-hover-bar card-image-lg text-center    " >
                                 <span class="card-img">
 								<img src="imagens3/pedra.png" style="-ms-transform: rotate(360deg); /* IE 9 */ transform: rotate(360deg);" class="img-responsive" alt="uma pedra" title="tupi">
                                 </span>
-								<span class="card-img-overlay" style="background-color:rgba(255, 255, 255, 0.8)">
+								<span class="card-img-overlay">
                                     <span class="card-title h4">Pytéripé pé i tyb'amé</span>
 									<span class="card-title p">Pytéripé pé i tyb'amé oîepé itá
 									I tyb'amé oîepé itá pytéripé pé
@@ -667,12 +674,12 @@
             </div>
             
         </div>
-		<footer class="footer bg-dark text-white shape-parent overflow-hidden pt-160 pb-40">
+		<footer class="footer shape-parent overflow-hidden pt-160 pb-40">
             <div class="container mb-n5 footrepair">
                 
                 <div class="row justify-content-between gh-1 gv-4 mb-30">
                     <div class="col-lg-3">
-                        <ul class="nav flex-column text-white repair2">
+                        <ul class="nav flex-column repair2">
                             <li class="nav-item">
                                 <a href="callto:+351 915122373" class="nav-link">+351 915-122-373</a>
                             </li>
@@ -685,7 +692,7 @@
                     <div class="col-12 col-lg-6">
                         <div class="row gh-1 gv-1">
                             <div class="col-12 col-lg-4">
-                                <ul class="nav flex-column text-white">
+                                <ul class="nav flex-column  ">
                                     <li class="nav-item">
                                         <a href="../../acerca.html" class="nav-link">Acerca de nós</a>
                                     </li>
@@ -695,7 +702,7 @@
                                 </ul>
                             </div>
                             <div class="col-12 col-lg-4">
-                                <ul class="nav flex-column text-white">
+                                <ul class="nav flex-column  ">
                                     <li class="nav-item">
                                         <a href="../../termos.html" class="nav-link">Termos legais</a>
                                     </li>
@@ -705,7 +712,7 @@
                                 </ul>
                             </div>
                             <div class="col-12 col-lg-4">
-                                <ul class="nav flex-column text-white">
+                                <ul class="nav flex-column  ">
                                     <li class="nav-item">
                                         <a href="../../mapa.html" class="nav-link">Mapa do site</a>
                                     </li>
@@ -719,7 +726,7 @@
                 </div>
                 <div class="row justify-content-between mt-100 mt-lg-0">
                     <div class="col-auto">
-                        <ul class="nav text-white align-items-center">
+                        <ul class="nav   align-items-center">
                             <li class="nav-item">
                                 <a href="https://facebook.com/museudafala" class="nav-link">
                                     <svg width="10" height="22" viewBox="0 0 10 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -750,6 +757,8 @@
             </div>
         </footer>
          <!-- START: Scripts -->
+		 <!-- Dark mode -->
+		<script src="../../assets/js/script.js"></script>
         <!-- Object Fit Polyfill -->
         <script src="../../assets/vendor/object-fit-images/dist/ofi.min.js"></script>
         <!-- Popper -->
